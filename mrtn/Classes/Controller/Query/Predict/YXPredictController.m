@@ -76,7 +76,7 @@
                 [MBProgressHUD showFail:@"上传失败"];// 显示错误消息
             }
         }
-        [self query:nil];
+        [self query:nil];// 刷新列表
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [progress hide:YES];// 隐藏读取框

@@ -20,6 +20,7 @@
     
     YXDatePicker *root = [[[NSBundle mainBundle] loadNibNamed:@"YXDatePicker" owner:nil options:nil] firstObject];
     root.frame = CGRectMake(0, 0, superView.width, superView.height);
+    root.datePicker.size = CGSizeMake(superView.width, superView.height);
     root.textField = textField;
     [superView addSubview:root];
     return root;

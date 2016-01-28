@@ -12,10 +12,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZd-vv-rWw">
-                    <rect key="frame" x="20" y="184" width="335" height="300"/>
+                    <rect key="frame" x="20" y="234" width="335" height="200"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOB-nf-cul">
-                            <rect key="frame" x="5" y="265" width="160" height="30"/>
+                            <rect key="frame" x="5" y="165" width="160" height="30"/>
                             <animations/>
                             <color key="backgroundColor" red="0.1019607843" green="0.5450980392" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="取消">
@@ -31,7 +31,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wb-00-jtj">
-                            <rect key="frame" x="170" y="265" width="160" height="30"/>
+                            <rect key="frame" x="170" y="165" width="160" height="30"/>
                             <animations/>
                             <color key="backgroundColor" red="0.1019607843" green="0.5450980392" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="确认">
@@ -47,7 +47,7 @@
                             </connections>
                         </button>
                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="fs1-iQ-Zz5">
-                            <rect key="frame" x="0.0" y="0.0" width="335" height="260"/>
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="160"/>
                             <animations/>
                             <date key="date" timeIntervalSinceReferenceDate="475513417.30651802">
                                 <!--2016-01-26 15:03:37 +0000-->
@@ -58,7 +58,7 @@
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="4qo-rD-OoO"/>
+                        <constraint firstAttribute="height" constant="200" id="4qo-rD-OoO"/>
                         <constraint firstAttribute="bottom" secondItem="YOB-nf-cul" secondAttribute="bottom" constant="5" id="7Tg-5D-Iwu"/>
                         <constraint firstItem="fs1-iQ-Zz5" firstAttribute="top" secondItem="CZd-vv-rWw" secondAttribute="top" id="8vp-gc-7Az"/>
                         <constraint firstAttribute="bottom" secondItem="3wb-00-jtj" secondAttribute="bottom" constant="5" id="L5h-Io-mLZ"/>
