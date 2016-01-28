@@ -1,0 +1,38 @@
+//
+//  全局头文件
+//
+//  Created by Mac on 15/11/27.
+//  Copyright © 2015年 YusysTechnologies. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+// 常用扩展类
+#import "UIView+Extension.h"
+#import "UITableView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "UIScrollView+Extension.h"
+#import "NSString+Extension.h"
+
+#endif
+
+// 程序在发布状态下关闭一切Log
+#ifdef __OPTIMIZE__ // 发布状态
+# define YXLog(...) // YXLog无效
+#else // Debug状态
+# define YXLog(...) NSLog(__VA_ARGS__) // YXLog方法与NSLog方法是一样的
+#endif
+
+// 当前系统版本号
+#define CurrentVersion [[[UIDevice currentDeivce] systemVersion] floatValue]
+#define IOS8 [[[UIDevice currentDevice]systemVersion] floatValue] >= 8.0
+// 16进制RGB转化为颜色值
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed: ((float)((rgbValue & 0xFF0000) >> 16))/255.0 green: ((float)((rgbValue & 0xFF00) >> 8))/255.0 blue: ((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
+#endif /* PrefixHeader_pch */
