@@ -45,6 +45,22 @@
         [self.trainNumTF setEnabled:NO];
         [self.trainRemarkTV setSelectable:NO];
         [self.trainDateB setEnabled:NO];
+    }else if ([_taskOrderInfo.taskStatus isEqual:UNDONE]) {
+        NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.trainTypeT selectRowAtIndexPath:path animated:NO scrollPosition:UITableViewScrollPositionNone];
+        [self tableView:self.trainTypeT didSelectRowAtIndexPath:path];
+        [self.itemPosFaultT selectRowAtIndexPath:path animated:NO scrollPosition:UITableViewScrollPositionNone];
+        [self tableView:self.itemPosFaultT didSelectRowAtIndexPath:path];
+        [self.itemCardT selectRowAtIndexPath:path animated:NO scrollPosition:UITableViewScrollPositionNone];
+        [self tableView:self.itemCardT didSelectRowAtIndexPath:path];
+        [self.itemVoucherT selectRowAtIndexPath:path animated:NO scrollPosition:UITableViewScrollPositionNone];
+        [self tableView:self.itemVoucherT didSelectRowAtIndexPath:path];
+        [self.itemUserinfoT selectRowAtIndexPath:path animated:NO scrollPosition:UITableViewScrollPositionNone];
+        [self tableView:self.itemUserinfoT didSelectRowAtIndexPath:path];
+        [self.itemPostSaveT selectRowAtIndexPath:path animated:NO scrollPosition:UITableViewScrollPositionNone];
+        [self tableView:self.itemPostSaveT didSelectRowAtIndexPath:path];
+        [self.itemMcAgreementT selectRowAtIndexPath:path animated:NO scrollPosition:UITableViewScrollPositionNone];
+        [self tableView:self.itemMcAgreementT didSelectRowAtIndexPath:path];
     }
     
 }
@@ -54,7 +70,7 @@
         _taskOrderInfo.taskTrainDetail.trainDate = self.trainDateTF.text;
         _taskOrderInfo.taskTrainDetail.trainNum = self.trainNumTF.text;
         _taskOrderInfo.taskTrainDetail.trainRemark = self.trainRemarkTV.text;
-        _taskOrderInfo.taskTrainDetail.trainType = [NSString stringWithFormat:@"%ld",[self.trainTypeT selectedIndexPathRow]];
+        _taskOrderInfo.taskTrainDetail.trainType = [NSString stringWithFormat:@"00%ld",[self.trainTypeT selectedIndexPathRow]+1];
         _taskOrderInfo.taskTrainDetail.itemPosFault = [self.itemPosFaultT cellForRowAtIndexPath:[self.itemPosFaultT indexPathForSelectedRow]].textLabel.text;
         _taskOrderInfo.taskTrainDetail.itemCard = [self.itemCardT cellForRowAtIndexPath:[self.itemCardT indexPathForSelectedRow]].textLabel.text;
         _taskOrderInfo.taskTrainDetail.itemVoucher = [self.itemVoucherT cellForRowAtIndexPath:[self.itemVoucherT indexPathForSelectedRow]].textLabel.text;

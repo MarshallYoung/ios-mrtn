@@ -45,10 +45,6 @@
     self.managementNameTF.text = _taskOrderInfo.taskVisitDetail.managementName;
     self.managementTelTF.text = _taskOrderInfo.taskVisitDetail.managementTel;
     self.resultTV.text = _taskOrderInfo.taskVisitDetail.result;
-    for (int i = 11; i < 21; i++) {// 给所有TableView添加代理和数据
-        ((UITableView *)[self viewWithTag:i]).dataSource = self;
-        ((UITableView *)[self viewWithTag:i]).delegate = self;
-    }
     if ([_taskOrderInfo.taskStatus isEqual:DONE]) {// 已完结任务单,不可填写
         [self.visitDateTF setEnabled:NO];
         [self.visitLastDateTF setEnabled:NO];
@@ -58,6 +54,10 @@
         [self.resultTV setSelectable:NO];
         [self.visitDateB setEnabled:NO];
         [self.visitLastDateB setEnabled:NO];
+    }
+    for (int i = 11; i < 21; i++) {// 给所有TableView添加代理和数据
+        ((UITableView *)[self viewWithTag:i]).dataSource = self;
+        ((UITableView *)[self viewWithTag:i]).delegate = self;
     }
     
 }

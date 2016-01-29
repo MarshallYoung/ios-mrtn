@@ -26,12 +26,17 @@
     _taskOrderInfo = taskOrderInfo;
     self.otherContextTV.text = _taskOrderInfo.taskRepairDetail.otherContext;
     self.remarkTV.text = _taskOrderInfo.taskRepairDetail.remark;
+    self.rtContentT.delegate = self;
+    self.rtContentT.dataSource = self;
     if ([_taskOrderInfo.taskStatus isEqual:DONE]) {
         [self.otherContextTV setSelectable:NO];
         [self.remarkTV setSelectable:NO];
+    }else if ([_taskOrderInfo.taskStatus isEqual:UNDONE]) {
+        NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.rtContentT selectRowAtIndexPath:path animated:NO scrollPosition:UITableViewScrollPositionNone];
+        [self tableView:self.rtContentT didSelectRowAtIndexPath:path];
     }
-    self.rtContentT.delegate = self;
-    self.rtContentT.dataSource = self;
+    
     
 }
 

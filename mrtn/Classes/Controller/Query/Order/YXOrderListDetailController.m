@@ -33,6 +33,12 @@
     [super viewDidLoad];
     
     self.title = @"待办任务单列表";
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
     [self loadData];// 显示数据
     
 }

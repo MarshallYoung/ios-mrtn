@@ -8,7 +8,6 @@
 
 #import "LBXScanLineAnimation.h"
 
-
 @interface LBXScanLineAnimation()
 {
     int num;

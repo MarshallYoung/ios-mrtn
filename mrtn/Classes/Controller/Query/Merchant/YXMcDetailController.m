@@ -57,14 +57,13 @@
     progress = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];;
     progress.delegate = self;// 设置代理,用于移除
     progress.labelText = @"初始化数据...";// 设置文本
-    [self.navigationController.view addSubview:progress];// 显示
+    [self.view addSubview:progress];// 显示
     
     // 请求
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer.timeoutInterval = 10;// 设置超时时间
     // 设置请求头,<<调试DEBUG>>用
     [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"android_request"];
-    
     NSDictionary *parameters = @{@"id":_merchantInfo.id};// 设置参数
     [manager POST:URL_QUERY_MERCHANT parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
@@ -130,7 +129,10 @@
     for (YXTermInfo *info in arr) {
         [self.scrollView addBottomSubview:[YXTermCell initWithTermInfo:info]];
     }
-    
+    CGSize size = self.scrollView.contentSize;
+    YXLog(@"old content size = %f , %f", size.width, size.height);
+    self.scrollView.contentSize = CGSizeMake(size.width, 1000);
+    YXLog(@"new content size = %f , %f", self.scrollView.contentSize.width, self.scrollView.contentSize.height);
 }
 
 // 通过商户信息初始化

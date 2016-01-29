@@ -45,8 +45,6 @@
  
  */
 
-#import <Foundation/Foundation.h>
-
 @class AVCaptureConnection;
 
 @interface AVCamUtilities : NSObject {

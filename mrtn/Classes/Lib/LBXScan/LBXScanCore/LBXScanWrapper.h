@@ -10,8 +10,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import "LBXScanResult.h"
 
-
-
 /**
  @brief  封装ZXing和ios系统自带原生扫码功能
          ZXing识别图片二维码以及生成二维码功能

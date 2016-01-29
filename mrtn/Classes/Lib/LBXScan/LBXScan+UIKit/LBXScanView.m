@@ -9,8 +9,6 @@
 
 #import "LBXScanView.h"
 
-
-
 @interface LBXScanView()
 
 //扫码区域各种参数

@@ -5,7 +5,6 @@
 //  Copyright © 2015年 YusysTechnologies. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "YXNavigationController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

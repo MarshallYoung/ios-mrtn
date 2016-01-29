@@ -6,13 +6,9 @@
 //  Copyright © 2015年 lbxia. All rights reserved.
 //
 
-
-#import <UIKit/UIKit.h>
 #import "LBXScanLineAnimation.h"
 #import "LBXScanNetAnimation.h"
 #import "LBXScanViewStyle.h"
-
-
 
 /**
  扫码区域显示效果

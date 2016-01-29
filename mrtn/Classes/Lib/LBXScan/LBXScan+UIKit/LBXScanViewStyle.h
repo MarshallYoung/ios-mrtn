@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
-
 /**
  扫码区域动画效果
  */

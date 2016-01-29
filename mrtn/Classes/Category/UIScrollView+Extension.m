@@ -1,6 +1,5 @@
 //
-//  UIScrollView+Extension.m
-//  mrtn
+//  滚动控件扩展
 //
 //  Created by Mac on 16/1/19.
 //  Copyright © 2016年 YusysTechnologies. All rights reserved.
@@ -16,12 +15,23 @@
     
     if (subview) {// 子控件不为空
         subview.y = self.contentSize.height;// 设置控件纵坐标
-        CGSize newSize = self.contentSize;// 得到ScrollView内容尺寸
-        newSize.height += subview.height + MARGIN;// 设置ScrollView的滚动区域
-        self.contentSize = newSize;
         [self addSubview:subview];
+        [self refreshLayout];
     }
 
+}
+
+-(void)refreshLayout {
+    
+    UIView *lastSubview = [[self subviews] lastObject];
+    CGSize newContentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, lastSubview.y + lastSubview.height + MARGIN);// 宽度是屏幕宽度,需要的话就修改
+    self.contentSize = newContentSize;
+    
+}
+
+-(void)selectAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
 }
 
 

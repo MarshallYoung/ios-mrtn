@@ -24,6 +24,7 @@
 #import "YXTaskAttachment.h"
 #import "YXUploadImageResponse.h"
 #import "YXSignBoard.h"
+#import "YXAlertDialog.h"
 
 @interface YXOrderDetailController ()<MBProgressHUDDelegate>
 
@@ -268,11 +269,15 @@
         YXLog(@"%@",responseObject);
         [progress hide:YES];// 隐藏读取框
         [btn setEnabled:NO];// 失效提交按钮
-        [MBProgressHUD showSuccess:@"任务单上传成功"];
+        [YXAlertDialog initWithSuperView:self.view message:@"任务单上传成功" confirm:^(void) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [progress hide:YES];// 隐藏读取框
-        [MBProgressHUD showFail:@"服务器无响应,请联系服务人员"];
+        [YXAlertDialog initWithSuperView:self.view message:@"服务器无响应,请联系服务人员" confirm:^(void) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
     }];
     
 }

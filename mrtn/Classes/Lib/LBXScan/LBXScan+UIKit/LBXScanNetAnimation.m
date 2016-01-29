@@ -8,7 +8,6 @@
 
 #import "LBXScanNetAnimation.h"
 
-
 @interface LBXScanNetAnimation()
 {
     BOOL isAnimationing;
