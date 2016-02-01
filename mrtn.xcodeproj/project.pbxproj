@@ -57,16 +57,6 @@
 		041070C51C59A8F300D6D958 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FA61C59A8F300D6D958 /* AFURLResponseSerialization.m */; settings = {ASSET_TAGS = (); }; };
 		041070C61C59A8F300D6D958 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FA81C59A8F300D6D958 /* AFURLSessionManager.m */; settings = {ASSET_TAGS = (); }; };
 		041070C71C59A8F300D6D958 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FAC1C59A8F300D6D958 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		041070C81C59A8F300D6D958 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FB11C59A8F300D6D958 /* JSONModel.m */; settings = {ASSET_TAGS = (); }; };
-		041070C91C59A8F300D6D958 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FB31C59A8F300D6D958 /* JSONModelArray.m */; settings = {ASSET_TAGS = (); }; };
-		041070CA1C59A8F300D6D958 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FB51C59A8F300D6D958 /* JSONModelClassProperty.m */; settings = {ASSET_TAGS = (); }; };
-		041070CB1C59A8F300D6D958 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FB71C59A8F300D6D958 /* JSONModelError.m */; settings = {ASSET_TAGS = (); }; };
-		041070CC1C59A8F300D6D958 /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FBA1C59A8F300D6D958 /* NSArray+JSONModel.m */; settings = {ASSET_TAGS = (); }; };
-		041070CD1C59A8F300D6D958 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FBE1C59A8F300D6D958 /* JSONAPI.m */; settings = {ASSET_TAGS = (); }; };
-		041070CE1C59A8F300D6D958 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FC01C59A8F300D6D958 /* JSONHTTPClient.m */; settings = {ASSET_TAGS = (); }; };
-		041070CF1C59A8F300D6D958 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FC21C59A8F300D6D958 /* JSONModel+networking.m */; settings = {ASSET_TAGS = (); }; };
-		041070D01C59A8F300D6D958 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FC51C59A8F300D6D958 /* JSONKeyMapper.m */; settings = {ASSET_TAGS = (); }; };
-		041070D11C59A8F300D6D958 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FC71C59A8F300D6D958 /* JSONValueTransformer.m */; settings = {ASSET_TAGS = (); }; };
 		041070D21C59A8F300D6D958 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FF01C59A8F300D6D958 /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 		041070D31C59A8F300D6D958 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FF41C59A8F300D6D958 /* MKAnnotationView+WebCache.m */; settings = {ASSET_TAGS = (); }; };
 		041070D41C59A8F300D6D958 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106FF61C59A8F300D6D958 /* NSData+ImageContentType.m */; settings = {ASSET_TAGS = (); }; };
@@ -148,6 +138,17 @@
 		041071201C59A8F300D6D958 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0410708D1C59A8F300D6D958 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		041071211C59A8F300D6D958 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0410708E1C59A8F300D6D958 /* main.m */; settings = {ASSET_TAGS = (); }; };
 		041071221C59A8F300D6D958 /* Thumbs.db in Resources */ = {isa = PBXBuildFile; fileRef = 041070901C59A8F300D6D958 /* Thumbs.db */; settings = {ASSET_TAGS = (); }; };
+		044E29501C5B61E600A4AAD9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044E29361C5B61E600A4AAD9 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
+		044E29511C5B61E600A4AAD9 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044E29391C5B61E600A4AAD9 /* JSONModel.m */; settings = {ASSET_TAGS = (); }; };
+		044E29521C5B61E600A4AAD9 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 044E293B1C5B61E600A4AAD9 /* JSONModelArray.m */; settings = {ASSET_TAGS = (); }; };
+		044E29531C5B61E600A4AAD9 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 044E293D1C5B61E600A4AAD9 /* JSONModelClassProperty.m */; settings = {ASSET_TAGS = (); }; };
+		044E29541C5B61E600A4AAD9 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 044E293F1C5B61E600A4AAD9 /* JSONModelError.m */; settings = {ASSET_TAGS = (); }; };
+		044E29551C5B61E600A4AAD9 /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044E29421C5B61E600A4AAD9 /* NSArray+JSONModel.m */; settings = {ASSET_TAGS = (); }; };
+		044E29561C5B61E600A4AAD9 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 044E29461C5B61E600A4AAD9 /* JSONAPI.m */; settings = {ASSET_TAGS = (); }; };
+		044E29571C5B61E600A4AAD9 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 044E29481C5B61E600A4AAD9 /* JSONHTTPClient.m */; settings = {ASSET_TAGS = (); }; };
+		044E29581C5B61E600A4AAD9 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 044E294A1C5B61E600A4AAD9 /* JSONModel+networking.m */; settings = {ASSET_TAGS = (); }; };
+		044E29591C5B61E600A4AAD9 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 044E294D1C5B61E600A4AAD9 /* JSONKeyMapper.m */; settings = {ASSET_TAGS = (); }; };
+		044E295A1C5B61E600A4AAD9 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 044E294F1C5B61E600A4AAD9 /* JSONValueTransformer.m */; settings = {ASSET_TAGS = (); }; };
 		04646C401C59AB6100D6DE13 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04646A401C59AB6000D6DE13 /* CodeScan.bundle */; settings = {ASSET_TAGS = (); }; };
 		04646C411C59AB6100D6DE13 /* LBXScanLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04646A421C59AB6000D6DE13 /* LBXScanLineAnimation.m */; settings = {ASSET_TAGS = (); }; };
 		04646C421C59AB6100D6DE13 /* LBXScanNetAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04646A441C59AB6000D6DE13 /* LBXScanNetAnimation.m */; settings = {ASSET_TAGS = (); }; };
@@ -473,27 +474,6 @@
 		04106FAB1C59A8F300D6D958 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
 		04106FAC1C59A8F300D6D958 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		04106FAD1C59A8F300D6D958 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		04106FB01C59A8F300D6D958 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
-		04106FB11C59A8F300D6D958 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
-		04106FB21C59A8F300D6D958 /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
-		04106FB31C59A8F300D6D958 /* JSONModelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelArray.m; sourceTree = "<group>"; };
-		04106FB41C59A8F300D6D958 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelClassProperty.h; sourceTree = "<group>"; };
-		04106FB51C59A8F300D6D958 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelClassProperty.m; sourceTree = "<group>"; };
-		04106FB61C59A8F300D6D958 /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelError.h; sourceTree = "<group>"; };
-		04106FB71C59A8F300D6D958 /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelError.m; sourceTree = "<group>"; };
-		04106FB91C59A8F300D6D958 /* NSArray+JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSONModel.h"; sourceTree = "<group>"; };
-		04106FBA1C59A8F300D6D958 /* NSArray+JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSONModel.m"; sourceTree = "<group>"; };
-		04106FBB1C59A8F300D6D958 /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
-		04106FBD1C59A8F300D6D958 /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
-		04106FBE1C59A8F300D6D958 /* JSONAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPI.m; sourceTree = "<group>"; };
-		04106FBF1C59A8F300D6D958 /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
-		04106FC01C59A8F300D6D958 /* JSONHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHTTPClient.m; sourceTree = "<group>"; };
-		04106FC11C59A8F300D6D958 /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
-		04106FC21C59A8F300D6D958 /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
-		04106FC41C59A8F300D6D958 /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
-		04106FC51C59A8F300D6D958 /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
-		04106FC61C59A8F300D6D958 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
-		04106FC71C59A8F300D6D958 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
 		04106FEF1C59A8F300D6D958 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		04106FF01C59A8F300D6D958 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		04106FF31C59A8F300D6D958 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -642,6 +622,28 @@
 		0410708F1C59A8F300D6D958 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		041070901C59A8F300D6D958 /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thumbs.db; sourceTree = "<group>"; };
 		041070911C59A8F300D6D958 /* mrtn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = mrtn.xcodeproj; sourceTree = "<group>"; };
+		044E29361C5B61E600A4AAD9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		044E29381C5B61E600A4AAD9 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		044E29391C5B61E600A4AAD9 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
+		044E293A1C5B61E600A4AAD9 /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
+		044E293B1C5B61E600A4AAD9 /* JSONModelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelArray.m; sourceTree = "<group>"; };
+		044E293C1C5B61E600A4AAD9 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelClassProperty.h; sourceTree = "<group>"; };
+		044E293D1C5B61E600A4AAD9 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelClassProperty.m; sourceTree = "<group>"; };
+		044E293E1C5B61E600A4AAD9 /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelError.h; sourceTree = "<group>"; };
+		044E293F1C5B61E600A4AAD9 /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelError.m; sourceTree = "<group>"; };
+		044E29411C5B61E600A4AAD9 /* NSArray+JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSONModel.h"; sourceTree = "<group>"; };
+		044E29421C5B61E600A4AAD9 /* NSArray+JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSONModel.m"; sourceTree = "<group>"; };
+		044E29431C5B61E600A4AAD9 /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
+		044E29451C5B61E600A4AAD9 /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
+		044E29461C5B61E600A4AAD9 /* JSONAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPI.m; sourceTree = "<group>"; };
+		044E29471C5B61E600A4AAD9 /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
+		044E29481C5B61E600A4AAD9 /* JSONHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHTTPClient.m; sourceTree = "<group>"; };
+		044E29491C5B61E600A4AAD9 /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
+		044E294A1C5B61E600A4AAD9 /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
+		044E294C1C5B61E600A4AAD9 /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
+		044E294D1C5B61E600A4AAD9 /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
+		044E294E1C5B61E600A4AAD9 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
+		044E294F1C5B61E600A4AAD9 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
 		04646A401C59AB6000D6DE13 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		04646A411C59AB6000D6DE13 /* LBXScanLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanLineAnimation.h; sourceTree = "<group>"; };
 		04646A421C59AB6000D6DE13 /* LBXScanLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanLineAnimation.m; sourceTree = "<group>"; };
@@ -1372,10 +1374,10 @@
 		04106F941C59A8F300D6D958 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				044E29351C5B61E600A4AAD9 /* JSONModel */,
 				04646A3E1C59AB6000D6DE13 /* LBXScan */,
 				04106F951C59A8F300D6D958 /* AFNetworking */,
 				04106FAA1C59A8F300D6D958 /* GTMBase64-master */,
-				04106FAE1C59A8F300D6D958 /* JSONModel */,
 				04106FEE1C59A8F300D6D958 /* MBProgressHUD */,
 				04106FF21C59A8F300D6D958 /* SDWebImage */,
 			);
@@ -1416,66 +1418,6 @@
 				04106FAD1C59A8F300D6D958 /* GTMDefines.h */,
 			);
 			path = "GTMBase64-master";
-			sourceTree = "<group>";
-		};
-		04106FAE1C59A8F300D6D958 /* JSONModel */ = {
-			isa = PBXGroup;
-			children = (
-				04106FAF1C59A8F300D6D958 /* JSONModel */,
-				04106FB81C59A8F300D6D958 /* JSONModelCategories */,
-				04106FBB1C59A8F300D6D958 /* JSONModelLib.h */,
-				04106FBC1C59A8F300D6D958 /* JSONModelNetworking */,
-				04106FC31C59A8F300D6D958 /* JSONModelTransformations */,
-			);
-			path = JSONModel;
-			sourceTree = "<group>";
-		};
-		04106FAF1C59A8F300D6D958 /* JSONModel */ = {
-			isa = PBXGroup;
-			children = (
-				04106FB01C59A8F300D6D958 /* JSONModel.h */,
-				04106FB11C59A8F300D6D958 /* JSONModel.m */,
-				04106FB21C59A8F300D6D958 /* JSONModelArray.h */,
-				04106FB31C59A8F300D6D958 /* JSONModelArray.m */,
-				04106FB41C59A8F300D6D958 /* JSONModelClassProperty.h */,
-				04106FB51C59A8F300D6D958 /* JSONModelClassProperty.m */,
-				04106FB61C59A8F300D6D958 /* JSONModelError.h */,
-				04106FB71C59A8F300D6D958 /* JSONModelError.m */,
-			);
-			path = JSONModel;
-			sourceTree = "<group>";
-		};
-		04106FB81C59A8F300D6D958 /* JSONModelCategories */ = {
-			isa = PBXGroup;
-			children = (
-				04106FB91C59A8F300D6D958 /* NSArray+JSONModel.h */,
-				04106FBA1C59A8F300D6D958 /* NSArray+JSONModel.m */,
-			);
-			path = JSONModelCategories;
-			sourceTree = "<group>";
-		};
-		04106FBC1C59A8F300D6D958 /* JSONModelNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				04106FBD1C59A8F300D6D958 /* JSONAPI.h */,
-				04106FBE1C59A8F300D6D958 /* JSONAPI.m */,
-				04106FBF1C59A8F300D6D958 /* JSONHTTPClient.h */,
-				04106FC01C59A8F300D6D958 /* JSONHTTPClient.m */,
-				04106FC11C59A8F300D6D958 /* JSONModel+networking.h */,
-				04106FC21C59A8F300D6D958 /* JSONModel+networking.m */,
-			);
-			path = JSONModelNetworking;
-			sourceTree = "<group>";
-		};
-		04106FC31C59A8F300D6D958 /* JSONModelTransformations */ = {
-			isa = PBXGroup;
-			children = (
-				04106FC41C59A8F300D6D958 /* JSONKeyMapper.h */,
-				04106FC51C59A8F300D6D958 /* JSONKeyMapper.m */,
-				04106FC61C59A8F300D6D958 /* JSONValueTransformer.h */,
-				04106FC71C59A8F300D6D958 /* JSONValueTransformer.m */,
-			);
-			path = JSONModelTransformations;
 			sourceTree = "<group>";
 		};
 		04106FEE1C59A8F300D6D958 /* MBProgressHUD */ = {
@@ -1737,6 +1679,67 @@
 		041070921C59A8F300D6D958 /* Products */ = {
 			isa = PBXGroup;
 			name = Products;
+			sourceTree = "<group>";
+		};
+		044E29351C5B61E600A4AAD9 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				044E29361C5B61E600A4AAD9 /* Info.plist */,
+				044E29371C5B61E600A4AAD9 /* JSONModel */,
+				044E29401C5B61E600A4AAD9 /* JSONModelCategories */,
+				044E29431C5B61E600A4AAD9 /* JSONModelLib.h */,
+				044E29441C5B61E600A4AAD9 /* JSONModelNetworking */,
+				044E294B1C5B61E600A4AAD9 /* JSONModelTransformations */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		044E29371C5B61E600A4AAD9 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				044E29381C5B61E600A4AAD9 /* JSONModel.h */,
+				044E29391C5B61E600A4AAD9 /* JSONModel.m */,
+				044E293A1C5B61E600A4AAD9 /* JSONModelArray.h */,
+				044E293B1C5B61E600A4AAD9 /* JSONModelArray.m */,
+				044E293C1C5B61E600A4AAD9 /* JSONModelClassProperty.h */,
+				044E293D1C5B61E600A4AAD9 /* JSONModelClassProperty.m */,
+				044E293E1C5B61E600A4AAD9 /* JSONModelError.h */,
+				044E293F1C5B61E600A4AAD9 /* JSONModelError.m */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		044E29401C5B61E600A4AAD9 /* JSONModelCategories */ = {
+			isa = PBXGroup;
+			children = (
+				044E29411C5B61E600A4AAD9 /* NSArray+JSONModel.h */,
+				044E29421C5B61E600A4AAD9 /* NSArray+JSONModel.m */,
+			);
+			path = JSONModelCategories;
+			sourceTree = "<group>";
+		};
+		044E29441C5B61E600A4AAD9 /* JSONModelNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				044E29451C5B61E600A4AAD9 /* JSONAPI.h */,
+				044E29461C5B61E600A4AAD9 /* JSONAPI.m */,
+				044E29471C5B61E600A4AAD9 /* JSONHTTPClient.h */,
+				044E29481C5B61E600A4AAD9 /* JSONHTTPClient.m */,
+				044E29491C5B61E600A4AAD9 /* JSONModel+networking.h */,
+				044E294A1C5B61E600A4AAD9 /* JSONModel+networking.m */,
+			);
+			path = JSONModelNetworking;
+			sourceTree = "<group>";
+		};
+		044E294B1C5B61E600A4AAD9 /* JSONModelTransformations */ = {
+			isa = PBXGroup;
+			children = (
+				044E294C1C5B61E600A4AAD9 /* JSONKeyMapper.h */,
+				044E294D1C5B61E600A4AAD9 /* JSONKeyMapper.m */,
+				044E294E1C5B61E600A4AAD9 /* JSONValueTransformer.h */,
+				044E294F1C5B61E600A4AAD9 /* JSONValueTransformer.m */,
+			);
+			path = JSONModelTransformations;
 			sourceTree = "<group>";
 		};
 		04646A3E1C59AB6000D6DE13 /* LBXScan */ = {
@@ -2608,6 +2611,7 @@
 				041071221C59A8F300D6D958 /* Thumbs.db in Resources */,
 				041071171C59A8F300D6D958 /* YXTaskVisitFragment.xib in Resources */,
 				041071021C59A8F300D6D958 /* YXBacklogCell.xib in Resources */,
+				044E29501C5B61E600A4AAD9 /* Info.plist in Resources */,
 				041071191C59A8F300D6D958 /* YXDatePicker.xib in Resources */,
 				041070A61C59A8F300D6D958 /* YXMessageViewController.xib in Resources */,
 				041070A31C59A8F300D6D958 /* YXLoginController.xib in Resources */,
@@ -2633,6 +2637,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044E29571C5B61E600A4AAD9 /* JSONHTTPClient.m in Sources */,
 				04646C751C59AB6100D6DE13 /* ZXVINParsedResult.m in Sources */,
 				04646C831C59AB6100D6DE13 /* ZXBitArray.m in Sources */,
 				04646D211C59AB6100D6DE13 /* ZXQRCodeReader.m in Sources */,
@@ -2644,7 +2649,6 @@
 				041070FE1C59A8F300D6D958 /* YXControllerInfo.m in Sources */,
 				041070FB1C59A8F300D6D958 /* YXPredictResponse.m in Sources */,
 				04646CB01C59AB6100D6DE13 /* ZXDataMatrixX12Encoder.m in Sources */,
-				041070CD1C59A8F300D6D958 /* JSONAPI.m in Sources */,
 				04646CD01C59AB6100D6DE13 /* ZXAbstractRSSReader.m in Sources */,
 				04646CE81C59AB6100D6DE13 /* ZXUPCAReader.m in Sources */,
 				04646CAF1C59AB6100D6DE13 /* ZXDataMatrixTextEncoder.m in Sources */,
@@ -2674,7 +2678,6 @@
 				041070A21C59A8F300D6D958 /* YXLoginController.m in Sources */,
 				041070E91C59A8F300D6D958 /* YXTaskSurveyDetail.m in Sources */,
 				041070EA1C59A8F300D6D958 /* YXTaskTrainDetail.m in Sources */,
-				041070CE1C59A8F300D6D958 /* JSONHTTPClient.m in Sources */,
 				04646C951C59AB6100D6DE13 /* ZXDecodeHints.m in Sources */,
 				04646C5E1C59AB6100D6DE13 /* ZXEmailDoCoMoResultParser.m in Sources */,
 				041070E01C59A8F300D6D958 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -2691,7 +2694,6 @@
 				04646CF31C59AB6100D6DE13 /* ZXPDF417BarcodeMetadata.m in Sources */,
 				04646C421C59AB6100D6DE13 /* LBXScanNetAnimation.m in Sources */,
 				041070F01C59A8F300D6D958 /* YXTaskOrderInfo.m in Sources */,
-				041070D11C59A8F300D6D958 /* JSONValueTransformer.m in Sources */,
 				04646C4E1C59AB6100D6DE13 /* ZXAztecHighLevelEncoder.m in Sources */,
 				04646C5D1C59AB6100D6DE13 /* ZXEmailAddressResultParser.m in Sources */,
 				04646D171C59AB6100D6DE13 /* ZXQRCodeFinderPatternFinder.m in Sources */,
@@ -2700,6 +2702,7 @@
 				041070DC1C59A8F300D6D958 /* UIButton+WebCache.m in Sources */,
 				041070FA1C59A8F300D6D958 /* YXLoginResponse.m in Sources */,
 				04646CE31C59AB6100D6DE13 /* ZXITFWriter.m in Sources */,
+				044E295A1C5B61E600A4AAD9 /* JSONValueTransformer.m in Sources */,
 				04646D201C59AB6100D6DE13 /* ZXQRCodeMultiReader.m in Sources */,
 				0410711D1C59A8F300D6D958 /* YXSignView.m in Sources */,
 				04646CBE1C59AB6100D6DE13 /* ZXAI013x0x1xDecoder.m in Sources */,
@@ -2708,9 +2711,11 @@
 				04646C9D1C59AB6100D6DE13 /* ZXResultPoint.m in Sources */,
 				04646CD91C59AB6100D6DE13 /* ZXCode128Writer.m in Sources */,
 				04646C6A1C59AB6100D6DE13 /* ZXSMSParsedResult.m in Sources */,
+				044E29561C5B61E600A4AAD9 /* JSONAPI.m in Sources */,
 				0410710A1C59A8F300D6D958 /* YXTaskAttachment.m in Sources */,
 				04646C741C59AB6100D6DE13 /* ZXVEventResultParser.m in Sources */,
 				04646D0B1C59AB6100D6DE13 /* ZXQRCodeDataMask.m in Sources */,
+				044E29521C5B61E600A4AAD9 /* JSONModelArray.m in Sources */,
 				04646C761C59AB6100D6DE13 /* ZXVINResultParser.m in Sources */,
 				04646CB61C59AB6100D6DE13 /* ZXMaxiCodeReader.m in Sources */,
 				041070C61C59A8F300D6D958 /* AFURLSessionManager.m in Sources */,
@@ -2720,12 +2725,12 @@
 				04646C5C1C59AB6100D6DE13 /* ZXEmailAddressParsedResult.m in Sources */,
 				04646CC11C59AB6100D6DE13 /* ZXAI01decoder.m in Sources */,
 				04646CFD1C59AB6100D6DE13 /* ZXPDF417Detector.m in Sources */,
+				044E29581C5B61E600A4AAD9 /* JSONModel+networking.m in Sources */,
 				04646C571C59AB6100D6DE13 /* ZXAddressBookDoCoMoResultParser.m in Sources */,
 				041070ED1C59A8F300D6D958 /* YXMerchantDetailInfo.m in Sources */,
 				04646C5A1C59AB6100D6DE13 /* ZXBookmarkDoCoMoResultParser.m in Sources */,
 				04646C901C59AB6100D6DE13 /* ZXPerspectiveTransform.m in Sources */,
 				041071051C59A8F300D6D958 /* YXTaskOrderCell.m in Sources */,
-				041070D01C59A8F300D6D958 /* JSONKeyMapper.m in Sources */,
 				04646CB31C59AB6100D6DE13 /* ZXMaxiCodeBitMatrixParser.m in Sources */,
 				04646D1D1C59AB6100D6DE13 /* ZXQRCodeMatrixUtil.m in Sources */,
 				04646CA21C59AB6100D6DE13 /* ZXDataMatrixDecoder.m in Sources */,
@@ -2761,7 +2766,6 @@
 				04646C841C59AB6100D6DE13 /* ZXBitMatrix.m in Sources */,
 				04646C811C59AB6100D6DE13 /* ZXReedSolomonDecoder.m in Sources */,
 				041070D91C59A8F300D6D958 /* SDWebImageDownloaderOperation.m in Sources */,
-				041070CA1C59A8F300D6D958 /* JSONModelClassProperty.m in Sources */,
 				041070B51C59A8F300D6D958 /* YXPredictController.m in Sources */,
 				041070F81C59A8F300D6D958 /* YXQueryOrderListResponse.m in Sources */,
 				041071181C59A8F300D6D958 /* YXDatePicker.m in Sources */,
@@ -2792,6 +2796,7 @@
 				041071121C59A8F300D6D958 /* YXTaskSurveyFragment.m in Sources */,
 				041071031C59A8F300D6D958 /* YXMerchantCell.m in Sources */,
 				041071101C59A8F300D6D958 /* YXTaskRepairFragment.m in Sources */,
+				044E29591C5B61E600A4AAD9 /* JSONKeyMapper.m in Sources */,
 				04646C8D1C59AB6100D6DE13 /* ZXGridSampler.m in Sources */,
 				04646CB41C59AB6100D6DE13 /* ZXMaxiCodeDecodedBitStreamParser.m in Sources */,
 				04646C4A1C59AB6100D6DE13 /* ZXAztecDetector.m in Sources */,
@@ -2816,6 +2821,7 @@
 				04646C931C59AB6100D6DE13 /* ZXBinaryBitmap.m in Sources */,
 				04646C641C59AB6100D6DE13 /* ZXISBNResultParser.m in Sources */,
 				0410709B1C59A8F300D6D958 /* UIScrollView+Extension.m in Sources */,
+				044E29551C5B61E600A4AAD9 /* NSArray+JSONModel.m in Sources */,
 				04646C451C59AB6100D6DE13 /* AVCamUtilities.m in Sources */,
 				04646CD81C59AB6100D6DE13 /* ZXCode128Reader.m in Sources */,
 				04646C8E1C59AB6100D6DE13 /* ZXHybridBinarizer.m in Sources */,
@@ -2823,14 +2829,12 @@
 				04646CAB1C59AB6100D6DE13 /* ZXDataMatrixErrorCorrection.m in Sources */,
 				04646C891C59AB6100D6DE13 /* ZXDecoderResult.m in Sources */,
 				04646C7B1C59AB6100D6DE13 /* ZXImage.m in Sources */,
-				041070CC1C59A8F300D6D958 /* NSArray+JSONModel.m in Sources */,
 				04646C4D1C59AB6100D6DE13 /* ZXAztecEncoder.m in Sources */,
 				041070D61C59A8F300D6D958 /* SDWebImageCompat.m in Sources */,
 				04646C6B1C59AB6100D6DE13 /* ZXSMSTOMMSTOResultParser.m in Sources */,
 				04646CBD1C59AB6100D6DE13 /* ZXAI01393xDecoder.m in Sources */,
 				04646CF61C59AB6100D6DE13 /* ZXPDF417Codeword.m in Sources */,
 				041070C41C59A8F300D6D958 /* AFURLRequestSerialization.m in Sources */,
-				041070C91C59A8F300D6D958 /* JSONModelArray.m in Sources */,
 				041070BB1C59A8F300D6D958 /* format.c in Sources */,
 				04646CBF1C59AB6100D6DE13 /* ZXAI013x0xDecoder.m in Sources */,
 				04646CF11C59AB6100D6DE13 /* ZXModulusPoly.m in Sources */,
@@ -2847,7 +2851,6 @@
 				041070961C59A8F300D6D958 /* MBProgressHUD+Extension.m in Sources */,
 				041070E11C59A8F300D6D958 /* UIImageView+WebCache.m in Sources */,
 				04646D101C59AB6100D6DE13 /* ZXQRCodeFormatInformation.m in Sources */,
-				041070C81C59A8F300D6D958 /* JSONModel.m in Sources */,
 				04646C7C1C59AB6100D6DE13 /* ZXMathUtils.m in Sources */,
 				04646CFC1C59AB6100D6DE13 /* ZXPDF417ScanningDecoder.m in Sources */,
 				04646CD71C59AB6100D6DE13 /* ZXCodaBarWriter.m in Sources */,
@@ -2922,15 +2925,14 @@
 				041070B91C59A8F300D6D958 /* YXShotViewController.m in Sources */,
 				041070DD1C59A8F300D6D958 /* UIImage+GIF.m in Sources */,
 				04646C491C59AB6100D6DE13 /* ZXAztecDecoder.m in Sources */,
-				041070CF1C59A8F300D6D958 /* JSONModel+networking.m in Sources */,
 				04646CFE1C59AB6100D6DE13 /* ZXPDF417DetectorResult.m in Sources */,
 				041070F51C59A8F300D6D958 /* YXQueryMerchantDetailResponse.m in Sources */,
 				04646CDA1C59AB6100D6DE13 /* ZXCode39Reader.m in Sources */,
 				041070F71C59A8F300D6D958 /* YXQueryOrderDetailResponse.m in Sources */,
 				041070BC1C59A8F300D6D958 /* YXEncryptHelper.m in Sources */,
 				04646C861C59AB6100D6DE13 /* ZXBoolArray.m in Sources */,
+				044E29541C5B61E600A4AAD9 /* JSONModelError.m in Sources */,
 				04646CC81C59AB6100D6DE13 /* ZXRSSExpandedDecodedNumeric.m in Sources */,
-				041070CB1C59A8F300D6D958 /* JSONModelError.m in Sources */,
 				04646CF91C59AB6100D6DE13 /* ZXPDF417DetectionResult.m in Sources */,
 				04646CE71C59AB6100D6DE13 /* ZXOneDReader.m in Sources */,
 				04646D041C59AB6100D6DE13 /* ZXPDF417HighLevelEncoder.m in Sources */,
@@ -2969,10 +2971,12 @@
 				04646CBA1C59AB6100D6DE13 /* ZXAI013103decoder.m in Sources */,
 				04646C591C59AB6100D6DE13 /* ZXBizcardResultParser.m in Sources */,
 				04646D0E1C59AB6100D6DE13 /* ZXQRCodeDecoderMetaData.m in Sources */,
+				044E29531C5B61E600A4AAD9 /* JSONModelClassProperty.m in Sources */,
 				04646D1B1C59AB6100D6DE13 /* ZXQRCodeEncoder.m in Sources */,
 				041070F11C59A8F300D6D958 /* YXTermInfo.m in Sources */,
 				04646CC61C59AB6100D6DE13 /* ZXRSSExpandedDecodedChar.m in Sources */,
 				04646CF81C59AB6100D6DE13 /* ZXPDF417DecodedBitStreamParser.m in Sources */,
+				044E29511C5B61E600A4AAD9 /* JSONModel.m in Sources */,
 				04646D121C59AB6100D6DE13 /* ZXQRCodeVersion.m in Sources */,
 				04646C651C59AB6100D6DE13 /* ZXParsedResult.m in Sources */,
 			);

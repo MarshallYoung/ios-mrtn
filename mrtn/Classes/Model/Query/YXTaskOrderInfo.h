@@ -15,7 +15,7 @@
 #define TASK_REPAIR 007 // 报修任务单
 #define TASK_APPLY 009 // 装机申请任务单
 #define TASK_INSTALL 008 // 装机任务单
-#define TASK_RISK 010 // 补充进件材料单
+#define TASK_RISK 10 // 补充进件材料单 010
 
 #import "JSONModel.h"
 #import "YXTaskTrainDetail.h"
