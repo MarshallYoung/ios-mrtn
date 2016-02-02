@@ -6,12 +6,14 @@
 //
 
 #import "YXNavigationController.h"
-#import "YXLoginController.h"
 
 @implementation YXNavigationController
 
-// 第一次使用类时候调用
+/**
+ *  初始化时调用
+ */
 + (void)initialize {
+    [super initialize];
     
     [self setNavigationTheme];
     [self setBarItemTheme];
@@ -27,7 +29,12 @@
     
 }
 
-// 场景切换执行动画
+/**
+ *  切换场景执行动画
+ *
+ *  @param viewController 视图控制器
+ *  @param animated       是否执行动画
+ */
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     
     if (self.viewControllers.count > 0) {
@@ -38,7 +45,9 @@
     
 }
 
-// 设置导航栏主题
+/**
+ *  设置导航栏主题
+ */
 + (void)setNavigationTheme {
     
     UINavigationBar *appearance = [UINavigationBar appearance];// 得到当前主题
@@ -49,7 +58,9 @@
     
 }
 
-// 设置导航按钮主题
+/**
+ *  设置导航栏按钮主题
+ */
 + (void)setBarItemTheme {
     
     UIBarButtonItem *appearance = [UIBarButtonItem appearance];
@@ -58,10 +69,14 @@
 
 }
 
-// 设置状态栏风格
--(UIStatusBarStyle)preferredStatusBarStyle {
+/**
+ *  设置状态栏风格
+ *
+ *  @return 状态风格
+ */
+- (UIStatusBarStyle)preferredStatusBarStyle {
     
-    return UIStatusBarStyleLightContent;// 返回白色状态栏
+    return UIStatusBarStyleLightContent;// 白色状态栏
     
 }
 

@@ -107,7 +107,7 @@ char	*ReverseString(char *s)
 
 	memset(buffer,0,sizeof(buffer));
 
-	len=strlen(s);
+	len=(int)strlen(s);
 
 	for(i=0;i<len;i++) buffer[i]=s[(len-1)-i];
 
@@ -206,7 +206,7 @@ int	DBCCaseToSBCCase(BYTE *src,BYTE *dst,int size)
 }
 int	FormatData(BYTE *source,BYTE *target,int len,int op)
 {
-	int	i,dlen;
+	int	i,dlen = 0;
 
 	switch ( op ) 
 	{
@@ -268,7 +268,7 @@ char	*UpperAmount(char  *amount)
 	if (sp==NULL)	strcat(buffer,".");
 
 	sp=strchr(buffer,'.');
-	len=sp-buffer;
+	len=(int)(sp-buffer);
 
 	for(i=0;*(buffer+i)!=0;i++)
 	{
@@ -470,12 +470,12 @@ void   Substitute(char   *pInput,   char   *pOutput,   char   *pSrc,   char   *p
 	int           nSrcLen,   nDstLen,   nLen; 
 	
 	//   指向输入字符串的游动指针. 
-	pi   =   pInput;         
-	//   指向输出字符串的游动指针. 
-	po   =   pOutput; 
+    pi = pInput;
+	//   指向输出字符串的游动指针.
+    po = pOutput;
 	//   计算被替换串和替换串的长度. 
-	nSrcLen   =   strlen(pSrc); 
-	nDstLen   =   strlen(pDst); 
+    nSrcLen = (int)strlen(pSrc);
+    nDstLen = (int)strlen(pDst);
 	
 	if(pSrc == NULL) 
 	{

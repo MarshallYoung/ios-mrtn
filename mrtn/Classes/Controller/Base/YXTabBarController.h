@@ -10,6 +10,13 @@
 @interface YXTabBarController : UITabBarController
 
 @property (nonatomic,strong)YXLoginInfo *loginInfo;// 登录信息
-+ (instancetype)initWithLoginInfo:(YXLoginInfo *)loginInfo;// 用登录信息初始化
+/**
+ *  初始化方法
+ *
+ *  @param loginInfo 登录信息
+ *
+ *  @return 选项试图控制器
+ */
++ (instancetype)initWithLoginInfo:(YXLoginInfo *)loginInfo;
 
 @end

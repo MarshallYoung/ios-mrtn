@@ -35,15 +35,15 @@
     }
     // 标准des解密是16位的
     // 这个用的是3des双倍长度的解密,需要分2次进行
-    char *cKey = [key UTF8String];
+    char *cKey = (char *)[key UTF8String];
     NSString *seed1 = [qrcode substringWithRange:NSMakeRange(0, 16)];// 头
     NSString *seed2 = [qrcode substringWithRange:NSMakeRange(16, 16)];// 尾巴
     // 1次解密
-    char *source1 = [seed1 UTF8String];
+    char *source1 = (char *)[seed1 UTF8String];
     char target1[16] = "";// 1次结果
     Soft3DESASC(source1, cKey, DECRYPT, target1);
     // 2次解密
-    char *source2 = [seed2 UTF8String];
+    char *source2 = (char *)[seed2 UTF8String];
     char target2[16] = "";// 2次结果
     Soft3DESASC(source2, cKey, DECRYPT, target2);
     char target[23] = "";// 接受2次的结果

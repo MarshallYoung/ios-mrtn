@@ -9,45 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "mrtn/Classes/Controller/Query/Order/YXOrderDetailController.m"
-            timestampString = "475987319.113129"
+            filePath = "mrtn/Classes/Controller/Query/Merchant/YXMerchantListController.m"
+            timestampString = "476075911.610272"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
-            landmarkName = "-uploadInfo"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "mrtn/Classes/Controller/Query/Order/YXOrderDetailController.m"
-            timestampString = "475987458.088697"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
-            landmarkName = "-uploadInfo"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "mrtn/Classes/Controller/Query/Order/YXOrderDetailController.m"
-            timestampString = "475987471.904416"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
-            landmarkName = "-uploadInfo"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-query:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

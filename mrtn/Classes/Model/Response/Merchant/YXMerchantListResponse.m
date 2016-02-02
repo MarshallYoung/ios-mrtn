@@ -5,9 +5,9 @@
 //  Copyright © 2015年 YusysTechnologies. All rights reserved.
 //
 
-#import "YXQueryMerchantBookResponse.h"
+#import "YXMerchantListResponse.h"
 
-@implementation YXQueryMerchantBookResponse
+@implementation YXMerchantListResponse
 
 
 @end

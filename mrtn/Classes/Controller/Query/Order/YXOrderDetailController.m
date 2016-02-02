@@ -25,6 +25,7 @@
 #import "YXUploadImageResponse.h"
 #import "YXSignBoard.h"
 #import "YXAlertDialog.h"
+#import "AFNetworking.h"
 
 @interface YXOrderDetailController ()<MBProgressHUDDelegate>
 

@@ -7,7 +7,7 @@
 
 #import "YXHomepageController.h"
 #import "YXTabBarController.h"
-#import "YXQueryMcBookController.h"
+#import "YXMerchantListController.h"
 #import "YXScanViewController.h"
 #import "YXOrderListController.h"
 #import "YXControllerInfo.h"
@@ -55,7 +55,7 @@
 
 - (IBAction)pushToQuery:(id)sender {
     
-    YXQueryMcBookController *controller = [[YXQueryMcBookController alloc] init];
+    YXMerchantListController *controller = [[YXMerchantListController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
     
 }

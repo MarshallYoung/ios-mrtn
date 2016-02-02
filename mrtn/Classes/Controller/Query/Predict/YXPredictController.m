@@ -13,6 +13,7 @@
 #import "YXPredictResponse.h"
 #import "YXTaskOrderCell.h"
 #import "YXDatePicker.h"
+#import "AFNetworking.h"
 
 @interface YXPredictController ()<MBProgressHUDDelegate,UITableViewDataSource,UITableViewDelegate>
 

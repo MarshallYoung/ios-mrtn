@@ -6,7 +6,6 @@
 //
 
 #import "YXViewController.h"
-#import "YXNavigationController.h"
 
 @interface YXLoginController : YXViewController
 

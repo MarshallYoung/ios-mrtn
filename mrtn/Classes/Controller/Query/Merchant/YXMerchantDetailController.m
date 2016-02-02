@@ -5,13 +5,14 @@
 //  Copyright © 2015年 YusysTechnologies. All rights reserved.
 //
 
-#import "YXMcDetailController.h"
+#import "YXMerchantDetailController.h"
 #import "MBProgressHUD+Extension.h"
 #import "YXQueryMerchantDetailResponse.h"
 #import "YXTermCell.h"
 #import "YXURLHelper.h"
+#import "AFNetworking.h"
 
-@interface YXMcDetailController () <MBProgressHUDDelegate>
+@interface YXMerchantDetailController () <MBProgressHUDDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;// 根ScrollView
 @property (strong, nonatomic) IBOutlet UILabel *mcIdL;// 商户编号
@@ -34,7 +35,7 @@
 @end
 
 
-@implementation YXMcDetailController {
+@implementation YXMerchantDetailController {
     
     YXMerchantDetailInfo *merchantDetailInfo;// 商户详细信息
     NSMutableArray<YXTermInfo> *arr;// 商户绑定的机具信息集合
@@ -129,16 +130,13 @@
     for (YXTermInfo *info in arr) {
         [self.scrollView addBottomSubview:[YXTermCell initWithTermInfo:info]];
     }
-    CGSize size = self.scrollView.contentSize;
-    YXLog(@"old content size = %f , %f", size.width, size.height);
-    self.scrollView.contentSize = CGSizeMake(size.width, 1000);
-    YXLog(@"new content size = %f , %f", self.scrollView.contentSize.width, self.scrollView.contentSize.height);
+    
 }
 
 // 通过商户信息初始化
 + (instancetype)initWithMerchantInfo:(YXMerchantInfo *)merchantInfo {
     
-    YXMcDetailController *detailVC = [[YXMcDetailController alloc] init];
+    YXMerchantDetailController *detailVC = [[YXMerchantDetailController alloc] init];
     detailVC.merchantInfo = merchantInfo;
     return detailVC;
     

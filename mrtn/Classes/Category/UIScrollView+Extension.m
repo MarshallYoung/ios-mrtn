@@ -29,10 +29,5 @@
     
 }
 
--(void)selectAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
-}
-
 
 @end

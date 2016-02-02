@@ -9,6 +9,15 @@
 
 @interface MBProgressHUD (Extension)
 
+/**
+ *  显示读取动画
+ *
+ *  @param controller 视图控制器
+ *  @param string     显示的信息
+ *
+ *  @return 登录框
+ */
++ (instancetype)showHUDAddedTo:(UIViewController<MBProgressHUDDelegate> *)controller text:(NSString *)string;
 + (void)showText:(NSString *)string;// 显示文字
 + (void)showSuccess:(NSString *)string;// 显示对号和文字
 + (void)showFail:(NSString *)string;// 显示错号和文字

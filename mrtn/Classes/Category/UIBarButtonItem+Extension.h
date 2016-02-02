@@ -7,7 +7,16 @@
 
 @interface UIBarButtonItem (Extension)
 
-/** 得到自定义导航按钮 */
+/**
+ *  自定义导航栏按钮
+ *
+ *  @param imageName          图片名
+ *  @param highlightImageName 点击图片名字
+ *  @param target             执行方法所在类
+ *  @param action             执行方法
+ *
+ *  @return 导航栏按钮
+ */
 + (UIBarButtonItem *)itemWithImageName:(NSString *)imageName highlightImageName:(NSString *)highlightImageName target:(id)target action:(SEL)action;
 
 @end

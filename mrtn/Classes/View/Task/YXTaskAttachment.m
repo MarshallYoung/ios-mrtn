@@ -99,7 +99,7 @@
 // 放大图片
 - (void)zoomImage:(UITapGestureRecognizer *)recognizer {
     
-    int index = recognizer.view.tag;
+    long index = recognizer.view.tag;
     NSString *fileName = fileNameArray[index];
     YXZoomImageController *controller = [YXZoomImageController initWithFileName:fileName];
     UIViewController *current = [self currentController];// 得到当前所在的控制器

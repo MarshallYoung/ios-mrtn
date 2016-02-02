@@ -6,12 +6,10 @@
 //
 
 #import "YXLoginController.h"
+#import "YXNetworkingManager.h"
 #import "AppDelegate.h"
 #import "YXTabBarController.h"
-#import "YXEncryptHelper.h" // 加密工具
-#import "YXURLHelper.h"
 #import "MBProgressHUD+Extension.h"
-#import "YXLoginResponse.h"
 
 @interface YXLoginController ()<UITextFieldDelegate,MBProgressHUDDelegate>
 
@@ -22,11 +20,7 @@
 @end
 
 
-@implementation YXLoginController{
-
-    MBProgressHUD *progress;// 提示
-    
-}
+@implementation YXLoginController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,42 +29,46 @@
     
 }
 
-// 登录
 - (IBAction)login:(id)sender {
     
     [self.view endEditing:YES];// 关闭虚拟键盘
     NSString *name = self.nameF.text;
-    NSString *pwd = self.pwdF.text;
-    if ([name isEmpty]) { // 用户名为空
+    NSString *pwd  = self.pwdF.text;
+    if ([name isEmpty]) {// 用户名为空
         [MBProgressHUD showFail:@"请输入用户名"];
         return;
     }
-    if ([pwd isEmpty]) { // 密码为空
+    if ([pwd isEmpty]) {// 密码为空
         [MBProgressHUD showFail:@"请输入密码"];
         return;
     }
-    // 显示读取框
-    progress = [MBProgressHUD showHUDAddedTo:self.view animated:YES];;
-    progress.delegate = self;// 设置代理,用于移除
-    progress.labelText = @"登录中...";// 设置文本
-    [self.view addSubview:progress];// 显示
-    // 发送请求
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer.timeoutInterval = 15;// 设置超时时间
-    NSDictionary *parameters = @{@"name":name ,@"pwd":[YXEncryptHelper md5HexDigest:pwd]};// 设置参数
-    [manager POST:URL_LOGIN parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
+    MBProgressHUD *progress = [MBProgressHUD showHUDAddedTo:self text:@"登录中..."];;// 登录读取框
+    YXLoginRequest *request = [YXLoginRequest requestWithName:name password:pwd];// 得到请求
+    [YXNetworkingManager loginWithRequest:request success:^(YXLoginResponse *response) {// 请求成功
         [progress hide:YES];// 隐藏读取框
-        YXLoginResponse *rsp = [[YXLoginResponse alloc] initWithDictionary:responseObject error:nil];
-        if (rsp.success) {// 登录成功
-            [self enterWithInfo:rsp.data];
-        }else {// 登录失败
-            [MBProgressHUD showFail:rsp.msg];
+        if (response.success) {// 登录成功
+            YXLoginInfo *loginInfo = response.data;// 得到登录信息
+            [self enterWithInfo:loginInfo];
+        } else {// 登录失败
+            [MBProgressHUD showFail:response.msg];
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(void) {
         [progress hide:YES];// 隐藏读取框
-        [MBProgressHUD showFail:@"服务器无响应,请联系服务人员"];
+        [MBProgressHUD show408];
     }];
+    
+}
+
+/**
+ *  进入主界面
+ *
+ *  @param loginInfo 登录信息
+ */
+- (void) enterWithInfo:(YXLoginInfo *)loginInfo {
+    
+    YXTabBarController *controller = [YXTabBarController initWithLoginInfo:loginInfo];
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    delegate.window.rootViewController = controller;
     
 }
 
@@ -83,15 +81,6 @@
         [self login:nil];
     };
     return YES;
-    
-}
-
-//  清空用户名密码,进入主界面
-- (void) enterWithInfo:(YXLoginInfo *)loginInfo {
-    
-    YXTabBarController *controller = [YXTabBarController initWithLoginInfo:loginInfo];
-    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    delegate.window.rootViewController = controller;
     
 }
 

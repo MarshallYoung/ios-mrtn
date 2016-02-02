@@ -81,7 +81,11 @@
     
 }
 
-// 得到当前view所在controller
+/**
+ *  得到所在视图控制器
+ *
+ *  @return 视图控制器
+ */
 - (UIViewController *)currentController {
     
     UIViewController *controller;
@@ -98,14 +102,18 @@
     
 }
 
-// 在底端添加subview
+/**
+ *  末尾添加子控件
+ *
+ *  @param subview 子控件
+ */
 - (void)addBottomSubview:(UIView *)subview {
     
     if (subview) {// 子控件不为空
-        subview.y = self.height;// 设置控件纵坐标
+        subview.y      = self.height;// 设置控件纵坐标
         CGSize newSize = self.size;// 得到尺寸
-        newSize.height += subview.height + MARGIN;// 设置ScrollView的滚动区域
-        self.size = newSize;
+        newSize.height += subview.height + MARGIN;// 变更尺寸
+        self.size      = newSize;
         [self addSubview:subview];
     }
     

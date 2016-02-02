@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YXQueryMcBookController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YXMerchantListController">
             <connections>
-                <outlet property="merchantId" destination="HYY-vY-Puo" id="lmB-Aw-67Q"/>
-                <outlet property="merchantName" destination="KMY-ml-rX0" id="Snq-18-tll"/>
+                <outlet property="mcIdF" destination="HYY-vY-Puo" id="J1r-I6-bIp"/>
+                <outlet property="mcNameF" destination="KMY-ml-rX0" id="JmR-vk-n3E"/>
                 <outlet property="table" destination="Jwy-xz-Hoc" id="nhS-Ud-9jc"/>
                 <outlet property="view" destination="M9g-Se-j2a" id="38h-3p-mVp"/>
             </connections>

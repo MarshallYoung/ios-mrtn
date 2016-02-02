@@ -13,6 +13,24 @@
 
 @implementation MBProgressHUD (Extension)
 
+/**
+ *  显示读取动画
+ *
+ *  @param controller 视图控制器
+ *  @param string     显示的信息
+ *
+ *  @return 登录框
+ */
++ (instancetype)showHUDAddedTo:(UIViewController<MBProgressHUDDelegate> *)controller text:(NSString *)string {
+    
+    MBProgressHUD *progress = [MBProgressHUD showHUDAddedTo:controller.view animated:YES];;
+    progress.delegate  = controller;// 设置代理,用于移除
+    progress.labelText = string;// 文本信息
+    [controller.view addSubview:progress];// 显示
+    return progress;
+    
+}
+
 // 显示文字
 + (void)showText:(NSString *)string {
     

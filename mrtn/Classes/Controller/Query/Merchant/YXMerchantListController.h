@@ -7,6 +7,6 @@
 
 #import "YXViewController.h"
 
-@interface YXQueryMcBookController : YXViewController
+@interface YXMerchantListController : YXViewController
 
 @end

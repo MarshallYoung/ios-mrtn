@@ -21,6 +21,9 @@
     if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
         return YES;
     }
+    if ([string isEqual:@""]) {
+        return YES;
+    }
     return NO;
     
 }
@@ -31,7 +34,11 @@
     
 }
 
-// 产生随机16位字符串
+/**
+ *  产生16位随机大写英文字符串
+ *
+ *  @return 16位字符串
+ */
 + (NSString *)random16bitString {
     
     char data[16];

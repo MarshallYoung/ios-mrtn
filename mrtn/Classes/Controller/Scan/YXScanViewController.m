@@ -14,6 +14,7 @@
 #import "YXQueryMachineResponse.h"
 #import "YXUploadScanResponse.h"
 #import "YXEncryptHelper.h"
+#import "AFNetworking.h"
 
 @interface YXScanViewController ()<CLLocationManagerDelegate,MBProgressHUDDelegate>
 

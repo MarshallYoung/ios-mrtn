@@ -13,14 +13,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] init];
-    self.window.frame = [UIScreen mainScreen].bounds;
+    self.window.frame = [UIScreen mainScreen].bounds;// 铺满全屏
     self.window.rootViewController = [self newLoginController];
     [self.window makeKeyAndVisible];// 前置界面
     return YES;
     
 }
 
-// 得到全新的登录界面,用于登录
+/**
+ *  得到全新的登录界面,用于登录
+ *
+ *  @param YXNavigationController 导航控制器
+ *
+ *  @return 导航控制器
+ */
 - (YXNavigationController *)newLoginController {
     
     YXLoginController *controller = [[YXLoginController alloc] init];// 初始化登录界面

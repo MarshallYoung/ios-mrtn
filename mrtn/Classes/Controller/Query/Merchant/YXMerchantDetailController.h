@@ -7,7 +7,7 @@
 
 #import "YXMerchantInfo.h"
 
-@interface YXMcDetailController : UIViewController
+@interface YXMerchantDetailController : UIViewController
 
 @property (nonatomic,strong)YXMerchantInfo *merchantInfo;// 商户信息
 + (instancetype)initWithMerchantInfo:(YXMerchantInfo *)merchantInfo;// 通过商户信息初始化

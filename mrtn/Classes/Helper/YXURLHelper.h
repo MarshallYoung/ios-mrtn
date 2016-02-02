@@ -5,8 +5,6 @@
 //  Copyright © 2015年 YusysTechnologies. All rights reserved.
 //
 
-#import "AFNetworking.h"
-
 // 服务器地址
 #define URL @"http://182.50.120.70:6061/mms/"
 // 登录

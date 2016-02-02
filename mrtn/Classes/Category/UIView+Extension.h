@@ -11,8 +11,18 @@
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
-@property (nonatomic, assign) CGSize size;
-- (UIViewController *)currentController;// 得到view所在控制器
-- (void)addBottomSubview:(UIView *)subview;// 末尾添加
+@property (nonatomic, assign) CGSize  size;
+/**
+ *  得到所在视图控制器
+ *
+ *  @return 视图控制器
+ */
+- (UIViewController *)currentController;
+/**
+ *  末尾添加子控件
+ *
+ *  @param subview 子控件
+ */
+- (void)addBottomSubview:(UIView *)subview;
 
 @end

@@ -11,6 +11,7 @@
 #import "YXQueryTaskOrderResponse.h"
 #import "YXTaskOrderCell.h"
 #import "YXOrderDetailController.h"
+#import "AFNetworking.h"
 
 @interface YXOrderListDetailController ()<MBProgressHUDDelegate,UITableViewDataSource,UITableViewDelegate>
 
