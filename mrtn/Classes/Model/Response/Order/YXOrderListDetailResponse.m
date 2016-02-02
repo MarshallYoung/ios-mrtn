@@ -5,8 +5,8 @@
 //  Copyright © 2015年 YusysTechnologies. All rights reserved.
 //
 
-#import "YXQueryTaskOrderResponse.h"
+#import "YXOrderListDetailResponse.h"
 
-@implementation YXQueryTaskOrderResponse
+@implementation YXOrderListDetailResponse
 
 @end

@@ -28,7 +28,7 @@
 
 @implementation YXOrderListController {
     
-    NSMutableArray<YXOrderListInfo> *arr;// 结果集合
+    NSMutableArray<YXOrderListInfo> *array;// 结果
     
 }
 
@@ -64,7 +64,7 @@
         [progress hide:YES];// 隐藏读取框
         YXOrderListResponse *response = [[YXOrderListResponse alloc] initWithDictionary:responseObject error:nil];
         if (response.success) {
-            arr = response.data;// 设置数据
+            array = response.data;// 设置数据
             [self.table reloadData];
         }else{
             [MBProgressHUD showFail:response.msg];// 显示错误消息
@@ -86,7 +86,7 @@
 // 显示多少条数据
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return arr.count;
+    return array.count;
     
 }
 
@@ -94,15 +94,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     YXBacklogCell *cell = [YXBacklogCell cellWithTableView:self.table];
-    cell.orderListInfo =arr[indexPath.row];
+    cell.orderListInfo  = array[indexPath.row];
     return cell;
     
 }
 
 // 点击cell执行方法
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    YXOrderListDetailController *controller = [YXOrderListDetailController initWithOrderListInfo:arr[indexPath.row]];
+    YXOrderListDetailController *controller = [YXOrderListDetailController initWithOrderListInfo:array[indexPath.row]];
     controller.controllerInfo = _controllerInfo;
     [self.navigationController pushViewController:controller animated:YES];
     

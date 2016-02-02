@@ -1,5 +1,5 @@
 //
-//  任务单列表详情,上级是YXOrderListController
+//  任务单列表详情
 //
 //  Created by Mac on 15/12/23.
 //  Copyright © 2015年 YusysTechnologies. All rights reserved.
@@ -10,8 +10,16 @@
 
 @interface YXOrderListDetailController : UIViewController
 
-@property (nonatomic,strong)YXControllerInfo *controllerInfo;// 视图控制器信息
-@property (nonatomic,strong)YXOrderListInfo *orderInfo;// 任务单信息
-+ (instancetype)initWithOrderListInfo:(YXOrderListInfo *)orderInfo;// 通过任务单信息初始化
+@property (nonatomic, strong) YXControllerInfo *controllerInfo;// 视图控制器信息
+@property (nonatomic, strong) YXOrderListInfo  *orderInfo;// 任务单信息
+/**
+ *  初始化方法
+ *
+ *  @param orderInfo 任务单信息
+ *
+ *  @return 视图控制器
+ */
++ (instancetype)initWithOrderListInfo:(YXOrderListInfo *)orderInfo;
+
 
 @end

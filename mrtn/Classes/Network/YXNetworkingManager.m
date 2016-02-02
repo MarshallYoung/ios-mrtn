@@ -12,6 +12,7 @@
 #import "YXMerchantListRequest.h"
 #import "YXMerchantDetailRequest.h"
 #import "YXOrderListRequest.h"
+#import "YXOrderListDetailRequest.h"
 
 @implementation YXNetworkingManager
 
@@ -46,11 +47,11 @@
     
     NSString *url;// 请求地址
     NSDictionary *parameters;// 设置参数
-    if ([request isMemberOfClass:[YXMerchantListRequest class]]) {// 查询商户列表
+    if ([request isMemberOfClass:[YXMerchantListRequest class]]) {// 商户列表
         url = URL_MERCHANT_LIST;
         YXMerchantListRequest *query = (YXMerchantListRequest *)request;
         parameters = @{@"mcId":query.mcId, @"mcName":query.mcName, @"currentPageNum":query.currentPageNum, @"pageSize":query.pageSize};
-    } else if ([request isMemberOfClass:[YXMerchantDetailRequest class]]) {// 查询商户详情
+    } else if ([request isMemberOfClass:[YXMerchantDetailRequest class]]) {// 商户详情
         url = URL_MERCHANT_DETAIL;
         YXMerchantDetailRequest *query = (YXMerchantDetailRequest *)request;
         parameters = @{@"id":query.theId};
@@ -58,6 +59,10 @@
         url = URL_ORDER_LIST;
         YXOrderListRequest *query = (YXOrderListRequest *)request;
         parameters = @{@"mcId":query.mcId, @"mcName":query.mcName, @"disptTime":query.disptTime, @"taskStatus":query.taskStatus, @"instId":@"0", @"UserId":@""};
+    } else if ([request isMemberOfClass:[YXOrderListDetailRequest class]]) {// 任务单列表详情
+        url = URL_ORDER_LIST_DETAIL;
+        YXOrderListDetailRequest *query = (YXOrderListDetailRequest *)request;
+        parameters = @{@"mcId":query.mcId, @"mcName":query.mcName, @"disptTime":@"", @"taskStatus":query.taskStatus, @"instId":@"", @"UserId":@""};
     }
     AFHTTPRequestOperationManager *manager = [self requestManager];
     [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {// 查询成功

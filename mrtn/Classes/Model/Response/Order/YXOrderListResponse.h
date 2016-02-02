@@ -12,6 +12,6 @@
 
 @property (nonatomic,assign) BOOL     success;// 是否查询成功
 @property (nonatomic,strong) NSString<Optional> *msg;// 消息提示
-@property (nonatomic,strong)NSMutableArray<YXOrderListInfo,Optional> *data;// 结果
+@property (nonatomic,strong) NSMutableArray<YXOrderListInfo, Optional> *data;// 结果
 
 @end

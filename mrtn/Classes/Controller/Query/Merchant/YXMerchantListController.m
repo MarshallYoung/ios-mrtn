@@ -27,7 +27,7 @@
 
 @implementation YXMerchantListController {
     
-    NSMutableArray<YXMerchantInfo> *arr;// 商户信息集合
+    NSMutableArray<YXMerchantInfo> *array;// 结果
     
 }
 
@@ -51,7 +51,7 @@
         [progress hide:YES];// 隐藏读取框
         YXMerchantListResponse *response = [[YXMerchantListResponse alloc] initWithDictionary:responseObject error:nil];// 得到响应
         if (response.success) {
-            arr = response.data;// 设置数据
+            array = response.data;// 设置数据
             [self.table reloadData];// 刷新数据源
         }else{
             [MBProgressHUD showFail:response.msg];// 显示错误消息
@@ -73,7 +73,7 @@
 // 显示多少条数据
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return arr.count;
+    return array.count;
     
 }
 
@@ -81,7 +81,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     YXMerchantCell *cell = [YXMerchantCell cellWithTableView:self.table];
-    cell.merchantInfo = arr[indexPath.row];
+    cell.merchantInfo    = array[indexPath.row];
     return cell;
     
 }
@@ -89,7 +89,7 @@
 // 点击cell执行方法
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    YXMerchantDetailController *controller = [YXMerchantDetailController initWithMerchantInfo:arr[indexPath.row]];
+    YXMerchantDetailController *controller = [YXMerchantDetailController initWithMerchantInfo:array[indexPath.row]];
     [self.navigationController pushViewController:controller animated:YES];
     
 }

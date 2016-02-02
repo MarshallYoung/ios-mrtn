@@ -9,7 +9,7 @@
 #import "YXPredictController.h"
 #import "MBProgressHUD+Extension.h"
 #import "YXURLHelper.h"
-#import "YXQueryTaskOrderResponse.h"
+#import "YXOrderListDetailResponse.h"
 #import "YXPredictResponse.h"
 #import "YXTaskOrderCell.h"
 #import "YXDatePicker.h"
@@ -100,11 +100,11 @@
     // 设置请求头,<<调试DEBUG>>用
     [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"android_request"];
     NSDictionary *parameters = @{@"mcId":@"",@"taskStatus":@"1",@"mcName":mcName,@"disptTime":disptTime,@"type":@"3"};// 设置参数
-    [manager POST:URL_ORDERLIST_DETAIL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:URL_ORDER_LIST_DETAIL parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         YXLog(@"%@",responseObject);
         [progress hide:YES];// 隐藏读取框
-        YXQueryTaskOrderResponse *rsp = [[YXQueryTaskOrderResponse alloc] initWithDictionary:responseObject error:nil];
+        YXOrderListDetailResponse *rsp = [[YXOrderListDetailResponse alloc] initWithDictionary:responseObject error:nil];
         if (rsp.success) {
             arr = rsp.data;// 设置数据
             [self.table reloadData];

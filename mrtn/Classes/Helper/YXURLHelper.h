@@ -9,18 +9,21 @@
 #define URL @"http://182.50.120.70:6061/mms/"
 // 登录
 #define URL_LOGIN [NSString stringWithFormat:@"%@login/appLogin",URL]
-// 商户信息
-#define URL_MERCHANT_LIST [NSString stringWithFormat:@"%@mcinfo/query",URL]
+
 // 商户列表
-#define URL_MACHINE [NSString stringWithFormat:@"%@machine/list",URL]
-// 单个商户
+#define URL_MERCHANT_LIST [NSString stringWithFormat:@"%@mcinfo/query",URL]
+// 商户详情
 #define URL_MERCHANT_DETAIL [NSString stringWithFormat:@"%@mcinfo/queryOne",URL]
 // 商户列表
-#define URL_ORDER_LIST [NSString stringWithFormat:@"%@taskOrderService/getGroupMcInfo",URL]
+#define URL_MACHINE [NSString stringWithFormat:@"%@machine/list",URL]
+
 // 任务单列表
-#define URL_ORDERLIST_DETAIL [NSString stringWithFormat:@"%@taskOrderService/getOrderList",URL]
+#define URL_ORDER_LIST [NSString stringWithFormat:@"%@taskOrderService/getGroupMcInfo",URL]
+// 任务单列表详情
+#define URL_ORDER_LIST_DETAIL [NSString stringWithFormat:@"%@taskOrderService/getOrderList",URL]
 // 任务单详情
 #define URL_ORDER_DETAIL [NSString stringWithFormat:@"%@taskOrder/queryOne",URL]
+
 // 图片上传
 #define URL_IMAGE_UPLOAD [NSString stringWithFormat:@"%@servlet/Upload",URL]
 // 图片下载
