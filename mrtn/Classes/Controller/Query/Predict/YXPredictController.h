@@ -5,8 +5,6 @@
 //  Copyright © 2016年 YusysTechnologies. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface YXPredictController : UIViewController
 
 @end

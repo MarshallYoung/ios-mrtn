@@ -54,12 +54,12 @@
     YXMerchantDetailRequest *request = [YXMerchantDetailRequest requestWithId:_merchantInfo.theId];
     [YXNetworkingManager queryWithRequest:request success:^(id responseObject) {
         [progress hide:YES];// 隐藏读取框
-        YXMerchantDetailResponse *rsp = [[YXMerchantDetailResponse alloc] initWithDictionary:responseObject error:nil];// 得到响应
-        if (rsp.success) {
-            YXMerchantDetailInfo *info = rsp.data;
+        YXMerchantDetailResponse *response = [[YXMerchantDetailResponse alloc] initWithDictionary:responseObject error:nil];// 得到响应
+        if (response.success) {
+            YXMerchantDetailInfo *info = response.data;
             [self displayInfo:info];
         }else{
-            [MBProgressHUD showFail:rsp.msg];// 显示错误消息
+            [MBProgressHUD showFail:response.msg];// 显示错误消息
         }
     } failure:^(void) {
         [progress hide:YES];// 隐藏读取框

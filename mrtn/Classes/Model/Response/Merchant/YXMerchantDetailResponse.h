@@ -10,9 +10,9 @@
 
 @interface YXMerchantDetailResponse : JSONModel
 
-@property (nonatomic,assign)BOOL success;
-@property (nonatomic,strong)NSString<Optional> *msg;
-@property (nonatomic,strong)NSString<Optional> *flag;
-@property (nonatomic,strong)YXMerchantDetailInfo<Optional> *data;
+@property (nonatomic,assign) BOOL     success;// 是否查询成功
+@property (nonatomic,strong) NSString<Optional> *msg;// 消息
+@property (nonatomic,strong) NSString<Optional> *flag;
+@property (nonatomic,strong)YXMerchantDetailInfo<Optional> *data;// 结果
 
 @end

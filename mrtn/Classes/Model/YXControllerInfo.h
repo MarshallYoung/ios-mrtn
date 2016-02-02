@@ -5,13 +5,11 @@
 //  Copyright © 2015年 YusysTechnologies. All rights reserved.
 //
 
-#define ORDER_BACKLOG 0xff01 // 用于mode字段,表示进入待办列表
-#define ORDER_PROCESSED 0xff02 // 用于mode字段,表示进入办结列表
-
-#import <Foundation/Foundation.h>
+#define ORDER_BACKLOG   @"1"// 用于mode字段,表示进入待办列表
+#define ORDER_PROCESSED @"2"// 用于mode字段,表示进入办结列表
 
 @interface YXControllerInfo : NSObject
 
-@property (nonatomic,assign) int mode;// 视图控制器的模式
+@property (nonatomic, strong) NSString *mode;// 视图控制器的模式
 
 @end

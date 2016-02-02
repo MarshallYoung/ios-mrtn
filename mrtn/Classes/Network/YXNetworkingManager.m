@@ -11,6 +11,7 @@
 #import "YXURLHelper.h"
 #import "YXMerchantListRequest.h"
 #import "YXMerchantDetailRequest.h"
+#import "YXOrderListRequest.h"
 
 @implementation YXNetworkingManager
 
@@ -53,6 +54,10 @@
         url = URL_MERCHANT_DETAIL;
         YXMerchantDetailRequest *query = (YXMerchantDetailRequest *)request;
         parameters = @{@"id":query.theId};
+    } else if ([request isMemberOfClass:[YXOrderListRequest class]]) {// 任务单列表
+        url = URL_ORDER_LIST;
+        YXOrderListRequest *query = (YXOrderListRequest *)request;
+        parameters = @{@"mcId":query.mcId, @"mcName":query.mcName, @"disptTime":query.disptTime, @"taskStatus":query.taskStatus, @"instId":@"0", @"UserId":@""};
     }
     AFHTTPRequestOperationManager *manager = [self requestManager];
     [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {// 查询成功

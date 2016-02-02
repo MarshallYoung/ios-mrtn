@@ -7,9 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YXOrderListController">
             <connections>
-                <outlet property="disptTimeTF" destination="Zfe-4g-jie" id="lFX-WV-7a5"/>
-                <outlet property="mcIdTF" destination="QKP-nZ-7Bv" id="9CG-PZ-q6a"/>
-                <outlet property="mcNameTF" destination="rns-Aa-ktC" id="ip2-Uc-S8t"/>
+                <outlet property="disptTimeF" destination="Zfe-4g-jie" id="oQJ-rg-Wv3"/>
+                <outlet property="mcIdF" destination="QKP-nZ-7Bv" id="a0k-Ry-YDD"/>
+                <outlet property="mcNameF" destination="rns-Aa-ktC" id="xuF-Jr-1Jw"/>
                 <outlet property="table" destination="Vdd-V0-6HV" id="bSt-EV-vNX"/>
                 <outlet property="view" destination="6EM-Ab-827" id="EDe-u1-vUm"/>
             </connections>
@@ -77,12 +77,6 @@
                                 <action selector="query:" destination="-1" eventType="touchUpInside" id="Q8z-VA-EaQ"/>
                             </connections>
                         </button>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rns-Aa-ktC">
-                            <rect key="frame" x="83" y="75" width="287" height="30"/>
-                            <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJp-yL-qd2">
                             <rect key="frame" x="300" y="40" width="70" height="30"/>
                             <animations/>
@@ -100,6 +94,12 @@
                                 <action selector="datePicker:" destination="-1" eventType="touchUpInside" id="Gez-Hw-iD1"/>
                             </connections>
                         </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rns-Aa-ktC">
+                            <rect key="frame" x="83" y="75" width="287" height="30"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                     </subviews>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

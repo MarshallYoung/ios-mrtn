@@ -1,5 +1,5 @@
 //
-//  查询商户信息列表
+//  商户信息列表
 //
 //  Created by Mac on 15/11/16.
 //  Copyright © 2015年 YusysTechnologies. All rights reserved.
@@ -41,11 +41,12 @@
 // 查询
 - (IBAction)query:(id)sender {
     
+    
     [self.view endEditing:YES];
+    MBProgressHUD *progress = [MBProgressHUD showHUDAddedTo:self text:@"正在查询..."];// 读取框
     NSString *mcId   = self.mcIdF.text;// 得到ID
     NSString *mcName = self.mcNameF.text;// 得到商户名称
     YXMerchantListRequest *request = [YXMerchantListRequest requestWithId:mcId name:mcName];// 得到请求
-    MBProgressHUD *progress = [MBProgressHUD showHUDAddedTo:self text:@"正在查询..."];// 显示进度框
     [YXNetworkingManager queryWithRequest:request success:^(id responseObject) {
         [progress hide:YES];// 隐藏读取框
         YXMerchantListResponse *response = [[YXMerchantListResponse alloc] initWithDictionary:responseObject error:nil];// 得到响应
