@@ -363,8 +363,7 @@
 		04D6BA1F1C605B8C00006CE5 /* YXRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9DE1C605B8C00006CE5 /* YXRequest.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA201C605B8C00006CE5 /* YXLoginResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9E21C605B8C00006CE5 /* YXLoginResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA211C605B8C00006CE5 /* YXMerchantListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9E51C605B8C00006CE5 /* YXMerchantListResponse.m */; settings = {ASSET_TAGS = (); }; };
-		04D6BA221C605B8C00006CE5 /* YXQueryMerchantDetailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9E71C605B8C00006CE5 /* YXQueryMerchantDetailResponse.m */; settings = {ASSET_TAGS = (); }; };
-		04D6BA231C605B8C00006CE5 /* YXQueryMerchantResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9E91C605B8C00006CE5 /* YXQueryMerchantResponse.m */; settings = {ASSET_TAGS = (); }; };
+		04D6BA221C605B8C00006CE5 /* YXMerchantDetailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9E71C605B8C00006CE5 /* YXMerchantDetailResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA241C605B8C00006CE5 /* YXPredictResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9EC1C605B8C00006CE5 /* YXPredictResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA251C605B8C00006CE5 /* YXQueryOrderDetailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9EE1C605B8C00006CE5 /* YXQueryOrderDetailResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA261C605B8C00006CE5 /* YXQueryOrderListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9F01C605B8C00006CE5 /* YXQueryOrderListResponse.m */; settings = {ASSET_TAGS = (); }; };
@@ -385,6 +384,7 @@
 		04D6BA351C605B8C00006CE5 /* YXMachineInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6BA121C605B8C00006CE5 /* YXMachineInfo.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA361C605B8C00006CE5 /* YXTermInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6BA141C605B8C00006CE5 /* YXTermInfo.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA371C605B8C00006CE5 /* YXControllerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6BA161C605B8C00006CE5 /* YXControllerInfo.m */; settings = {ASSET_TAGS = (); }; };
+		04D6BA3A1C605F2600006CE5 /* YXMerchantDetailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6BA391C605F2600006CE5 /* YXMerchantDetailRequest.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1092,10 +1092,8 @@
 		04D6B9E21C605B8C00006CE5 /* YXLoginResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoginResponse.m; sourceTree = "<group>"; };
 		04D6B9E41C605B8C00006CE5 /* YXMerchantListResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMerchantListResponse.h; sourceTree = "<group>"; };
 		04D6B9E51C605B8C00006CE5 /* YXMerchantListResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMerchantListResponse.m; sourceTree = "<group>"; };
-		04D6B9E61C605B8C00006CE5 /* YXQueryMerchantDetailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXQueryMerchantDetailResponse.h; sourceTree = "<group>"; };
-		04D6B9E71C605B8C00006CE5 /* YXQueryMerchantDetailResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXQueryMerchantDetailResponse.m; sourceTree = "<group>"; };
-		04D6B9E81C605B8C00006CE5 /* YXQueryMerchantResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXQueryMerchantResponse.h; sourceTree = "<group>"; };
-		04D6B9E91C605B8C00006CE5 /* YXQueryMerchantResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXQueryMerchantResponse.m; sourceTree = "<group>"; };
+		04D6B9E61C605B8C00006CE5 /* YXMerchantDetailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMerchantDetailResponse.h; sourceTree = "<group>"; };
+		04D6B9E71C605B8C00006CE5 /* YXMerchantDetailResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMerchantDetailResponse.m; sourceTree = "<group>"; };
 		04D6B9EB1C605B8C00006CE5 /* YXPredictResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXPredictResponse.h; sourceTree = "<group>"; };
 		04D6B9EC1C605B8C00006CE5 /* YXPredictResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXPredictResponse.m; sourceTree = "<group>"; };
 		04D6B9ED1C605B8C00006CE5 /* YXQueryOrderDetailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXQueryOrderDetailResponse.h; sourceTree = "<group>"; };
@@ -1136,6 +1134,8 @@
 		04D6BA141C605B8C00006CE5 /* YXTermInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTermInfo.m; sourceTree = "<group>"; };
 		04D6BA151C605B8C00006CE5 /* YXControllerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXControllerInfo.h; sourceTree = "<group>"; };
 		04D6BA161C605B8C00006CE5 /* YXControllerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXControllerInfo.m; sourceTree = "<group>"; };
+		04D6BA381C605F2600006CE5 /* YXMerchantDetailRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMerchantDetailRequest.h; sourceTree = "<group>"; };
+		04D6BA391C605F2600006CE5 /* YXMerchantDetailRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMerchantDetailRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2439,10 +2439,10 @@
 		04D6B9C91C605B8C00006CE5 /* Merchant */ = {
 			isa = PBXGroup;
 			children = (
-				04D6B9CA1C605B8C00006CE5 /* YXMerchantDetailInfo.h */,
-				04D6B9CB1C605B8C00006CE5 /* YXMerchantDetailInfo.m */,
 				04D6B9CC1C605B8C00006CE5 /* YXMerchantInfo.h */,
 				04D6B9CD1C605B8C00006CE5 /* YXMerchantInfo.m */,
+				04D6B9CA1C605B8C00006CE5 /* YXMerchantDetailInfo.h */,
+				04D6B9CB1C605B8C00006CE5 /* YXMerchantDetailInfo.m */,
 			);
 			path = Merchant;
 			sourceTree = "<group>";
@@ -2484,6 +2484,8 @@
 			children = (
 				04D6B9D81C605B8C00006CE5 /* YXMerchantListRequest.h */,
 				04D6B9D91C605B8C00006CE5 /* YXMerchantListRequest.m */,
+				04D6BA381C605F2600006CE5 /* YXMerchantDetailRequest.h */,
+				04D6BA391C605F2600006CE5 /* YXMerchantDetailRequest.m */,
 			);
 			path = Merchant;
 			sourceTree = "<group>";
@@ -2527,10 +2529,8 @@
 			children = (
 				04D6B9E41C605B8C00006CE5 /* YXMerchantListResponse.h */,
 				04D6B9E51C605B8C00006CE5 /* YXMerchantListResponse.m */,
-				04D6B9E61C605B8C00006CE5 /* YXQueryMerchantDetailResponse.h */,
-				04D6B9E71C605B8C00006CE5 /* YXQueryMerchantDetailResponse.m */,
-				04D6B9E81C605B8C00006CE5 /* YXQueryMerchantResponse.h */,
-				04D6B9E91C605B8C00006CE5 /* YXQueryMerchantResponse.m */,
+				04D6B9E61C605B8C00006CE5 /* YXMerchantDetailResponse.h */,
+				04D6B9E71C605B8C00006CE5 /* YXMerchantDetailResponse.m */,
 			);
 			path = Merchant;
 			sourceTree = "<group>";
@@ -2749,6 +2749,7 @@
 				04646CE21C59AB6100D6DE13 /* ZXITFReader.m in Sources */,
 				041070C01C59A8F300D6D958 /* AFHTTPSessionManager.m in Sources */,
 				04646D1C1C59AB6100D6DE13 /* ZXQRCodeMaskUtil.m in Sources */,
+				04D6BA3A1C605F2600006CE5 /* YXMerchantDetailRequest.m in Sources */,
 				041070A21C59A8F300D6D958 /* YXLoginController.m in Sources */,
 				04646C951C59AB6100D6DE13 /* ZXDecodeHints.m in Sources */,
 				04646C5E1C59AB6100D6DE13 /* ZXEmailDoCoMoResultParser.m in Sources */,
@@ -2771,7 +2772,7 @@
 				04646C5D1C59AB6100D6DE13 /* ZXEmailAddressResultParser.m in Sources */,
 				04646D171C59AB6100D6DE13 /* ZXQRCodeFinderPatternFinder.m in Sources */,
 				04646C4F1C59AB6100D6DE13 /* ZXAztecSimpleToken.m in Sources */,
-				04D6BA221C605B8C00006CE5 /* YXQueryMerchantDetailResponse.m in Sources */,
+				04D6BA221C605B8C00006CE5 /* YXMerchantDetailResponse.m in Sources */,
 				04646D051C59AB6100D6DE13 /* ZXPDF417Common.m in Sources */,
 				04D6BA171C605B8C00006CE5 /* YXLoginInfo.m in Sources */,
 				041070DC1C59A8F300D6D958 /* UIButton+WebCache.m in Sources */,
@@ -3026,7 +3027,6 @@
 				04646C821C59AB6100D6DE13 /* ZXReedSolomonEncoder.m in Sources */,
 				0410711E1C59A8F300D6D958 /* YXTouchDrawView.m in Sources */,
 				04646CCF1C59AB6100D6DE13 /* ZXRSSExpandedRow.m in Sources */,
-				04D6BA231C605B8C00006CE5 /* YXQueryMerchantResponse.m in Sources */,
 				04D6BA211C605B8C00006CE5 /* YXMerchantListResponse.m in Sources */,
 				041071211C59A8F300D6D958 /* main.m in Sources */,
 				04646C441C59AB6100D6DE13 /* LBXScanViewStyle.m in Sources */,

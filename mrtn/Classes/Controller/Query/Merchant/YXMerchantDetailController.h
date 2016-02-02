@@ -9,7 +9,17 @@
 
 @interface YXMerchantDetailController : UIViewController
 
-@property (nonatomic,strong)YXMerchantInfo *merchantInfo;// 商户信息
-+ (instancetype)initWithMerchantInfo:(YXMerchantInfo *)merchantInfo;// 通过商户信息初始化
+/**
+ *  商户信息
+ */
+@property (nonatomic,strong)YXMerchantInfo *merchantInfo;
+/**
+ *  初始化方法
+ *
+ *  @param merchantInfo 商户信息
+ *
+ *  @return 视图控制器
+ */
++ (instancetype)initWithMerchantInfo:(YXMerchantInfo *)merchantInfo;
 
 @end

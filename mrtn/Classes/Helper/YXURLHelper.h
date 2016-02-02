@@ -10,11 +10,11 @@
 // 登录
 #define URL_LOGIN [NSString stringWithFormat:@"%@login/appLogin",URL]
 // 商户信息
-#define URL_QUERY_MCBOOK [NSString stringWithFormat:@"%@mcinfo/query",URL]
+#define URL_MERCHANT_LIST [NSString stringWithFormat:@"%@mcinfo/query",URL]
 // 商户列表
 #define URL_MACHINE [NSString stringWithFormat:@"%@machine/list",URL]
 // 单个商户
-#define URL_QUERY_MERCHANT [NSString stringWithFormat:@"%@mcinfo/queryOne",URL]
+#define URL_MERCHANT_DETAIL [NSString stringWithFormat:@"%@mcinfo/queryOne",URL]
 // 商户列表
 #define URL_ORDER_LIST [NSString stringWithFormat:@"%@taskOrderService/getGroupMcInfo",URL]
 // 任务单列表

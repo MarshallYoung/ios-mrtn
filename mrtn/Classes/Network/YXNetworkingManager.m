@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "YXURLHelper.h"
 #import "YXMerchantListRequest.h"
+#import "YXMerchantDetailRequest.h"
 
 @implementation YXNetworkingManager
 
@@ -45,9 +46,13 @@
     NSString *url;// 请求地址
     NSDictionary *parameters;// 设置参数
     if ([request isMemberOfClass:[YXMerchantListRequest class]]) {// 查询商户列表
-        url = URL_QUERY_MCBOOK;
+        url = URL_MERCHANT_LIST;
         YXMerchantListRequest *query = (YXMerchantListRequest *)request;
         parameters = @{@"mcId":query.mcId, @"mcName":query.mcName, @"currentPageNum":query.currentPageNum, @"pageSize":query.pageSize};
+    } else if ([request isMemberOfClass:[YXMerchantDetailRequest class]]) {// 查询商户详情
+        url = URL_MERCHANT_DETAIL;
+        YXMerchantDetailRequest *query = (YXMerchantDetailRequest *)request;
+        parameters = @{@"id":query.theId};
     }
     AFHTTPRequestOperationManager *manager = [self requestManager];
     [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {// 查询成功
