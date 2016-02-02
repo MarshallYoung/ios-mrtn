@@ -350,6 +350,7 @@
 		04646D231C59AB6100D6DE13 /* ZXMultiFormatReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04646C3A1C59AB6100D6DE13 /* ZXMultiFormatReader.m */; settings = {ASSET_TAGS = (); }; };
 		04646D241C59AB6100D6DE13 /* ZXMultiFormatWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04646C3C1C59AB6100D6DE13 /* ZXMultiFormatWriter.m */; settings = {ASSET_TAGS = (); }; };
 		04646D251C59AB6100D6DE13 /* ZXingWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04646C3F1C59AB6100D6DE13 /* ZXingWrapper.m */; settings = {ASSET_TAGS = (); }; };
+		0485D2531C60A61200C682AB /* YXOrderDetailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0485D2521C60A61200C682AB /* YXOrderDetailRequest.m */; settings = {ASSET_TAGS = (); }; };
 		048F8E0A1C5B53EC002E2EB4 /* YXAlertDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 048F8E091C5B53EC002E2EB4 /* YXAlertDialog.m */; settings = {ASSET_TAGS = (); }; };
 		048F8E0C1C5B53FF002E2EB4 /* YXAlertDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048F8E0B1C5B53FF002E2EB4 /* YXAlertDialog.xib */; settings = {ASSET_TAGS = (); }; };
 		04D6BA171C605B8C00006CE5 /* YXLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9C81C605B8C00006CE5 /* YXLoginInfo.m */; settings = {ASSET_TAGS = (); }; };
@@ -365,7 +366,7 @@
 		04D6BA211C605B8C00006CE5 /* YXMerchantListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9E51C605B8C00006CE5 /* YXMerchantListResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA221C605B8C00006CE5 /* YXMerchantDetailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9E71C605B8C00006CE5 /* YXMerchantDetailResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA241C605B8C00006CE5 /* YXPredictResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9EC1C605B8C00006CE5 /* YXPredictResponse.m */; settings = {ASSET_TAGS = (); }; };
-		04D6BA251C605B8C00006CE5 /* YXQueryOrderDetailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9EE1C605B8C00006CE5 /* YXQueryOrderDetailResponse.m */; settings = {ASSET_TAGS = (); }; };
+		04D6BA251C605B8C00006CE5 /* YXOrderDetailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9EE1C605B8C00006CE5 /* YXOrderDetailResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA261C605B8C00006CE5 /* YXOrderListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9F01C605B8C00006CE5 /* YXOrderListResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA281C605B8C00006CE5 /* YXQueryMachineResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9F61C605B8C00006CE5 /* YXQueryMachineResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA291C605B8C00006CE5 /* YXUploadScanResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9F81C605B8C00006CE5 /* YXUploadScanResponse.m */; settings = {ASSET_TAGS = (); }; };
@@ -1068,6 +1069,8 @@
 		04646C3C1C59AB6100D6DE13 /* ZXMultiFormatWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXMultiFormatWriter.m; sourceTree = "<group>"; };
 		04646C3E1C59AB6100D6DE13 /* ZXingWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXingWrapper.h; sourceTree = "<group>"; };
 		04646C3F1C59AB6100D6DE13 /* ZXingWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXingWrapper.m; sourceTree = "<group>"; };
+		0485D2511C60A61200C682AB /* YXOrderDetailRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXOrderDetailRequest.h; sourceTree = "<group>"; };
+		0485D2521C60A61200C682AB /* YXOrderDetailRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXOrderDetailRequest.m; sourceTree = "<group>"; };
 		048F8E081C5B53EC002E2EB4 /* YXAlertDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXAlertDialog.h; sourceTree = "<group>"; };
 		048F8E091C5B53EC002E2EB4 /* YXAlertDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXAlertDialog.m; sourceTree = "<group>"; };
 		048F8E0B1C5B53FF002E2EB4 /* YXAlertDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXAlertDialog.xib; sourceTree = "<group>"; };
@@ -1098,8 +1101,8 @@
 		04D6B9E71C605B8C00006CE5 /* YXMerchantDetailResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMerchantDetailResponse.m; sourceTree = "<group>"; };
 		04D6B9EB1C605B8C00006CE5 /* YXPredictResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXPredictResponse.h; sourceTree = "<group>"; };
 		04D6B9EC1C605B8C00006CE5 /* YXPredictResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXPredictResponse.m; sourceTree = "<group>"; };
-		04D6B9ED1C605B8C00006CE5 /* YXQueryOrderDetailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXQueryOrderDetailResponse.h; sourceTree = "<group>"; };
-		04D6B9EE1C605B8C00006CE5 /* YXQueryOrderDetailResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXQueryOrderDetailResponse.m; sourceTree = "<group>"; };
+		04D6B9ED1C605B8C00006CE5 /* YXOrderDetailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXOrderDetailResponse.h; sourceTree = "<group>"; };
+		04D6B9EE1C605B8C00006CE5 /* YXOrderDetailResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXOrderDetailResponse.m; sourceTree = "<group>"; };
 		04D6B9EF1C605B8C00006CE5 /* YXOrderListResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXOrderListResponse.h; sourceTree = "<group>"; };
 		04D6B9F01C605B8C00006CE5 /* YXOrderListResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXOrderListResponse.m; sourceTree = "<group>"; };
 		04D6B9F51C605B8C00006CE5 /* YXQueryMachineResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXQueryMachineResponse.h; sourceTree = "<group>"; };
@@ -2549,10 +2552,10 @@
 				04D6B9F01C605B8C00006CE5 /* YXOrderListResponse.m */,
 				04D6BA451C609F3800006CE5 /* YXOrderListDetailResponse.h */,
 				04D6BA461C609F3800006CE5 /* YXOrderListDetailResponse.m */,
+				04D6B9ED1C605B8C00006CE5 /* YXOrderDetailResponse.h */,
+				04D6B9EE1C605B8C00006CE5 /* YXOrderDetailResponse.m */,
 				04D6B9EB1C605B8C00006CE5 /* YXPredictResponse.h */,
 				04D6B9EC1C605B8C00006CE5 /* YXPredictResponse.m */,
-				04D6B9ED1C605B8C00006CE5 /* YXQueryOrderDetailResponse.h */,
-				04D6B9EE1C605B8C00006CE5 /* YXQueryOrderDetailResponse.m */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -2618,6 +2621,8 @@
 				04D6BA3D1C60946100006CE5 /* YXOrderListRequest.m */,
 				04D6BA421C609E9300006CE5 /* YXOrderListDetailRequest.h */,
 				04D6BA431C609E9300006CE5 /* YXOrderListDetailRequest.m */,
+				0485D2511C60A61200C682AB /* YXOrderDetailRequest.h */,
+				0485D2521C60A61200C682AB /* YXOrderDetailRequest.m */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -2785,7 +2790,7 @@
 				04646C631C59AB6100D6DE13 /* ZXISBNParsedResult.m in Sources */,
 				04646CF31C59AB6100D6DE13 /* ZXPDF417BarcodeMetadata.m in Sources */,
 				04646C421C59AB6100D6DE13 /* LBXScanNetAnimation.m in Sources */,
-				04D6BA251C605B8C00006CE5 /* YXQueryOrderDetailResponse.m in Sources */,
+				04D6BA251C605B8C00006CE5 /* YXOrderDetailResponse.m in Sources */,
 				04646C4E1C59AB6100D6DE13 /* ZXAztecHighLevelEncoder.m in Sources */,
 				04646C5D1C59AB6100D6DE13 /* ZXEmailAddressResultParser.m in Sources */,
 				04646D171C59AB6100D6DE13 /* ZXQRCodeFinderPatternFinder.m in Sources */,
@@ -2829,6 +2834,7 @@
 				04646CA21C59AB6100D6DE13 /* ZXDataMatrixDecoder.m in Sources */,
 				04D6BA2F1C605B8C00006CE5 /* YXTaskInstallDetail.m in Sources */,
 				0410710E1C59A8F300D6D958 /* YXTaskDistributionFragment.m in Sources */,
+				0485D2531C60A61200C682AB /* YXOrderDetailRequest.m in Sources */,
 				04646D091C59AB6100D6DE13 /* ZXQRCodeBitMatrixParser.m in Sources */,
 				04646C471C59AB6100D6DE13 /* LBXScanResult.m in Sources */,
 				04D6BA2B1C605B8C00006CE5 /* YXUploadImageResponse.m in Sources */,

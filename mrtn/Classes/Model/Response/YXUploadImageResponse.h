@@ -9,8 +9,17 @@
 
 @interface YXUploadImageResponse : JSONModel
 
-@property (nonatomic,strong)NSString *file_id;// 图片名
-@property (nonatomic,strong)NSString *img_url;// 图片路径
-@property (nonatomic,strong)NSString *success;// 结果 00是成功
+/**
+ *  是否上传成功(成功返回00)
+ */
+@property (nonatomic,strong)NSString *success;
+/**
+ *  图片名
+ */
+@property (nonatomic,strong)NSString *file_id;
+/**
+ *  图片网络地址
+ */
+@property (nonatomic,strong)NSString *img_url;
 
 @end

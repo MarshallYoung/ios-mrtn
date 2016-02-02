@@ -29,4 +29,13 @@
  */
 + (void)queryWithRequest:(YXRequest *)request success:(void(^)(id responseObject))success failure:(void(^)(void))failure;
 
+/**
+ *  上传图片
+ *
+ *  @param image   图片
+ *  @param success 上传成功执行方法
+ *  @param failure 上传失败执行方法
+ */
++ (void)uploadImage:(UIImage *)image success:(void(^)(id responseObject))success failure:(void(^)(void))failure;
+
 @end

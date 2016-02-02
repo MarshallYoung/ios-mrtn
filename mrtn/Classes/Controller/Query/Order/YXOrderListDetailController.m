@@ -8,12 +8,10 @@
 #import "YXOrderListDetailController.h"
 #import "YXNetworkingManager.h"
 #import "MBProgressHUD+Extension.h"
-#import "YXURLHelper.h"
 #import "YXOrderListDetailRequest.h"
 #import "YXOrderListDetailResponse.h"
 #import "YXTaskOrderCell.h"
 #import "YXOrderDetailController.h"
-#import "AFNetworking.h"
 
 @interface YXOrderListDetailController ()<MBProgressHUDDelegate,UITableViewDataSource,UITableViewDelegate>
 
@@ -30,9 +28,9 @@
 
 + (instancetype)initWithOrderListInfo:(YXOrderListInfo *)orderInfo {
     
-    YXOrderListDetailController *detailVC = [[YXOrderListDetailController alloc] init];
-    detailVC.orderInfo = orderInfo;
-    return detailVC;
+    YXOrderListDetailController *controller = [[YXOrderListDetailController alloc] init];
+    controller.orderInfo = orderInfo;
+    return controller;
     
 }
 
@@ -56,7 +54,7 @@
 
 - (void)refreshData {
     
-    MBProgressHUD *progress = [MBProgressHUD showHUDAddedTo:self text:@"正在查询..."];// 读取框
+    MBProgressHUD *progress = [MBProgressHUD showHUDAddedTo:self text:@"初始化数据..."];// 读取框
     YXOrderListDetailRequest *request = [[YXOrderListDetailRequest alloc] init];
     request.mcId       = _orderInfo.mcid;// 商户编号
     request.mcName     = _orderInfo.mcName;// 商户名称

@@ -17,6 +17,17 @@
  *
  *  @return 导航栏按钮
  */
-+ (UIBarButtonItem *)itemWithImageName:(NSString *)imageName highlightImageName:(NSString *)highlightImageName target:(id)target action:(SEL)action;
++ (instancetype)itemWithImageName:(NSString *)imageName highlightImageName:(NSString *)highlightImageName target:(id)target action:(SEL)action;
+
+/**
+ *  初始化方法
+ *
+ *  @param title  按钮文字
+ *  @param target 执行方法所在类
+ *  @param action 执行方法
+ *
+ *  @return 导航栏按钮
+ */
++ (instancetype)itemWithTitle:(NSString *)title target:(id)target action:(SEL)action;
 
 @end

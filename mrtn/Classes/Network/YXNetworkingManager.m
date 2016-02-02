@@ -13,6 +13,7 @@
 #import "YXMerchantDetailRequest.h"
 #import "YXOrderListRequest.h"
 #import "YXOrderListDetailRequest.h"
+#import "YXOrderDetailRequest.h"
 
 @implementation YXNetworkingManager
 
@@ -63,9 +64,38 @@
         url = URL_ORDER_LIST_DETAIL;
         YXOrderListDetailRequest *query = (YXOrderListDetailRequest *)request;
         parameters = @{@"mcId":query.mcId, @"mcName":query.mcName, @"disptTime":@"", @"taskStatus":query.taskStatus, @"instId":@"", @"UserId":@""};
+    } else if ([request isMemberOfClass:[YXOrderDetailRequest class]]) {// 任务单列表详情
+        url = URL_ORDER_DETAIL;
+        YXOrderDetailRequest *query = (YXOrderDetailRequest *)request;
+        parameters = @{@"id":query.theId};
     }
     AFHTTPRequestOperationManager *manager = [self requestManager];
     [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {// 查询成功
+        success(responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {// 查询失败
+        failure();
+    }];
+    
+}
+
+/**
+ *  上传图片
+ *
+ *  @param image   图片
+ *  @param success 上传成功执行方法
+ *  @param failure 上传失败执行方法
+ */
++ (void)uploadImage:(UIImage *)image success:(void (^)(id))success failure:(void (^)(void))failure {
+    
+    AFHTTPRequestOperationManager *manager = [self requestManager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    NSSet *set = [[NSSet alloc] initWithObjects:@"text/plain",@"application/json",@"text/json",@"text/html", nil];
+    manager.responseSerializer.acceptableContentTypes = set;
+    [manager POST:URL_IMAGE_UPLOAD parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        NSData *data = UIImageJPEGRepresentation(image, 1.0);
+        [formData appendPartWithFileData:data name:[NSString random16bitString] fileName:[NSString stringWithFormat:@"%@.png", [NSString random16bitString]] mimeType:@"image/png"];
+        
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
         success(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {// 查询失败
         failure();

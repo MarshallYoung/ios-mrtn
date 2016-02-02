@@ -30,5 +30,23 @@
     
 }
 
+/**
+ *  初始化方法
+ *
+ *  @param title  按钮文字
+ *  @param target 执行方法所在类
+ *  @param action 执行方法
+ *
+ *  @return 导航栏按钮
+ */
++ (instancetype)itemWithTitle:(NSString *)title target:(id)target action:(SEL)action {
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 20)];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc] initWithCustomView:button];
+    
+}
+
 
 @end
