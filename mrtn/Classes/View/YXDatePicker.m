@@ -55,10 +55,12 @@
         [strFormatter setDateFormat:@"yyyyMMddHHmm"];
     }
     if (_textField) {// 存在文本框就填充
-        _textField.text = [formatter stringFromDate:self.datePicker.date];
+        NSString *text = [formatter stringFromDate:self.datePicker.date];
+        _textField.text = text;
     }
-    if (_confirmBlock) {
-        _confirmBlock([strFormatter stringFromDate:self.datePicker.date]);
+    if (_confirmBlock) {// 回调
+        NSString *dateString = [strFormatter stringFromDate:self.datePicker.date];
+        _confirmBlock(dateString);
     }
     [self removeFromSuperview];
     

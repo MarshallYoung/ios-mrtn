@@ -33,7 +33,7 @@
 // 关联商户和机具
 #define URL_SCAN_UPLOAD [NSString stringWithFormat:@"%@machine/scanCodeUpdate",URL]
 // 预计上门时间
-#define URL_PREDICT_UPLOAD [NSString stringWithFormat:@"%@taskOrderService/PredictTaskOrder",URL]
+#define URL_PREDICT_UPDATE [NSString stringWithFormat:@"%@taskOrderService/PredictTaskOrder",URL]
 
 
 @interface YXURLHelper : NSObject

@@ -57,4 +57,16 @@
  */
 + (AFHTTPRequestOperation *)uploadImage:(UIImage *)image success:(void(^)(id responseObject))success failure:(void(^)(void))failure;
 
+/**
+ *  更新
+ *
+ *  @param request 请求
+ *  @param success 更新成功执行方法
+ *  @param failure 更新失败执行方法
+ *
+ *  @return 任务
+ */
++ (AFHTTPRequestOperation *)updateWithRequest:(YXRequest *)request success:(void(^)(id responseObject))success failure:(void(^)(void))failure;
+
+
 @end

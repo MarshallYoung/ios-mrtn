@@ -354,6 +354,9 @@
 		048F8E0A1C5B53EC002E2EB4 /* YXAlertDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 048F8E091C5B53EC002E2EB4 /* YXAlertDialog.m */; settings = {ASSET_TAGS = (); }; };
 		048F8E0C1C5B53FF002E2EB4 /* YXAlertDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048F8E0B1C5B53FF002E2EB4 /* YXAlertDialog.xib */; settings = {ASSET_TAGS = (); }; };
 		049B0F921C61A2A200830466 /* YXUploadResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B0F911C61A2A200830466 /* YXUploadResponse.m */; settings = {ASSET_TAGS = (); }; };
+		04D4F9E91C61D3D40098EE9E /* YXUpdatePredictRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F9E81C61D3D40098EE9E /* YXUpdatePredictRequest.m */; settings = {ASSET_TAGS = (); }; };
+		04D4F9ED1C61D6F30098EE9E /* YXUpdatePredictResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F9EC1C61D6F30098EE9E /* YXUpdatePredictResponse.m */; settings = {ASSET_TAGS = (); }; };
+		04D4F9F01C61DA970098EE9E /* YXPredictListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F9EF1C61DA970098EE9E /* YXPredictListRequest.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA171C605B8C00006CE5 /* YXLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9C81C605B8C00006CE5 /* YXLoginInfo.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA181C605B8C00006CE5 /* YXMerchantDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9CB1C605B8C00006CE5 /* YXMerchantDetailInfo.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA191C605B8C00006CE5 /* YXMerchantInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9CD1C605B8C00006CE5 /* YXMerchantInfo.m */; settings = {ASSET_TAGS = (); }; };
@@ -366,7 +369,6 @@
 		04D6BA201C605B8C00006CE5 /* YXLoginResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9E21C605B8C00006CE5 /* YXLoginResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA211C605B8C00006CE5 /* YXMerchantListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9E51C605B8C00006CE5 /* YXMerchantListResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA221C605B8C00006CE5 /* YXMerchantDetailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9E71C605B8C00006CE5 /* YXMerchantDetailResponse.m */; settings = {ASSET_TAGS = (); }; };
-		04D6BA241C605B8C00006CE5 /* YXPredictResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9EC1C605B8C00006CE5 /* YXPredictResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA251C605B8C00006CE5 /* YXOrderDetailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9EE1C605B8C00006CE5 /* YXOrderDetailResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA261C605B8C00006CE5 /* YXOrderListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9F01C605B8C00006CE5 /* YXOrderListResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA281C605B8C00006CE5 /* YXQueryMachineResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9F61C605B8C00006CE5 /* YXQueryMachineResponse.m */; settings = {ASSET_TAGS = (); }; };
@@ -1078,6 +1080,12 @@
 		049ACD6E1C59BADE00F7EC3D /* mrtn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mrtn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049B0F901C61A2A200830466 /* YXUploadResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUploadResponse.h; sourceTree = "<group>"; };
 		049B0F911C61A2A200830466 /* YXUploadResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUploadResponse.m; sourceTree = "<group>"; };
+		04D4F9E71C61D3D40098EE9E /* YXUpdatePredictRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUpdatePredictRequest.h; sourceTree = "<group>"; };
+		04D4F9E81C61D3D40098EE9E /* YXUpdatePredictRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUpdatePredictRequest.m; sourceTree = "<group>"; };
+		04D4F9EB1C61D6F30098EE9E /* YXUpdatePredictResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUpdatePredictResponse.h; sourceTree = "<group>"; };
+		04D4F9EC1C61D6F30098EE9E /* YXUpdatePredictResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUpdatePredictResponse.m; sourceTree = "<group>"; };
+		04D4F9EE1C61DA970098EE9E /* YXPredictListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXPredictListRequest.h; sourceTree = "<group>"; };
+		04D4F9EF1C61DA970098EE9E /* YXPredictListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXPredictListRequest.m; sourceTree = "<group>"; };
 		04D6B9C71C605B8C00006CE5 /* YXLoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoginInfo.h; sourceTree = "<group>"; };
 		04D6B9C81C605B8C00006CE5 /* YXLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoginInfo.m; sourceTree = "<group>"; };
 		04D6B9CA1C605B8C00006CE5 /* YXMerchantDetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMerchantDetailInfo.h; sourceTree = "<group>"; };
@@ -1102,8 +1110,6 @@
 		04D6B9E51C605B8C00006CE5 /* YXMerchantListResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMerchantListResponse.m; sourceTree = "<group>"; };
 		04D6B9E61C605B8C00006CE5 /* YXMerchantDetailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMerchantDetailResponse.h; sourceTree = "<group>"; };
 		04D6B9E71C605B8C00006CE5 /* YXMerchantDetailResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMerchantDetailResponse.m; sourceTree = "<group>"; };
-		04D6B9EB1C605B8C00006CE5 /* YXPredictResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXPredictResponse.h; sourceTree = "<group>"; };
-		04D6B9EC1C605B8C00006CE5 /* YXPredictResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXPredictResponse.m; sourceTree = "<group>"; };
 		04D6B9ED1C605B8C00006CE5 /* YXOrderDetailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXOrderDetailResponse.h; sourceTree = "<group>"; };
 		04D6B9EE1C605B8C00006CE5 /* YXOrderDetailResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXOrderDetailResponse.m; sourceTree = "<group>"; };
 		04D6B9EF1C605B8C00006CE5 /* YXOrderListResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXOrderListResponse.h; sourceTree = "<group>"; };
@@ -2423,6 +2429,26 @@
 			);
 			sourceTree = "<group>";
 		};
+		04D4F9E61C61D39E0098EE9E /* Predict */ = {
+			isa = PBXGroup;
+			children = (
+				04D4F9EE1C61DA970098EE9E /* YXPredictListRequest.h */,
+				04D4F9EF1C61DA970098EE9E /* YXPredictListRequest.m */,
+				04D4F9E71C61D3D40098EE9E /* YXUpdatePredictRequest.h */,
+				04D4F9E81C61D3D40098EE9E /* YXUpdatePredictRequest.m */,
+			);
+			path = Predict;
+			sourceTree = "<group>";
+		};
+		04D4F9EA1C61D46C0098EE9E /* Predict */ = {
+			isa = PBXGroup;
+			children = (
+				04D4F9EB1C61D6F30098EE9E /* YXUpdatePredictResponse.h */,
+				04D4F9EC1C61D6F30098EE9E /* YXUpdatePredictResponse.m */,
+			);
+			path = Predict;
+			sourceTree = "<group>";
+		};
 		04D6B9C51C605B8C00006CE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -2477,6 +2503,7 @@
 				04D6B9D71C605B8C00006CE5 /* Merchant */,
 				04D6B9DA1C605B8C00006CE5 /* Term */,
 				04D6BA3B1C60943700006CE5 /* Order */,
+				04D4F9E61C61D39E0098EE9E /* Predict */,
 				04D6B9DD1C605B8C00006CE5 /* YXRequest.h */,
 				04D6B9DE1C605B8C00006CE5 /* YXRequest.m */,
 			);
@@ -2517,9 +2544,9 @@
 			children = (
 				04D6B9E01C605B8C00006CE5 /* Login */,
 				04D6B9E31C605B8C00006CE5 /* Merchant */,
-				04D6B9EA1C605B8C00006CE5 /* Order */,
-				04D6B9F11C605B8C00006CE5 /* Task */,
 				04D6B9F41C605B8C00006CE5 /* Term */,
+				04D6B9EA1C605B8C00006CE5 /* Order */,
+				04D4F9EA1C61D46C0098EE9E /* Predict */,
 				04D6B9F91C605B8C00006CE5 /* YXResponse.h */,
 				04D6B9FA1C605B8C00006CE5 /* YXResponse.m */,
 				04D6B9FB1C605B8C00006CE5 /* YXUploadImageResponse.h */,
@@ -2559,17 +2586,8 @@
 				04D6B9EE1C605B8C00006CE5 /* YXOrderDetailResponse.m */,
 				049B0F901C61A2A200830466 /* YXUploadResponse.h */,
 				049B0F911C61A2A200830466 /* YXUploadResponse.m */,
-				04D6B9EB1C605B8C00006CE5 /* YXPredictResponse.h */,
-				04D6B9EC1C605B8C00006CE5 /* YXPredictResponse.m */,
 			);
 			path = Order;
-			sourceTree = "<group>";
-		};
-		04D6B9F11C605B8C00006CE5 /* Task */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Task;
 			sourceTree = "<group>";
 		};
 		04D6B9F41C605B8C00006CE5 /* Term */ = {
@@ -2789,6 +2807,7 @@
 				0410709D1C59A8F300D6D958 /* UIView+Extension.m in Sources */,
 				048F8E0A1C5B53EC002E2EB4 /* YXAlertDialog.m in Sources */,
 				041070DA1C59A8F300D6D958 /* SDWebImageManager.m in Sources */,
+				04D4F9F01C61DA970098EE9E /* YXPredictListRequest.m in Sources */,
 				04646D011C59AB6100D6DE13 /* ZXPDF417BarcodeRow.m in Sources */,
 				04D6BA1E1C605B8C00006CE5 /* YXUpdateRequest.m in Sources */,
 				04646C681C59AB6100D6DE13 /* ZXResultParser.m in Sources */,
@@ -2849,6 +2868,7 @@
 				04646CA71C59AB6100D6DE13 /* ZXDataMatrixC40Encoder.m in Sources */,
 				04646CB91C59AB6100D6DE13 /* ZXAbstractExpandedDecoder.m in Sources */,
 				0410709F1C59A8F300D6D958 /* YXViewController.m in Sources */,
+				04D4F9E91C61D3D40098EE9E /* YXUpdatePredictRequest.m in Sources */,
 				04646D111C59AB6100D6DE13 /* ZXQRCodeMode.m in Sources */,
 				041070BA1C59A8F300D6D958 /* des.c in Sources */,
 				04D6BA371C605B8C00006CE5 /* YXControllerInfo.m in Sources */,
@@ -2879,6 +2899,7 @@
 				04D6BA301C605B8C00006CE5 /* YXTaskRepairDetail.m in Sources */,
 				04646C871C59AB6100D6DE13 /* ZXByteArray.m in Sources */,
 				04646C961C59AB6100D6DE13 /* ZXDimension.m in Sources */,
+				04D4F9ED1C61D6F30098EE9E /* YXUpdatePredictResponse.m in Sources */,
 				04646CC41C59AB6100D6DE13 /* ZXRSSExpandedBlockParsedResult.m in Sources */,
 				04D6BA2E1C605B8C00006CE5 /* YXTaskDistributionDetail.m in Sources */,
 				04646C501C59AB6100D6DE13 /* ZXAztecState.m in Sources */,
@@ -3076,7 +3097,6 @@
 				04646CED1C59AB6100D6DE13 /* ZXUPCEANReader.m in Sources */,
 				04D6BA281C605B8C00006CE5 /* YXQueryMachineResponse.m in Sources */,
 				04646C731C59AB6100D6DE13 /* ZXVCardResultParser.m in Sources */,
-				04D6BA241C605B8C00006CE5 /* YXPredictResponse.m in Sources */,
 				04646CBA1C59AB6100D6DE13 /* ZXAI013103decoder.m in Sources */,
 				04646C591C59AB6100D6DE13 /* ZXBizcardResultParser.m in Sources */,
 				04646D0E1C59AB6100D6DE13 /* ZXQRCodeDecoderMetaData.m in Sources */,

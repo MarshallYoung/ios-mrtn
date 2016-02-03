@@ -13,6 +13,8 @@
 #import "YXOrderListRequest.h"
 #import "YXOrderListDetailRequest.h"
 #import "YXOrderDetailRequest.h"
+#import "YXPredictListRequest.h"
+#import "YXUpdatePredictRequest.h"
 
 @implementation YXNetworkingManager
 
@@ -72,6 +74,10 @@
         url = URL_ORDER_DETAIL;
         YXOrderDetailRequest *query = (YXOrderDetailRequest *)request;
         parameters = @{@"id":query.theId};
+    } else if ([request isMemberOfClass:[YXPredictListRequest class]]) {// 预计上门时间
+        url = URL_ORDER_LIST_DETAIL;
+        YXPredictListRequest *query = (YXPredictListRequest *)request;
+        parameters = @{@"mcId":query.mcId, @"mcName":query.mcName, @"disptTime":query.disptTime, @"taskStatus":query.taskStatus, @"type":query.type};
     }
     AFHTTPRequestOperationManager *manager = [self manager];
     AFHTTPRequestOperation *operation = [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {// 查询成功
@@ -171,6 +177,32 @@
     // 设置请求头,<<调试DEBUG>>用
     [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"android_request"];
     return manager;
+    
+}
+
+/**
+ *  更新
+ *
+ *  @param request 请求
+ *  @param success 更新成功执行方法
+ *  @param failure 更新失败执行方法
+ *
+ *  @return 任务
+ */
++(AFHTTPRequestOperation *)updateWithRequest:(YXRequest *)request success:(void (^)(id))success failure:(void (^)(void))failure {
+    
+    NSDictionary *parameters;// 设置参数
+    if ([request isMemberOfClass:[YXUpdatePredictRequest class]]) {// 更新预计上门时间
+        YXUpdatePredictRequest *update = (YXUpdatePredictRequest *)request;
+        parameters = @{@"taskId":update.taskId, @"date":update.date, @"type":update.type};
+    }
+    AFHTTPRequestOperationManager *manager = [self manager];
+    AFHTTPRequestOperation *operation = [manager POST:URL_PREDICT_UPDATE parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {// 查询成功
+        success(responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {// 查询失败
+        failure();
+    }];
+    return operation;
     
 }
 

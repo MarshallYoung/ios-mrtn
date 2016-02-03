@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YusysTechnologies. All rights reserved.
 //
 
-#import "YXPredictResponse.h"
+#import "YXUpdatePredictResponse.h"
 
-@implementation YXPredictResponse
+@implementation YXUpdatePredictResponse
 
 @end
