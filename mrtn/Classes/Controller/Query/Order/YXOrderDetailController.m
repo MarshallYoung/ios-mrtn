@@ -11,9 +11,11 @@
 #import "MBProgressHUD+Extension.h"
 #import "YXOrderDetailRequest.h"
 #import "YXOrderDetailResponse.h"
-
+#import "YXUploadImageResponse.h"
+#import "YXUploadResponse.h"
 #import "UIBarButtonItem+Extension.h"
 #import "UIImageView+WebCache.h"
+
 #import "YXTaskRepairFragment.h"
 #import "YXTaskTrainFragment.h"
 #import "YXTaskVisitFragment.h"
@@ -21,11 +23,8 @@
 #import "YXTaskSurveyFragment.h"
 #import "YXTaskDistributionFragment.h"
 #import "YXTaskAttachment.h"
-#import "YXUploadImageResponse.h"
 #import "YXSignBoard.h"
 #import "YXAlertDialog.h"
-
-#import "AFNetworking.h"
 #import "YXURLHelper.h"
 
 @interface YXOrderDetailController ()<MBProgressHUDDelegate>
@@ -59,6 +58,7 @@
     YXFragment *fragment;// 各种任务单
     YXTaskAttachment *att;// 照片附件
     UITapGestureRecognizer *singleTap;// 单击事件
+    MBProgressHUD *progress;// 读取框
     
     BOOL signSetted;// 签名是否设置
     BOOL attSetted;// 附件是否设置
@@ -96,7 +96,7 @@
  */
 - (void)initInfo {
     
-    MBProgressHUD *progress = [MBProgressHUD showHUDAddedTo:self text:@"初始化数据..."];// 读取框
+    progress = [MBProgressHUD showHUDAddedTo:self text:@"初始化数据..."];// 读取框
     YXOrderDetailRequest *request = [YXOrderDetailRequest initWithId:_taskOrderInfo.taskId];
     [YXNetworkingManager queryWithRequest:request success:^(id responseObject) {
         [progress hide:YES];// 隐藏读取框
@@ -198,34 +198,71 @@
         [MBProgressHUD showFail:@"请拍照"];
         return;
     }
-    // 显示进度框
-    MBProgressHUD *progress = [MBProgressHUD showHUDAddedTo:self text:@"上传签名..."];
+    progress = [MBProgressHUD showHUDAddedTo:self text:@"上传签名..."];
+    YXTaskOrderInfo *taskOrderInfo = fragment.taskOrderInfo;
+    [self uploadSignWithOrder:taskOrderInfo];
+    
+}
+
+/**
+ *  上传签名
+ */
+- (void)uploadSignWithOrder:(YXTaskOrderInfo *)taskOrderInfo {
+    
     [YXNetworkingManager uploadImage:self.signIV.image success:^(id responseObject) {
-        
-        YXLog(@"%@",responseObject);
-        YXUploadImageResponse *rsp = [[YXUploadImageResponse alloc] initWithDictionary:responseObject error:nil];
-        if ([rsp.success isEqual:@"00"]) {// 成功
-            progress.labelText = @"上传附件...";
-            _taskOrderInfo.sign = rsp.file_id;
-            UIImage *image = ((UIImageView *)att.imageArray[0]).image;
-            [YXNetworkingManager uploadImage:image success:^(id responseObject) {
-                
-                YXLog(@"%@",responseObject);
-                YXUploadImageResponse *rsp = [[YXUploadImageResponse alloc] initWithDictionary:responseObject error:nil];
-                if ([rsp.success isEqual:@"00"]) {// 成功
-                    progress.labelText = @"上传信息...";
-                    _taskOrderInfo.attachment = rsp.file_id;
-                    [self uploadInfo];
-                } else {
-                    [progress hide:YES];// 隐藏读取框
-                    [MBProgressHUD show408];
-                }
-            } failure:^(void) {// 连接服务器失败
-                [progress hide:YES];// 隐藏读取框
-                [MBProgressHUD show408];
-            }];
+        YXUploadImageResponse *response = [[YXUploadImageResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response.success isEqual:@"00"]) {// 成功
+            taskOrderInfo.sign = response.file_id;
+            [self uploadAttWithOrder:taskOrderInfo];
         } else {
             [progress hide:YES];// 隐藏读取框
+            [MBProgressHUD show408];
+        }
+    } failure:^(void) {// 连接服务器失败
+        [progress hide:YES];// 隐藏读取框
+        [MBProgressHUD show408];
+    }];
+    
+}
+
+/**
+ *  上传附件
+ */
+- (void)uploadAttWithOrder:(YXTaskOrderInfo *)taskOrderInfo {
+    
+    progress.labelText = @"上传附件...";
+    UIImage *image = ((UIImageView *)att.imageArray[0]).image;
+    [YXNetworkingManager uploadImage:image success:^(id responseObject) {
+        YXUploadImageResponse *response = [[YXUploadImageResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response.success isEqual:@"00"]) {// 成功
+            taskOrderInfo.attachment = response.file_id;
+            [self uploadOrderWithOrder:taskOrderInfo];
+        } else {
+            [progress hide:YES];// 隐藏读取框
+            [MBProgressHUD show408];
+        }
+    } failure:^(void) {// 连接服务器失败
+        [progress hide:YES];// 隐藏读取框
+        [MBProgressHUD show408];
+    }];
+    
+}
+
+/**
+ *  上传任务单
+ */
+- (void)uploadOrderWithOrder:(YXTaskOrderInfo *)taskOrderInfo {
+    
+    progress.labelText = @"上传任务单...";
+    [YXNetworkingManager uploadTaskOrder:taskOrderInfo success:^(id responseObject) {
+        [progress hide:YES];// 隐藏读取框
+        YXUploadResponse *response = [[YXUploadResponse alloc] initWithDictionary:responseObject error:nil];
+        if (response.success) {
+            [btn setEnabled:NO];// 失效提交按钮
+            [YXAlertDialog initWithSuperView:self.view message:@"任务单上传成功" confirm:^(void) {
+                [self.navigationController popViewControllerAnimated:YES];
+            }];
+        } else {
             [MBProgressHUD show408];
         }
     } failure:^(void) {// 连接服务器失败
@@ -256,59 +293,6 @@
     self.signIV.userInteractionEnabled = YES;
     [self.signIV addGestureRecognizer:singleTap];// 添加点击事件
     signSetted = NO;
-    
-}
-
-// 上传任务单
-- (void)uploadInfo {
-    
-    // 请求
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer.timeoutInterval = 15;// 设置超时时间
-    // 设置请求头,<<调试DEBUG>>用
-    [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"android_request"];
-    int type = [_taskOrderInfo.taskType intValue];// 判断任务单类型
-    NSDictionary *parameters;// 设置参数
-    YXTaskOrderInfo *taskOrderInfo = fragment.taskOrderInfo;
-    switch (type) {
-        case TASK_REPAIR:// 故障报修单
-            parameters = @{@"taskId":_taskOrderInfo.taskId, @"sign":_taskOrderInfo.sign, @"attachment":_taskOrderInfo.attachment, @"taskRepairDetail.otherContext":taskOrderInfo.taskRepairDetail.otherContext, @"taskRepairDetail.remark":taskOrderInfo.taskRepairDetail.remark, @"taskRepairDetail.rtContent":taskOrderInfo.taskRepairDetail.rtContent};
-            break;
-        case TASK_TRAIN:// 培训任务单
-            parameters = @{@"taskId":_taskOrderInfo.taskId, @"sign":_taskOrderInfo.sign, @"attachment":_taskOrderInfo.attachment, @"taskTrainDetail.trainDate":taskOrderInfo.taskTrainDetail.trainDate, @"taskTrainDetail.trainNum":taskOrderInfo.taskTrainDetail.trainNum, @"taskTrainDetail.trainRemark":taskOrderInfo.taskTrainDetail.trainRemark, @"taskTrainDetail.trainType":taskOrderInfo.taskTrainDetail.trainType, @"taskTrainDetail.itemPosFault":taskOrderInfo.taskTrainDetail.itemPosFault, @"taskTrainDetail.itemCard":taskOrderInfo.taskTrainDetail.itemCard, @"taskTrainDetail.itemVoucher":taskOrderInfo.taskTrainDetail.itemVoucher, @"taskTrainDetail.itemUserinfo":taskOrderInfo.taskTrainDetail.itemUserinfo, @"taskTrainDetail.itemPostSave":taskOrderInfo.taskTrainDetail.itemPostSave, @"taskTrainDetail.itemMcAgreement":taskOrderInfo.taskTrainDetail.itemMcAgreement};
-            break;
-        case TASK_VISIT:// 走访回访单
-            parameters = @{@"taskId":_taskOrderInfo.taskId, @"sign":_taskOrderInfo.sign, @"attachment":_taskOrderInfo.attachment, @"taskVisitDetail.visitDate":taskOrderInfo.taskVisitDetail.visitDate, @"taskVisitDetail.visitLastDate":taskOrderInfo.taskVisitDetail.visitLastDate, @"taskVisitDetail.posNewAddr":taskOrderInfo.taskVisitDetail.posNewAddr, @"taskVisitDetail.managementName":taskOrderInfo.taskVisitDetail.managementName, @"taskVisitDetail.managementTel":taskOrderInfo.taskVisitDetail.managementTel, @"taskVisitDetail.result":taskOrderInfo.taskVisitDetail.result, @"taskVisitDetail.posIsAddr":taskOrderInfo.taskVisitDetail.posIsAddr, @"taskVisitDetail.posPositionChange":taskOrderInfo.taskVisitDetail.posPositionChange, @"taskVisitDetail.turnoverAvg":taskOrderInfo.taskVisitDetail.turnoverAvg, @"taskVisitDetail.stockException":taskOrderInfo.taskVisitDetail.stockException, @"taskVisitDetail.externalChange":taskOrderInfo.taskVisitDetail.externalChange, @"taskVisitDetail.internalChange":taskOrderInfo.taskVisitDetail.internalChange, @"taskVisitDetail.statusChange":taskOrderInfo.taskVisitDetail.statusChange, @"taskVisitDetail.managementChange":taskOrderInfo.taskVisitDetail.managementChange, @"taskVisitDetail.personQualityChange":taskOrderInfo.taskVisitDetail.personQualityChange, @"taskVisitDetail.otherRisk":taskOrderInfo.taskVisitDetail.otherRisk};
-            break;
-        case TASK_BANK:// 发卡行调单
-            parameters = @{@"taskId":_taskOrderInfo.taskId, @"sign":_taskOrderInfo.sign, @"attachment":_taskOrderInfo.attachment, @"taskBankDetail.dealDate":taskOrderInfo.taskBankDetail.dealDate, @"taskBankDetail.dealTime":taskOrderInfo.taskBankDetail.dealTime, @"taskBankDetail.clearDate":taskOrderInfo.taskBankDetail.clearDate, @"taskBankDetail.cardId":taskOrderInfo.taskBankDetail.cardId, @"taskBankDetail.authNo":taskOrderInfo.taskBankDetail.authNo, @"taskBankDetail.dealAmount":taskOrderInfo.taskBankDetail.dealAmount};
-            break;
-        case TASK_DISTRIBUTION:// 耗材配送单
-            parameters = @{@"taskId":_taskOrderInfo.taskId, @"sign":_taskOrderInfo.sign, @"attachment":_taskOrderInfo.attachment, @"taskDistributionDetail.mtalNum1":taskOrderInfo.taskDistributionDetail.mtalNum1, @"taskDistributionDetail.mtalNum2":taskOrderInfo.taskDistributionDetail.mtalNum2, @"taskDistributionDetail.mtalNum3":taskOrderInfo.taskDistributionDetail.mtalNum3};
-            break;
-        case TASK_SURVEY:// 风险调查单
-            parameters = @{@"taskId":_taskOrderInfo.taskId, @"sign":_taskOrderInfo.sign, @"attachment":_taskOrderInfo.attachment, @"taskSurveyDetail.riskQuestion":taskOrderInfo.taskSurveyDetail.riskQuestion, @"taskSurveyDetail.surveyRequire":taskOrderInfo.taskSurveyDetail.surveyRequire, @"taskSurveyDetail.bankOpinion":taskOrderInfo.taskSurveyDetail.bankOpinion, @"taskSurveyDetail.feedback":taskOrderInfo.taskSurveyDetail.feedback, @"taskSurveyDetail.measures":taskOrderInfo.taskSurveyDetail.measures};
-            break;
-        case TASK_RISK:// 补充进件材料
-            parameters = @{@"taskId":_taskOrderInfo.taskId, @"sign":_taskOrderInfo.sign, @"attachment":_taskOrderInfo.attachment};
-            break;
-        default:
-            parameters = nil;
-            break;
-    }
-    [manager POST:URL_ORDER_UPLOAD parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        YXLog(@"%@",responseObject);
-        [btn setEnabled:NO];// 失效提交按钮
-        [YXAlertDialog initWithSuperView:self.view message:@"任务单上传成功" confirm:^(void) {
-            [self.navigationController popViewControllerAnimated:YES];
-        }];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        [YXAlertDialog initWithSuperView:self.view message:@"服务器无响应,请联系服务人员" confirm:^(void) {
-            [self.navigationController popViewControllerAnimated:YES];
-        }];
-    }];
     
 }
 
