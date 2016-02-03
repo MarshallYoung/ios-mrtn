@@ -5,8 +5,8 @@
 //  Copyright © 2015年 YusysTechnologies. All rights reserved.
 //
 
-#import "YXQueryMachineResponse.h"
+#import "YXTermResponse.h"
 
-@implementation YXQueryMachineResponse
+@implementation YXTermResponse
 
 @end

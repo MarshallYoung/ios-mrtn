@@ -14,8 +14,10 @@
 #define URL_MERCHANT_LIST [NSString stringWithFormat:@"%@mcinfo/query",URL]
 // 商户详情
 #define URL_MERCHANT_DETAIL [NSString stringWithFormat:@"%@mcinfo/queryOne",URL]
-// 商户列表
-#define URL_MACHINE [NSString stringWithFormat:@"%@machine/list",URL]
+// 机具信息(用于商户关联)
+#define URL_TERM [NSString stringWithFormat:@"%@machine/list",URL]
+// 关联商户和机具
+#define URL_TERM_UPDATE [NSString stringWithFormat:@"%@machine/scanCodeUpdate",URL]
 
 // 任务单列表
 #define URL_ORDER_LIST [NSString stringWithFormat:@"%@taskOrderService/getGroupMcInfo",URL]
@@ -30,8 +32,6 @@
 #define URL_IMAGE [NSString stringWithFormat:@"%@resources/upload/task/",URL]
 // 任务单提交
 #define URL_ORDER_UPLOAD [NSString stringWithFormat:@"%@taskOrderService/PostTaskOrder",URL]
-// 关联商户和机具
-#define URL_SCAN_UPLOAD [NSString stringWithFormat:@"%@machine/scanCodeUpdate",URL]
 // 预计上门时间
 #define URL_PREDICT_UPDATE [NSString stringWithFormat:@"%@taskOrderService/PredictTaskOrder",URL]
 

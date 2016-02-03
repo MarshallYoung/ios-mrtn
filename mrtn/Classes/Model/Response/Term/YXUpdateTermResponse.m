@@ -6,8 +6,8 @@
 //  Copyright © 2016年 YusysTechnologies. All rights reserved.
 //
 
-#import "YXUploadScanResponse.h"
+#import "YXUpdateTermResponse.h"
 
-@implementation YXUploadScanResponse
+@implementation YXUpdateTermResponse
 
 @end

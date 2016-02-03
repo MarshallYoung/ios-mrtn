@@ -7,8 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YXScanViewController">
             <connections>
-                <outlet property="hostSerialNoL" destination="QdD-rJ-tF3" id="YMw-AJ-E7e"/>
-                <outlet property="mcIdL" destination="jMS-JH-VmB" id="dY4-ZB-MOQ"/>
+                <outlet property="hostSerialNoF" destination="QdD-rJ-tF3" id="ba8-XO-h3h"/>
+                <outlet property="mcIdF" destination="jMS-JH-VmB" id="zVT-mM-0wZ"/>
                 <outlet property="mhAddrL" destination="8Ic-8C-diC" id="vYB-1t-Rgy"/>
                 <outlet property="mhFactoryNameL" destination="TJE-Ic-kM0" id="ST3-uh-1dX"/>
                 <outlet property="mhIdL" destination="ixC-LZ-WB9" id="Hel-ti-fNA"/>
@@ -16,7 +16,7 @@
                 <outlet property="mhLongL" destination="E0J-Fe-xfV" id="cvj-Pp-ZwL"/>
                 <outlet property="mhModelL" destination="rZY-3X-PDO" id="E0h-QQ-pKs"/>
                 <outlet property="mhTypeNameL" destination="f4A-2q-y7g" id="dMk-8W-7l9"/>
-                <outlet property="termIdL" destination="fVZ-ti-Vw1" id="bqY-hO-FnE"/>
+                <outlet property="termIdF" destination="fVZ-ti-Vw1" id="Zv8-Gi-fGp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -13,6 +13,8 @@
 #import "YXOrderListRequest.h"
 #import "YXOrderListDetailRequest.h"
 #import "YXOrderDetailRequest.h"
+#import "YXTermRequest.h"
+#import "YXUpdateTermRequest.h"
 #import "YXPredictListRequest.h"
 #import "YXUpdatePredictRequest.h"
 
@@ -78,6 +80,10 @@
         url = URL_ORDER_LIST_DETAIL;
         YXPredictListRequest *query = (YXPredictListRequest *)request;
         parameters = @{@"mcId":query.mcId, @"mcName":query.mcName, @"disptTime":query.disptTime, @"taskStatus":query.taskStatus, @"type":query.type};
+    } else if ([request isMemberOfClass:[YXTermRequest class]]) {// 预计上门时间
+        url = URL_TERM;
+        YXTermRequest *query = (YXTermRequest *)request;
+        parameters = @{@"hostSerialNo":query.hostSerialNo};
     }
     AFHTTPRequestOperationManager *manager = [self manager];
     AFHTTPRequestOperation *operation = [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {// 查询成功
@@ -191,13 +197,19 @@
  */
 +(AFHTTPRequestOperation *)updateWithRequest:(YXRequest *)request success:(void (^)(id))success failure:(void (^)(void))failure {
     
+    NSString *url;// 请求地址
     NSDictionary *parameters;// 设置参数
     if ([request isMemberOfClass:[YXUpdatePredictRequest class]]) {// 更新预计上门时间
+        url = URL_PREDICT_UPDATE;
         YXUpdatePredictRequest *update = (YXUpdatePredictRequest *)request;
         parameters = @{@"taskId":update.taskId, @"date":update.date, @"type":update.type};
+    } else if ([request isMemberOfClass:[YXUpdateTermRequest class]]) {// 机具关联商户
+        url = URL_TERM_UPDATE;
+        YXUpdateTermRequest *update = (YXUpdateTermRequest *)request;
+        parameters = @{@"mcId":update.mcId, @"termId":update.termId, @"hostSerialNo":update.hostSerialNo, @"mhId":update.mhId, @"id":update.theId, @"mhLong":update.mhLong, @"mhLat":update.mhLat, @"mhAddr":update.mhAddr, @"isManual":@"1"};
     }
     AFHTTPRequestOperationManager *manager = [self manager];
-    AFHTTPRequestOperation *operation = [manager POST:URL_PREDICT_UPDATE parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {// 查询成功
+    AFHTTPRequestOperation *operation = [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {// 查询成功
         success(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {// 查询失败
         failure();

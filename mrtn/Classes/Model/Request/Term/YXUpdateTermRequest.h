@@ -1,11 +1,13 @@
 //
-//  用于scanCodeUpdate的请求
+//  更新机具信息请求
 //
 //  Created by Mac on 15/12/8.
 //  Copyright © 2015年 YusysTechnologies. All rights reserved.
 //
 
-@interface YXUpdateRequest : NSObject
+#import "YXRequest.h"
+
+@interface YXUpdateTermRequest : YXRequest
 
 @property (nonatomic, strong, getter = theId) NSString *id;// ID编号
 @property (nonatomic, strong) NSString *mhId;// 宇信ID（二维条码）

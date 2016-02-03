@@ -1,5 +1,5 @@
 //
-//  机具信息
+//  机具信息(用于商户关联)
 //
 //  Created by Mac on 15/12/21.
 //  Copyright © 2015年 YusysTechnologies. All rights reserved.

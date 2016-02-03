@@ -1,5 +1,5 @@
 //
-//  机具信息,用于YXMerchantDetailInfo
+//  机具信息(用于商户详情)
 //
 //  Created by Mac on 15/12/25.
 //  Copyright © 2015年 YusysTechnologies. All rights reserved.

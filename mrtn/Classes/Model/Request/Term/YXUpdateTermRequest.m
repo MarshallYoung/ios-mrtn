@@ -6,8 +6,8 @@
 //  Copyright © 2015年 YusysTechnologies. All rights reserved.
 //
 
-#import "YXUpdateRequest.h"
+#import "YXUpdateTermRequest.h"
 
-@implementation YXUpdateRequest
+@implementation YXUpdateTermRequest
 
 @end

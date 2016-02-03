@@ -357,6 +357,7 @@
 		04D4F9E91C61D3D40098EE9E /* YXUpdatePredictRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F9E81C61D3D40098EE9E /* YXUpdatePredictRequest.m */; settings = {ASSET_TAGS = (); }; };
 		04D4F9ED1C61D6F30098EE9E /* YXUpdatePredictResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F9EC1C61D6F30098EE9E /* YXUpdatePredictResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D4F9F01C61DA970098EE9E /* YXPredictListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F9EF1C61DA970098EE9E /* YXPredictListRequest.m */; settings = {ASSET_TAGS = (); }; };
+		04D4F9F31C61E72D0098EE9E /* YXTermRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F9F21C61E72D0098EE9E /* YXTermRequest.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA171C605B8C00006CE5 /* YXLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9C81C605B8C00006CE5 /* YXLoginInfo.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA181C605B8C00006CE5 /* YXMerchantDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9CB1C605B8C00006CE5 /* YXMerchantDetailInfo.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA191C605B8C00006CE5 /* YXMerchantInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9CD1C605B8C00006CE5 /* YXMerchantInfo.m */; settings = {ASSET_TAGS = (); }; };
@@ -364,15 +365,15 @@
 		04D6BA1B1C605B8C00006CE5 /* YXTaskOrderInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9D21C605B8C00006CE5 /* YXTaskOrderInfo.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA1C1C605B8C00006CE5 /* YXLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9D61C605B8C00006CE5 /* YXLoginRequest.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA1D1C605B8C00006CE5 /* YXMerchantListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9D91C605B8C00006CE5 /* YXMerchantListRequest.m */; settings = {ASSET_TAGS = (); }; };
-		04D6BA1E1C605B8C00006CE5 /* YXUpdateRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9DC1C605B8C00006CE5 /* YXUpdateRequest.m */; settings = {ASSET_TAGS = (); }; };
+		04D6BA1E1C605B8C00006CE5 /* YXUpdateTermRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9DC1C605B8C00006CE5 /* YXUpdateTermRequest.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA1F1C605B8C00006CE5 /* YXRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9DE1C605B8C00006CE5 /* YXRequest.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA201C605B8C00006CE5 /* YXLoginResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9E21C605B8C00006CE5 /* YXLoginResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA211C605B8C00006CE5 /* YXMerchantListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9E51C605B8C00006CE5 /* YXMerchantListResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA221C605B8C00006CE5 /* YXMerchantDetailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9E71C605B8C00006CE5 /* YXMerchantDetailResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA251C605B8C00006CE5 /* YXOrderDetailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9EE1C605B8C00006CE5 /* YXOrderDetailResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA261C605B8C00006CE5 /* YXOrderListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9F01C605B8C00006CE5 /* YXOrderListResponse.m */; settings = {ASSET_TAGS = (); }; };
-		04D6BA281C605B8C00006CE5 /* YXQueryMachineResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9F61C605B8C00006CE5 /* YXQueryMachineResponse.m */; settings = {ASSET_TAGS = (); }; };
-		04D6BA291C605B8C00006CE5 /* YXUploadScanResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9F81C605B8C00006CE5 /* YXUploadScanResponse.m */; settings = {ASSET_TAGS = (); }; };
+		04D6BA281C605B8C00006CE5 /* YXTermResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9F61C605B8C00006CE5 /* YXTermResponse.m */; settings = {ASSET_TAGS = (); }; };
+		04D6BA291C605B8C00006CE5 /* YXUpdateTermResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9F81C605B8C00006CE5 /* YXUpdateTermResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA2A1C605B8C00006CE5 /* YXResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9FA1C605B8C00006CE5 /* YXResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA2B1C605B8C00006CE5 /* YXUploadImageResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9FC1C605B8C00006CE5 /* YXUploadImageResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA2C1C605B8C00006CE5 /* YXTaskApplyDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9FF1C605B8C00006CE5 /* YXTaskApplyDetail.m */; settings = {ASSET_TAGS = (); }; };
@@ -1086,6 +1087,8 @@
 		04D4F9EC1C61D6F30098EE9E /* YXUpdatePredictResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUpdatePredictResponse.m; sourceTree = "<group>"; };
 		04D4F9EE1C61DA970098EE9E /* YXPredictListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXPredictListRequest.h; sourceTree = "<group>"; };
 		04D4F9EF1C61DA970098EE9E /* YXPredictListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXPredictListRequest.m; sourceTree = "<group>"; };
+		04D4F9F11C61E72D0098EE9E /* YXTermRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTermRequest.h; sourceTree = "<group>"; };
+		04D4F9F21C61E72D0098EE9E /* YXTermRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTermRequest.m; sourceTree = "<group>"; };
 		04D6B9C71C605B8C00006CE5 /* YXLoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoginInfo.h; sourceTree = "<group>"; };
 		04D6B9C81C605B8C00006CE5 /* YXLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoginInfo.m; sourceTree = "<group>"; };
 		04D6B9CA1C605B8C00006CE5 /* YXMerchantDetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMerchantDetailInfo.h; sourceTree = "<group>"; };
@@ -1100,8 +1103,8 @@
 		04D6B9D61C605B8C00006CE5 /* YXLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoginRequest.m; sourceTree = "<group>"; };
 		04D6B9D81C605B8C00006CE5 /* YXMerchantListRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMerchantListRequest.h; sourceTree = "<group>"; };
 		04D6B9D91C605B8C00006CE5 /* YXMerchantListRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMerchantListRequest.m; sourceTree = "<group>"; };
-		04D6B9DB1C605B8C00006CE5 /* YXUpdateRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUpdateRequest.h; sourceTree = "<group>"; };
-		04D6B9DC1C605B8C00006CE5 /* YXUpdateRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUpdateRequest.m; sourceTree = "<group>"; };
+		04D6B9DB1C605B8C00006CE5 /* YXUpdateTermRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUpdateTermRequest.h; sourceTree = "<group>"; };
+		04D6B9DC1C605B8C00006CE5 /* YXUpdateTermRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUpdateTermRequest.m; sourceTree = "<group>"; };
 		04D6B9DD1C605B8C00006CE5 /* YXRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequest.h; sourceTree = "<group>"; };
 		04D6B9DE1C605B8C00006CE5 /* YXRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequest.m; sourceTree = "<group>"; };
 		04D6B9E11C605B8C00006CE5 /* YXLoginResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoginResponse.h; sourceTree = "<group>"; };
@@ -1114,10 +1117,10 @@
 		04D6B9EE1C605B8C00006CE5 /* YXOrderDetailResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXOrderDetailResponse.m; sourceTree = "<group>"; };
 		04D6B9EF1C605B8C00006CE5 /* YXOrderListResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXOrderListResponse.h; sourceTree = "<group>"; };
 		04D6B9F01C605B8C00006CE5 /* YXOrderListResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXOrderListResponse.m; sourceTree = "<group>"; };
-		04D6B9F51C605B8C00006CE5 /* YXQueryMachineResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXQueryMachineResponse.h; sourceTree = "<group>"; };
-		04D6B9F61C605B8C00006CE5 /* YXQueryMachineResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXQueryMachineResponse.m; sourceTree = "<group>"; };
-		04D6B9F71C605B8C00006CE5 /* YXUploadScanResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUploadScanResponse.h; sourceTree = "<group>"; };
-		04D6B9F81C605B8C00006CE5 /* YXUploadScanResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUploadScanResponse.m; sourceTree = "<group>"; };
+		04D6B9F51C605B8C00006CE5 /* YXTermResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTermResponse.h; sourceTree = "<group>"; };
+		04D6B9F61C605B8C00006CE5 /* YXTermResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTermResponse.m; sourceTree = "<group>"; };
+		04D6B9F71C605B8C00006CE5 /* YXUpdateTermResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUpdateTermResponse.h; sourceTree = "<group>"; };
+		04D6B9F81C605B8C00006CE5 /* YXUpdateTermResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUpdateTermResponse.m; sourceTree = "<group>"; };
 		04D6B9F91C605B8C00006CE5 /* YXResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXResponse.h; sourceTree = "<group>"; };
 		04D6B9FA1C605B8C00006CE5 /* YXResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXResponse.m; sourceTree = "<group>"; };
 		04D6B9FB1C605B8C00006CE5 /* YXUploadImageResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUploadImageResponse.h; sourceTree = "<group>"; };
@@ -2533,8 +2536,10 @@
 		04D6B9DA1C605B8C00006CE5 /* Term */ = {
 			isa = PBXGroup;
 			children = (
-				04D6B9DB1C605B8C00006CE5 /* YXUpdateRequest.h */,
-				04D6B9DC1C605B8C00006CE5 /* YXUpdateRequest.m */,
+				04D4F9F11C61E72D0098EE9E /* YXTermRequest.h */,
+				04D4F9F21C61E72D0098EE9E /* YXTermRequest.m */,
+				04D6B9DB1C605B8C00006CE5 /* YXUpdateTermRequest.h */,
+				04D6B9DC1C605B8C00006CE5 /* YXUpdateTermRequest.m */,
 			);
 			path = Term;
 			sourceTree = "<group>";
@@ -2593,10 +2598,10 @@
 		04D6B9F41C605B8C00006CE5 /* Term */ = {
 			isa = PBXGroup;
 			children = (
-				04D6B9F51C605B8C00006CE5 /* YXQueryMachineResponse.h */,
-				04D6B9F61C605B8C00006CE5 /* YXQueryMachineResponse.m */,
-				04D6B9F71C605B8C00006CE5 /* YXUploadScanResponse.h */,
-				04D6B9F81C605B8C00006CE5 /* YXUploadScanResponse.m */,
+				04D6B9F51C605B8C00006CE5 /* YXTermResponse.h */,
+				04D6B9F61C605B8C00006CE5 /* YXTermResponse.m */,
+				04D6B9F71C605B8C00006CE5 /* YXUpdateTermResponse.h */,
+				04D6B9F81C605B8C00006CE5 /* YXUpdateTermResponse.m */,
 			);
 			path = Term;
 			sourceTree = "<group>";
@@ -2809,7 +2814,7 @@
 				041070DA1C59A8F300D6D958 /* SDWebImageManager.m in Sources */,
 				04D4F9F01C61DA970098EE9E /* YXPredictListRequest.m in Sources */,
 				04646D011C59AB6100D6DE13 /* ZXPDF417BarcodeRow.m in Sources */,
-				04D6BA1E1C605B8C00006CE5 /* YXUpdateRequest.m in Sources */,
+				04D6BA1E1C605B8C00006CE5 /* YXUpdateTermRequest.m in Sources */,
 				04646C681C59AB6100D6DE13 /* ZXResultParser.m in Sources */,
 				04646C631C59AB6100D6DE13 /* ZXISBNParsedResult.m in Sources */,
 				04646CF31C59AB6100D6DE13 /* ZXPDF417BarcodeMetadata.m in Sources */,
@@ -2866,6 +2871,7 @@
 				04646C521C59AB6100D6DE13 /* ZXAztecDetectorResult.m in Sources */,
 				04646C7E1C59AB6100D6DE13 /* ZXWhiteRectangleDetector.m in Sources */,
 				04646CA71C59AB6100D6DE13 /* ZXDataMatrixC40Encoder.m in Sources */,
+				04D4F9F31C61E72D0098EE9E /* YXTermRequest.m in Sources */,
 				04646CB91C59AB6100D6DE13 /* ZXAbstractExpandedDecoder.m in Sources */,
 				0410709F1C59A8F300D6D958 /* YXViewController.m in Sources */,
 				04D4F9E91C61D3D40098EE9E /* YXUpdatePredictRequest.m in Sources */,
@@ -2993,7 +2999,7 @@
 				04646CFF1C59AB6100D6DE13 /* ZXPDF417.m in Sources */,
 				04646D081C59AB6100D6DE13 /* ZXPDF417Writer.m in Sources */,
 				04646C851C59AB6100D6DE13 /* ZXBitSource.m in Sources */,
-				04D6BA291C605B8C00006CE5 /* YXUploadScanResponse.m in Sources */,
+				04D6BA291C605B8C00006CE5 /* YXUpdateTermResponse.m in Sources */,
 				043757BE1C5FAA0D00A653CE /* YXTabBarController.m in Sources */,
 				04646C431C59AB6100D6DE13 /* LBXScanView.m in Sources */,
 				04646C8A1C59AB6100D6DE13 /* ZXDefaultGridSampler.m in Sources */,
@@ -3095,7 +3101,7 @@
 				04646D1E1C59AB6100D6DE13 /* ZXMultiDetector.m in Sources */,
 				04646C691C59AB6100D6DE13 /* ZXSMSMMSResultParser.m in Sources */,
 				04646CED1C59AB6100D6DE13 /* ZXUPCEANReader.m in Sources */,
-				04D6BA281C605B8C00006CE5 /* YXQueryMachineResponse.m in Sources */,
+				04D6BA281C605B8C00006CE5 /* YXTermResponse.m in Sources */,
 				04646C731C59AB6100D6DE13 /* ZXVCardResultParser.m in Sources */,
 				04646CBA1C59AB6100D6DE13 /* ZXAI013103decoder.m in Sources */,
 				04646C591C59AB6100D6DE13 /* ZXBizcardResultParser.m in Sources */,
