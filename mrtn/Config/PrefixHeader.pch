@@ -18,6 +18,7 @@
 #import "UIBarButtonItem+Extension.h"
 #import "UIScrollView+Extension.h"
 #import "NSString+Extension.h"
+#import <GPUImage/GPUImage.h>
 
 #endif
 

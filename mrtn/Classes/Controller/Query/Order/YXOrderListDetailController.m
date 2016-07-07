@@ -59,8 +59,10 @@
     request.mcId       = _orderInfo.mcid;// 商户编号
     request.mcName     = _orderInfo.mcName;// 商户名称
     request.taskStatus = _controllerInfo.mode;// 任务单状态
+    YXLog(@"mcId=%@,mcName=%@,taskStatus=%@", _orderInfo.mcid, _orderInfo.mcName,_controllerInfo.mode);
     [YXNetworkingManager queryWithRequest:request success:^(id responseObject) {
         [progress hide:YES];// 隐藏读取框
+        YXLog(@"%@",responseObject);
         YXOrderListDetailResponse *response = [[YXOrderListDetailResponse alloc] initWithDictionary:responseObject error:nil];
         if (response.success) {
             array = response.data;// 设置数据

@@ -25,7 +25,7 @@
 #import "YXTaskAttachment.h"
 #import "YXSignBoard.h"
 #import "YXAlertDialog.h"
-#import "YXURLHelper.h"
+#import "YXAPI.h"
 
 @interface YXOrderDetailController ()<MBProgressHUDDelegate>
 
@@ -48,6 +48,7 @@
 @property (strong, nonatomic) IBOutlet UILabel      *termTlinknmL;// 终端联系人
 @property (strong, nonatomic) IBOutlet UILabel      *termTlinktelL;// 终端联系电话
 @property (strong, nonatomic) IBOutlet UIImageView  *signIV;// 签名
+@property (strong, nonatomic) IBOutlet UIView       *bottomView;
 
 @end
 
@@ -55,7 +56,7 @@
 @implementation YXOrderDetailController {
     
     UIBarButtonItem *btn;// 提交按钮
-    YXFragment *fragment;// 各种任务单
+    YXTaskFragment *fragment;// 各种任务单
     YXTaskAttachment *att;// 照片附件
     UITapGestureRecognizer *singleTap;// 单击事件
     MBProgressHUD *progress;// 读取框
@@ -87,7 +88,20 @@
     singleTap  = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sign)];// 初始化点击事件
     signSetted = NO;
     attSetted  = NO;
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     [self initInfo];
+    
+}
+
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    self.scrollView.contentSize = CGSizeMake([[UIScreen mainScreen] bounds].size.width - 4,2000);
     
 }
 
@@ -150,6 +164,17 @@
             [self.signIV sd_setImageWithURL:url];
         }
     }
+    [self initView];
+    
+}
+
+/**
+ *  由于这个界面有scrollView,而且使用了自动布局,所以初始化scrollView的contentSize的方法只能在viewDidLayoutSubviews中初始化,否则scrollView无法滚动
+ */
+- (void)initView {
+    CGSize newContentSize = self.scrollView.contentSize;
+    newContentSize.height = self.signIV.y + self.signIV.height;
+    self.scrollView.contentSize = newContentSize;
     // 判断任务单类型
     int type = [_taskOrderInfo.taskType intValue];
     switch (type) {

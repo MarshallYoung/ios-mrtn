@@ -7,7 +7,7 @@
 
 #import "YXNetworkingManager.h"
 #import "YXEncryptHelper.h"
-#import "YXURLHelper.h"
+#import "YXAPI.h"
 #import "YXMerchantListRequest.h"
 #import "YXMerchantDetailRequest.h"
 #import "YXOrderListRequest.h"
@@ -31,9 +31,11 @@
  */
 + (AFHTTPRequestOperation *)loginWithRequest:(YXLoginRequest *)request success:(void (^)(YXLoginResponse *))success failure:(void (^)(void))failure {
     
-    NSDictionary *parameters = @{@"name":request.name ,@"pwd":[YXEncryptHelper md5HexDigest:request.pwd]};// 设置参数
+    NSDictionary *parameters = @{@"username":request.name ,@"password":[YXEncryptHelper md5HexDigest:request.pwd]};// 设置参数
     AFHTTPRequestOperationManager *manager = [self manager];
     AFHTTPRequestOperation *operation = [manager POST:URL_LOGIN parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {// 登录成功
+        YXLog(@"登录获得服务器数据");
+        YXLog(@"%@",responseObject);
         YXLoginResponse *response = [[YXLoginResponse alloc] initWithDictionary:responseObject error:nil];// 得到响应
         success(response);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {// 登录失败

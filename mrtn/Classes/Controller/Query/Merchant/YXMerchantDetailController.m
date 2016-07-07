@@ -14,6 +14,7 @@
 
 @interface YXMerchantDetailController () <MBProgressHUDDelegate>
 
+@property (strong, nonatomic) YXMerchantDetailInfo *detailInfo;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;// 根ScrollView
 @property (strong, nonatomic) IBOutlet UILabel      *mcIdL;// 商户编号
 @property (strong, nonatomic) IBOutlet UILabel      *mcNameL;// 商户名称
@@ -31,6 +32,7 @@
 @property (strong, nonatomic) IBOutlet UILabel      *mcOpareaL;// 经营范围
 @property (strong, nonatomic) IBOutlet UILabel      *mcStatusL;// 商户状态
 @property (strong, nonatomic) IBOutlet UILabel      *instNameL;// 机构名称
+@property (strong, nonatomic) IBOutlet UIView       *bottomView;
 
 @end
 
@@ -41,7 +43,20 @@
     [super viewDidLoad];
     
     self.title = @"商户详情";
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
     [self loadData];
+    
+}
+
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    self.scrollView.contentSize = CGSizeMake([[UIScreen mainScreen] bounds].size.width - 4,800);
     
 }
 
@@ -56,8 +71,9 @@
         [progress hide:YES];// 隐藏读取框
         YXMerchantDetailResponse *response = [[YXMerchantDetailResponse alloc] initWithDictionary:responseObject error:nil];// 得到响应
         if (response.success) {
-            YXMerchantDetailInfo *info = response.data;
-            [self displayInfo:info];
+            YXLog(@"商户详情查询界面,返回信息是%@",response.data);
+            _detailInfo = response.data;
+            [self displayInfo:_detailInfo];
         }else{
             [MBProgressHUD showFail:response.msg];// 显示错误消息
         }
@@ -75,6 +91,7 @@
  */
 - (void)displayInfo:(YXMerchantDetailInfo *)info {
     
+    YXLog(@"scrollView在填充数据之前的contentSize高度是:%f",[self.scrollView contentSize].height);
     self.mcIdL.text = info.mcId;
     self.mcNameL.text = info.mcName;
     self.mcOrgcodeL.text = info.mcOrgcode;
@@ -113,9 +130,16 @@
         self.mcStatusL.text = @"可疑";
     }
     self.instNameL.text = info.instName;
-    NSMutableArray *array = info.terms;
+    [self initView];
+}
+
+/**
+ *  由于这个界面有scrollView,而且使用了自动布局,所以初始化scrollView的contentSize的方法只能在viewDidLayoutSubviews中初始化,否则scrollView无法滚动
+ */
+- (void)initView {
+    NSMutableArray *array = _detailInfo.terms;
     for (YXTermInfo *info in array) {
-        [self.scrollView addBottomSubview:[YXTermCell initWithTermInfo:info]];
+        [self.bottomView addBottomSubview:[YXTermCell initWithTermInfo:info]];
     }
     
 }

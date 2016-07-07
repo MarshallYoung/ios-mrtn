@@ -6,9 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "YXFragment.h"
+#import "YXTaskFragment.h"
 
-@interface YXTaskDistributionFragment : YXFragment
+@interface YXTaskDistributionFragment : YXTaskFragment
 
 + (instancetype)initWithTaskOrderInfo:(YXTaskOrderInfo *)taskOrderInfo;
 

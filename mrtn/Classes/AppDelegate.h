@@ -11,5 +11,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 - (YXNavigationController *)newLoginController;
+@property (strong, nonatomic) NSString *sid;
 
 @end

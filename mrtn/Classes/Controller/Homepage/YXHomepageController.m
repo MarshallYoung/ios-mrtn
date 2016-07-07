@@ -14,6 +14,8 @@
 #import "YXPredictController.h"
 #import "YXLoginInfo.h"
 
+#import "YXTestController.h"
+
 @interface YXHomepageController ()
 
 @property (strong, nonatomic) IBOutlet UILabel *userNameL;// 用户名
@@ -23,6 +25,8 @@
 - (IBAction)pushToBacklog:(id)sender;// 打开待办事项
 - (IBAction)pushToProcessed:(id)sender;// 打开办结
 - (IBAction)pushToPredict:(id)sender;// 预计上门时间
+- (IBAction)test:(id)sender;// 测试
+@property (strong, nonatomic) IBOutlet UIButton *testBtn;
 
 @end
 
@@ -39,6 +43,7 @@
     self.navigationController.title = @"商户云服务";
     YXTabBarController *root = (YXTabBarController *)self.tabBarController;
     loginInfo = root.loginInfo;
+    self.testBtn.hidden = YES;
     [self displayData];
     
 }
@@ -47,8 +52,9 @@
 - (void)displayData {
     
     if (loginInfo) {
-        self.userNameL.text = loginInfo.userName;
-        self.instNameL.text = loginInfo.instName;
+        YXLog(@"%@",loginInfo);
+//        self.userNameL.text = loginInfo.userName;
+//        self.instNameL.text = loginInfo.instName;
     }
     
 }
@@ -87,6 +93,18 @@
 - (IBAction)pushToPredict:(id)sender {
     
     YXPredictController *controller = [[YXPredictController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+    
+}
+
+/**
+ *  测试
+ *
+ *  @param sender 按钮
+ */
+- (IBAction)test:(id)sender {
+    
+    YXTestController *controller = [[YXTestController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
     
 }

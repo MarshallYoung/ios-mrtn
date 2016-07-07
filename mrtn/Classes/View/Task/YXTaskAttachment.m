@@ -8,7 +8,7 @@
 #define NAME_LENGTH 40 // 图片文件名长度
 
 #import "YXTaskAttachment.h"
-#import "YXURLHelper.h"
+#import "YXAPI.h"
 #import "UIImageView+WebCache.h"
 #import "MBProgressHUD+Extension.h"
 #import "YXZoomImageController.h"

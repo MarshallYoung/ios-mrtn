@@ -119,5 +119,20 @@
     
 }
 
+/**
+ *  屏幕快照
+ *
+ *  @return 图片
+ */
+-(UIImage *)convertViewToImage
+{
+    UIGraphicsBeginImageContext(self.bounds.size);
+    [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 
 @end

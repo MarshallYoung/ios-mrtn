@@ -14,20 +14,18 @@
 - (void)addBottomSubview:(UIView *)subview {
     
     if (subview) {// 子控件不为空
-        subview.y = self.contentSize.height;// 设置控件纵坐标
+        YXLog(@"scrollView添加subView之前的contentSize高度是:%f",[self contentSize].height);
+//        UIView *lastObj = [[self subviews] lastObject];
+        subview.y = [self contentSize].height;// 设置控件纵坐标
+        YXLog(@"subView的纵坐标y是:%f",subview.y);
         [self addSubview:subview];
-        [self refreshLayout];
+        CGSize newContentSize = [self contentSize];
+        newContentSize.height = subview.y + subview.height + MARGIN;
+        self.contentSize = newContentSize;
+        YXLog(@"scrollView添加subView之后的contentSize高度是:%f",[self contentSize].height);
+        
     }
 
 }
-
--(void)refreshLayout {
-    
-    UIView *lastSubview = [[self subviews] lastObject];
-    CGSize newContentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, lastSubview.y + lastSubview.height + MARGIN);// 宽度是屏幕宽度,需要的话就修改
-    self.contentSize = newContentSize;
-    
-}
-
 
 @end

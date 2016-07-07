@@ -45,7 +45,6 @@
 		041070BA1C59A8F300D6D958 /* des.c in Sources */ = {isa = PBXBuildFile; fileRef = 04106F8C1C59A8F300D6D958 /* des.c */; settings = {ASSET_TAGS = (); }; };
 		041070BB1C59A8F300D6D958 /* format.c in Sources */ = {isa = PBXBuildFile; fileRef = 04106F8E1C59A8F300D6D958 /* format.c */; settings = {ASSET_TAGS = (); }; };
 		041070BC1C59A8F300D6D958 /* YXEncryptHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106F911C59A8F300D6D958 /* YXEncryptHelper.m */; settings = {ASSET_TAGS = (); }; };
-		041070BD1C59A8F300D6D958 /* YXURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106F931C59A8F300D6D958 /* YXURLHelper.m */; settings = {ASSET_TAGS = (); }; };
 		041070BE1C59A8F300D6D958 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106F971C59A8F300D6D958 /* AFHTTPRequestOperation.m */; settings = {ASSET_TAGS = (); }; };
 		041070BF1C59A8F300D6D958 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106F991C59A8F300D6D958 /* AFHTTPRequestOperationManager.m */; settings = {ASSET_TAGS = (); }; };
 		041070C01C59A8F300D6D958 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04106F9B1C59A8F300D6D958 /* AFHTTPSessionManager.m */; settings = {ASSET_TAGS = (); }; };
@@ -82,7 +81,7 @@
 		041071061C59A8F300D6D958 /* YXTaskOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041070631C59A8F300D6D958 /* YXTaskOrderCell.xib */; settings = {ASSET_TAGS = (); }; };
 		041071071C59A8F300D6D958 /* YXTermCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041070651C59A8F300D6D958 /* YXTermCell.m */; settings = {ASSET_TAGS = (); }; };
 		041071081C59A8F300D6D958 /* YXTermCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041070661C59A8F300D6D958 /* YXTermCell.xib */; settings = {ASSET_TAGS = (); }; };
-		041071091C59A8F300D6D958 /* YXFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = 041070691C59A8F300D6D958 /* YXFragment.m */; settings = {ASSET_TAGS = (); }; };
+		041071091C59A8F300D6D958 /* YXTaskFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = 041070691C59A8F300D6D958 /* YXTaskFragment.m */; settings = {ASSET_TAGS = (); }; };
 		0410710A1C59A8F300D6D958 /* YXTaskAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0410706B1C59A8F300D6D958 /* YXTaskAttachment.m */; settings = {ASSET_TAGS = (); }; };
 		0410710B1C59A8F300D6D958 /* YXTaskAttachment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0410706C1C59A8F300D6D958 /* YXTaskAttachment.xib */; settings = {ASSET_TAGS = (); }; };
 		0410710C1C59A8F300D6D958 /* YXTaskBankFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0410706E1C59A8F300D6D958 /* YXTaskBankFragment.m */; settings = {ASSET_TAGS = (); }; };
@@ -108,6 +107,8 @@
 		041071201C59A8F300D6D958 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0410708D1C59A8F300D6D958 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		041071211C59A8F300D6D958 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0410708E1C59A8F300D6D958 /* main.m */; settings = {ASSET_TAGS = (); }; };
 		041071221C59A8F300D6D958 /* Thumbs.db in Resources */ = {isa = PBXBuildFile; fileRef = 041070901C59A8F300D6D958 /* Thumbs.db */; settings = {ASSET_TAGS = (); }; };
+		041E12B91C7ED27A00F3471C /* YXTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041E12B71C7ED27A00F3471C /* YXTestController.m */; settings = {ASSET_TAGS = (); }; };
+		041E12BA1C7ED27A00F3471C /* YXTestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041E12B81C7ED27A00F3471C /* YXTestController.xib */; settings = {ASSET_TAGS = (); }; };
 		043757BE1C5FAA0D00A653CE /* YXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043757BD1C5FAA0D00A653CE /* YXTabBarController.m */; settings = {ASSET_TAGS = (); }; };
 		044E29501C5B61E600A4AAD9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044E29361C5B61E600A4AAD9 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
 		044E29511C5B61E600A4AAD9 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044E29391C5B61E600A4AAD9 /* JSONModel.m */; settings = {ASSET_TAGS = (); }; };
@@ -354,11 +355,11 @@
 		048F8E0A1C5B53EC002E2EB4 /* YXAlertDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 048F8E091C5B53EC002E2EB4 /* YXAlertDialog.m */; settings = {ASSET_TAGS = (); }; };
 		048F8E0C1C5B53FF002E2EB4 /* YXAlertDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048F8E0B1C5B53FF002E2EB4 /* YXAlertDialog.xib */; settings = {ASSET_TAGS = (); }; };
 		049B0F921C61A2A200830466 /* YXUploadResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B0F911C61A2A200830466 /* YXUploadResponse.m */; settings = {ASSET_TAGS = (); }; };
+		049FC08E1C8836AE00EDBC9E /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049FC08D1C8836AE00EDBC9E /* GPUImage.framework */; };
 		04D4F9E91C61D3D40098EE9E /* YXUpdatePredictRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F9E81C61D3D40098EE9E /* YXUpdatePredictRequest.m */; settings = {ASSET_TAGS = (); }; };
 		04D4F9ED1C61D6F30098EE9E /* YXUpdatePredictResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F9EC1C61D6F30098EE9E /* YXUpdatePredictResponse.m */; settings = {ASSET_TAGS = (); }; };
 		04D4F9F01C61DA970098EE9E /* YXPredictListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F9EF1C61DA970098EE9E /* YXPredictListRequest.m */; settings = {ASSET_TAGS = (); }; };
 		04D4F9F31C61E72D0098EE9E /* YXTermRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4F9F21C61E72D0098EE9E /* YXTermRequest.m */; settings = {ASSET_TAGS = (); }; };
-		04D6BA171C605B8C00006CE5 /* YXLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9C81C605B8C00006CE5 /* YXLoginInfo.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA181C605B8C00006CE5 /* YXMerchantDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9CB1C605B8C00006CE5 /* YXMerchantDetailInfo.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA191C605B8C00006CE5 /* YXMerchantInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9CD1C605B8C00006CE5 /* YXMerchantInfo.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA1A1C605B8C00006CE5 /* YXOrderListInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6B9D01C605B8C00006CE5 /* YXOrderListInfo.m */; settings = {ASSET_TAGS = (); }; };
@@ -392,6 +393,15 @@
 		04D6BA3E1C60946100006CE5 /* YXOrderListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6BA3D1C60946100006CE5 /* YXOrderListRequest.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA441C609E9300006CE5 /* YXOrderListDetailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6BA431C609E9300006CE5 /* YXOrderListDetailRequest.m */; settings = {ASSET_TAGS = (); }; };
 		04D6BA471C609F3800006CE5 /* YXOrderListDetailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D6BA461C609F3800006CE5 /* YXOrderListDetailResponse.m */; settings = {ASSET_TAGS = (); }; };
+		04E9D8A21C75A0F100570673 /* YXAssessController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9D8A01C75A0F100570673 /* YXAssessController.m */; settings = {ASSET_TAGS = (); }; };
+		04E9D8A31C75A0F100570673 /* YXAssessController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E9D8A11C75A0F100570673 /* YXAssessController.xib */; settings = {ASSET_TAGS = (); }; };
+		04E9D8A71C75A51F00570673 /* YXAssessFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9D8A61C75A51F00570673 /* YXAssessFragment.m */; settings = {ASSET_TAGS = (); }; };
+		04E9D8AA1C75A67800570673 /* YXBusinessRepresentativeFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9D8A91C75A67800570673 /* YXBusinessRepresentativeFragment.m */; settings = {ASSET_TAGS = (); }; };
+		04E9D8AC1C75A69A00570673 /* YXBusinessRepresentativeFragment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E9D8AB1C75A69A00570673 /* YXBusinessRepresentativeFragment.xib */; settings = {ASSET_TAGS = (); }; };
+		04E9D8B01C75ACC500570673 /* YXBusinessDirectorFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9D8AE1C75ACC500570673 /* YXBusinessDirectorFragment.m */; settings = {ASSET_TAGS = (); }; };
+		04E9D8B11C75ACC500570673 /* YXBusinessDirectorFragment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E9D8AF1C75ACC500570673 /* YXBusinessDirectorFragment.xib */; settings = {ASSET_TAGS = (); }; };
+		04E9D8B51C75AF3000570673 /* YXServiceRepresentativeFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9D8B31C75AF3000570673 /* YXServiceRepresentativeFragment.m */; settings = {ASSET_TAGS = (); }; };
+		04E9D8B61C75AF3000570673 /* YXServiceRepresentativeFragment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E9D8B41C75AF3000570673 /* YXServiceRepresentativeFragment.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -459,8 +469,6 @@
 		04106F8F1C59A8F300D6D958 /* format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = format.h; sourceTree = "<group>"; };
 		04106F901C59A8F300D6D958 /* YXEncryptHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXEncryptHelper.h; sourceTree = "<group>"; };
 		04106F911C59A8F300D6D958 /* YXEncryptHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXEncryptHelper.m; sourceTree = "<group>"; };
-		04106F921C59A8F300D6D958 /* YXURLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXURLHelper.h; sourceTree = "<group>"; };
-		04106F931C59A8F300D6D958 /* YXURLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXURLHelper.m; sourceTree = "<group>"; };
 		04106F961C59A8F300D6D958 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		04106F971C59A8F300D6D958 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		04106F981C59A8F300D6D958 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -532,8 +540,8 @@
 		041070641C59A8F300D6D958 /* YXTermCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTermCell.h; sourceTree = "<group>"; };
 		041070651C59A8F300D6D958 /* YXTermCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTermCell.m; sourceTree = "<group>"; };
 		041070661C59A8F300D6D958 /* YXTermCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXTermCell.xib; sourceTree = "<group>"; };
-		041070681C59A8F300D6D958 /* YXFragment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXFragment.h; sourceTree = "<group>"; };
-		041070691C59A8F300D6D958 /* YXFragment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXFragment.m; sourceTree = "<group>"; };
+		041070681C59A8F300D6D958 /* YXTaskFragment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTaskFragment.h; sourceTree = "<group>"; };
+		041070691C59A8F300D6D958 /* YXTaskFragment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTaskFragment.m; sourceTree = "<group>"; };
 		0410706A1C59A8F300D6D958 /* YXTaskAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTaskAttachment.h; sourceTree = "<group>"; };
 		0410706B1C59A8F300D6D958 /* YXTaskAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTaskAttachment.m; sourceTree = "<group>"; };
 		0410706C1C59A8F300D6D958 /* YXTaskAttachment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXTaskAttachment.xib; sourceTree = "<group>"; };
@@ -573,6 +581,9 @@
 		0410708F1C59A8F300D6D958 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		041070901C59A8F300D6D958 /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thumbs.db; sourceTree = "<group>"; };
 		041070911C59A8F300D6D958 /* mrtn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = mrtn.xcodeproj; sourceTree = "<group>"; };
+		041E12B61C7ED27A00F3471C /* YXTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTestController.h; sourceTree = "<group>"; };
+		041E12B71C7ED27A00F3471C /* YXTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTestController.m; sourceTree = "<group>"; };
+		041E12B81C7ED27A00F3471C /* YXTestController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXTestController.xib; sourceTree = "<group>"; };
 		043757BC1C5FAA0D00A653CE /* YXTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTabBarController.h; sourceTree = "<group>"; };
 		043757BD1C5FAA0D00A653CE /* YXTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTabBarController.m; sourceTree = "<group>"; };
 		044E29361C5B61E600A4AAD9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1073,6 +1084,7 @@
 		04646C3C1C59AB6100D6DE13 /* ZXMultiFormatWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXMultiFormatWriter.m; sourceTree = "<group>"; };
 		04646C3E1C59AB6100D6DE13 /* ZXingWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXingWrapper.h; sourceTree = "<group>"; };
 		04646C3F1C59AB6100D6DE13 /* ZXingWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXingWrapper.m; sourceTree = "<group>"; };
+		0483134F1CC618A80028410F /* YXAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXAPI.h; sourceTree = "<group>"; };
 		0485D2511C60A61200C682AB /* YXOrderDetailRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXOrderDetailRequest.h; sourceTree = "<group>"; };
 		0485D2521C60A61200C682AB /* YXOrderDetailRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXOrderDetailRequest.m; sourceTree = "<group>"; };
 		048F8E081C5B53EC002E2EB4 /* YXAlertDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXAlertDialog.h; sourceTree = "<group>"; };
@@ -1081,6 +1093,7 @@
 		049ACD6E1C59BADE00F7EC3D /* mrtn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mrtn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049B0F901C61A2A200830466 /* YXUploadResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUploadResponse.h; sourceTree = "<group>"; };
 		049B0F911C61A2A200830466 /* YXUploadResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUploadResponse.m; sourceTree = "<group>"; };
+		049FC08D1C8836AE00EDBC9E /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GPUImage.framework; path = mrtn/Classes/Framework/GPUImage.framework; sourceTree = "<group>"; };
 		04D4F9E71C61D3D40098EE9E /* YXUpdatePredictRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUpdatePredictRequest.h; sourceTree = "<group>"; };
 		04D4F9E81C61D3D40098EE9E /* YXUpdatePredictRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUpdatePredictRequest.m; sourceTree = "<group>"; };
 		04D4F9EB1C61D6F30098EE9E /* YXUpdatePredictResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUpdatePredictResponse.h; sourceTree = "<group>"; };
@@ -1090,7 +1103,6 @@
 		04D4F9F11C61E72D0098EE9E /* YXTermRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTermRequest.h; sourceTree = "<group>"; };
 		04D4F9F21C61E72D0098EE9E /* YXTermRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTermRequest.m; sourceTree = "<group>"; };
 		04D6B9C71C605B8C00006CE5 /* YXLoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoginInfo.h; sourceTree = "<group>"; };
-		04D6B9C81C605B8C00006CE5 /* YXLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoginInfo.m; sourceTree = "<group>"; };
 		04D6B9CA1C605B8C00006CE5 /* YXMerchantDetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMerchantDetailInfo.h; sourceTree = "<group>"; };
 		04D6B9CB1C605B8C00006CE5 /* YXMerchantDetailInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMerchantDetailInfo.m; sourceTree = "<group>"; };
 		04D6B9CC1C605B8C00006CE5 /* YXMerchantInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMerchantInfo.h; sourceTree = "<group>"; };
@@ -1157,6 +1169,20 @@
 		04D6BA431C609E9300006CE5 /* YXOrderListDetailRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXOrderListDetailRequest.m; sourceTree = "<group>"; };
 		04D6BA451C609F3800006CE5 /* YXOrderListDetailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXOrderListDetailResponse.h; sourceTree = "<group>"; };
 		04D6BA461C609F3800006CE5 /* YXOrderListDetailResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXOrderListDetailResponse.m; sourceTree = "<group>"; };
+		04E9D89F1C75A0F100570673 /* YXAssessController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXAssessController.h; sourceTree = "<group>"; };
+		04E9D8A01C75A0F100570673 /* YXAssessController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXAssessController.m; sourceTree = "<group>"; };
+		04E9D8A11C75A0F100570673 /* YXAssessController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXAssessController.xib; sourceTree = "<group>"; };
+		04E9D8A51C75A51F00570673 /* YXAssessFragment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXAssessFragment.h; sourceTree = "<group>"; };
+		04E9D8A61C75A51F00570673 /* YXAssessFragment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXAssessFragment.m; sourceTree = "<group>"; };
+		04E9D8A81C75A67800570673 /* YXBusinessRepresentativeFragment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBusinessRepresentativeFragment.h; sourceTree = "<group>"; };
+		04E9D8A91C75A67800570673 /* YXBusinessRepresentativeFragment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBusinessRepresentativeFragment.m; sourceTree = "<group>"; };
+		04E9D8AB1C75A69A00570673 /* YXBusinessRepresentativeFragment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXBusinessRepresentativeFragment.xib; sourceTree = "<group>"; };
+		04E9D8AD1C75ACC500570673 /* YXBusinessDirectorFragment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBusinessDirectorFragment.h; sourceTree = "<group>"; };
+		04E9D8AE1C75ACC500570673 /* YXBusinessDirectorFragment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBusinessDirectorFragment.m; sourceTree = "<group>"; };
+		04E9D8AF1C75ACC500570673 /* YXBusinessDirectorFragment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXBusinessDirectorFragment.xib; sourceTree = "<group>"; };
+		04E9D8B21C75AF3000570673 /* YXServiceRepresentativeFragment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXServiceRepresentativeFragment.h; sourceTree = "<group>"; };
+		04E9D8B31C75AF3000570673 /* YXServiceRepresentativeFragment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXServiceRepresentativeFragment.m; sourceTree = "<group>"; };
+		04E9D8B41C75AF3000570673 /* YXServiceRepresentativeFragment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YXServiceRepresentativeFragment.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1164,6 +1190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049FC08E1C8836AE00EDBC9E /* GPUImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1192,6 +1219,7 @@
 		04106F3B1C59A8F300D6D958 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0483134F1CC618A80028410F /* YXAPI.h */,
 				04106F3C1C59A8F300D6D958 /* AppDelegate.h */,
 				04106F3D1C59A8F300D6D958 /* AppDelegate.m */,
 				04106F871C59A8F300D6D958 /* Framework */,
@@ -1228,6 +1256,7 @@
 		04106F4F1C59A8F300D6D958 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				041E12B41C7ED24A00F3471C /* Test */,
 				04106F501C59A8F300D6D958 /* Base */,
 				04106F591C59A8F300D6D958 /* Login */,
 				04106F551C59A8F300D6D958 /* Homepage */,
@@ -1235,6 +1264,7 @@
 				04106F641C59A8F300D6D958 /* More */,
 				04106F681C59A8F300D6D958 /* Query */,
 				04106F811C59A8F300D6D958 /* Scan */,
+				04E9D89E1C759F4000570673 /* Assess */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1369,8 +1399,6 @@
 				04106F8A1C59A8F300D6D958 /* DES */,
 				04106F901C59A8F300D6D958 /* YXEncryptHelper.h */,
 				04106F911C59A8F300D6D958 /* YXEncryptHelper.m */,
-				04106F921C59A8F300D6D958 /* YXURLHelper.h */,
-				04106F931C59A8F300D6D958 /* YXURLHelper.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1499,6 +1527,7 @@
 			children = (
 				0410705A1C59A8F300D6D958 /* Query */,
 				041070671C59A8F300D6D958 /* Task */,
+				04E9D8A41C75A4E400570673 /* Assess */,
 				0410707F1C59A8F300D6D958 /* YXDatePicker.h */,
 				041070801C59A8F300D6D958 /* YXDatePicker.m */,
 				041070811C59A8F300D6D958 /* YXDatePicker.xib */,
@@ -1540,8 +1569,8 @@
 		041070671C59A8F300D6D958 /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				041070681C59A8F300D6D958 /* YXFragment.h */,
-				041070691C59A8F300D6D958 /* YXFragment.m */,
+				041070681C59A8F300D6D958 /* YXTaskFragment.h */,
+				041070691C59A8F300D6D958 /* YXTaskFragment.m */,
 				0410706A1C59A8F300D6D958 /* YXTaskAttachment.h */,
 				0410706B1C59A8F300D6D958 /* YXTaskAttachment.m */,
 				0410706C1C59A8F300D6D958 /* YXTaskAttachment.xib */,
@@ -1582,6 +1611,16 @@
 		041070921C59A8F300D6D958 /* Products */ = {
 			isa = PBXGroup;
 			name = Products;
+			sourceTree = "<group>";
+		};
+		041E12B41C7ED24A00F3471C /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				041E12B61C7ED27A00F3471C /* YXTestController.h */,
+				041E12B71C7ED27A00F3471C /* YXTestController.m */,
+				041E12B81C7ED27A00F3471C /* YXTestController.xib */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		044E29351C5B61E600A4AAD9 /* JSONModel */ = {
@@ -2427,6 +2466,7 @@
 		04A008E31BEC3FE8000A6EDF = {
 			isa = PBXGroup;
 			children = (
+				049FC08D1C8836AE00EDBC9E /* GPUImage.framework */,
 				04106F381C59A8F300D6D958 /* mrtn */,
 				049ACD6E1C59BADE00F7EC3D /* mrtn.app */,
 			);
@@ -2472,7 +2512,6 @@
 			isa = PBXGroup;
 			children = (
 				04D6B9C71C605B8C00006CE5 /* YXLoginInfo.h */,
-				04D6B9C81C605B8C00006CE5 /* YXLoginInfo.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -2655,6 +2694,34 @@
 			path = Order;
 			sourceTree = "<group>";
 		};
+		04E9D89E1C759F4000570673 /* Assess */ = {
+			isa = PBXGroup;
+			children = (
+				04E9D89F1C75A0F100570673 /* YXAssessController.h */,
+				04E9D8A01C75A0F100570673 /* YXAssessController.m */,
+				04E9D8A11C75A0F100570673 /* YXAssessController.xib */,
+			);
+			path = Assess;
+			sourceTree = "<group>";
+		};
+		04E9D8A41C75A4E400570673 /* Assess */ = {
+			isa = PBXGroup;
+			children = (
+				04E9D8A51C75A51F00570673 /* YXAssessFragment.h */,
+				04E9D8A61C75A51F00570673 /* YXAssessFragment.m */,
+				04E9D8A81C75A67800570673 /* YXBusinessRepresentativeFragment.h */,
+				04E9D8A91C75A67800570673 /* YXBusinessRepresentativeFragment.m */,
+				04E9D8AB1C75A69A00570673 /* YXBusinessRepresentativeFragment.xib */,
+				04E9D8AD1C75ACC500570673 /* YXBusinessDirectorFragment.h */,
+				04E9D8AE1C75ACC500570673 /* YXBusinessDirectorFragment.m */,
+				04E9D8AF1C75ACC500570673 /* YXBusinessDirectorFragment.xib */,
+				04E9D8B21C75AF3000570673 /* YXServiceRepresentativeFragment.h */,
+				04E9D8B31C75AF3000570673 /* YXServiceRepresentativeFragment.m */,
+				04E9D8B41C75AF3000570673 /* YXServiceRepresentativeFragment.xib */,
+			);
+			path = Assess;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2723,13 +2790,16 @@
 				041071041C59A8F300D6D958 /* YXMerchantCell.xib in Resources */,
 				041070AC1C59A8F300D6D958 /* YXMerchantListController.xib in Resources */,
 				041070B61C59A8F300D6D958 /* YXPredictController.xib in Resources */,
+				04E9D8B61C75AF3000570673 /* YXServiceRepresentativeFragment.xib in Resources */,
 				041071201C59A8F300D6D958 /* LaunchScreen.storyboard in Resources */,
 				041070941C59A8F300D6D958 /* Assets.xcassets in Resources */,
 				0410710D1C59A8F300D6D958 /* YXTaskBankFragment.xib in Resources */,
 				0410711C1C59A8F300D6D958 /* YXSignBoard.xib in Resources */,
+				04E9D8AC1C75A69A00570673 /* YXBusinessRepresentativeFragment.xib in Resources */,
 				041071151C59A8F300D6D958 /* YXTaskTrainFragment.xib in Resources */,
 				041070B01C59A8F300D6D958 /* YXOrderListController.xib in Resources */,
 				041071061C59A8F300D6D958 /* YXTaskOrderCell.xib in Resources */,
+				04E9D8B11C75ACC500570673 /* YXBusinessDirectorFragment.xib in Resources */,
 				041071081C59A8F300D6D958 /* YXTermCell.xib in Resources */,
 				0410710F1C59A8F300D6D958 /* YXTaskDistributionFragment.xib in Resources */,
 				048F8E0C1C5B53FF002E2EB4 /* YXAlertDialog.xib in Resources */,
@@ -2738,6 +2808,7 @@
 				041071021C59A8F300D6D958 /* YXBacklogCell.xib in Resources */,
 				044E29501C5B61E600A4AAD9 /* Info.plist in Resources */,
 				041071191C59A8F300D6D958 /* YXDatePicker.xib in Resources */,
+				04E9D8A31C75A0F100570673 /* YXAssessController.xib in Resources */,
 				041070A61C59A8F300D6D958 /* YXMessageViewController.xib in Resources */,
 				041070A31C59A8F300D6D958 /* YXLoginController.xib in Resources */,
 				041070B21C59A8F300D6D958 /* YXOrderListDetailController.xib in Resources */,
@@ -2752,6 +2823,7 @@
 				0410710B1C59A8F300D6D958 /* YXTaskAttachment.xib in Resources */,
 				041071111C59A8F300D6D958 /* YXTaskRepairFragment.xib in Resources */,
 				041070B41C59A8F300D6D958 /* YXZoomImageController.xib in Resources */,
+				041E12BA1C7ED27A00F3471C /* YXTestController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2771,6 +2843,7 @@
 				04646C9C1C59AB6100D6DE13 /* ZXResult.m in Sources */,
 				04646C671C59AB6100D6DE13 /* ZXProductResultParser.m in Sources */,
 				04646CB01C59AB6100D6DE13 /* ZXDataMatrixX12Encoder.m in Sources */,
+				041E12B91C7ED27A00F3471C /* YXTestController.m in Sources */,
 				04646CD01C59AB6100D6DE13 /* ZXAbstractRSSReader.m in Sources */,
 				04646CE81C59AB6100D6DE13 /* ZXUPCAReader.m in Sources */,
 				04646CAF1C59AB6100D6DE13 /* ZXDataMatrixTextEncoder.m in Sources */,
@@ -2825,8 +2898,8 @@
 				04646D171C59AB6100D6DE13 /* ZXQRCodeFinderPatternFinder.m in Sources */,
 				04646C4F1C59AB6100D6DE13 /* ZXAztecSimpleToken.m in Sources */,
 				04D6BA221C605B8C00006CE5 /* YXMerchantDetailResponse.m in Sources */,
+				04E9D8A71C75A51F00570673 /* YXAssessFragment.m in Sources */,
 				04646D051C59AB6100D6DE13 /* ZXPDF417Common.m in Sources */,
-				04D6BA171C605B8C00006CE5 /* YXLoginInfo.m in Sources */,
 				041070DC1C59A8F300D6D958 /* UIButton+WebCache.m in Sources */,
 				04646CE31C59AB6100D6DE13 /* ZXITFWriter.m in Sources */,
 				044E295A1C5B61E600A4AAD9 /* JSONValueTransformer.m in Sources */,
@@ -2904,6 +2977,7 @@
 				041071181C59A8F300D6D958 /* YXDatePicker.m in Sources */,
 				04D6BA301C605B8C00006CE5 /* YXTaskRepairDetail.m in Sources */,
 				04646C871C59AB6100D6DE13 /* ZXByteArray.m in Sources */,
+				04E9D8AA1C75A67800570673 /* YXBusinessRepresentativeFragment.m in Sources */,
 				04646C961C59AB6100D6DE13 /* ZXDimension.m in Sources */,
 				04D4F9ED1C61D6F30098EE9E /* YXUpdatePredictResponse.m in Sources */,
 				04646CC41C59AB6100D6DE13 /* ZXRSSExpandedBlockParsedResult.m in Sources */,
@@ -2921,6 +2995,7 @@
 				04646C701C59AB6100D6DE13 /* ZXURIParsedResult.m in Sources */,
 				04646CDC1C59AB6100D6DE13 /* ZXCode93Reader.m in Sources */,
 				04646CC31C59AB6100D6DE13 /* ZXAnyAIDecoder.m in Sources */,
+				04E9D8B51C75AF3000570673 /* YXServiceRepresentativeFragment.m in Sources */,
 				04D6BA1A1C605B8C00006CE5 /* YXOrderListInfo.m in Sources */,
 				04646C561C59AB6100D6DE13 /* ZXAddressBookAUResultParser.m in Sources */,
 				041070D41C59A8F300D6D958 /* NSData+ImageContentType.m in Sources */,
@@ -3009,7 +3084,6 @@
 				041070BF1C59A8F300D6D958 /* AFHTTPRequestOperationManager.m in Sources */,
 				04646C411C59AB6100D6DE13 /* LBXScanLineAnimation.m in Sources */,
 				04646CB51C59AB6100D6DE13 /* ZXMaxiCodeDecoder.m in Sources */,
-				041070BD1C59A8F300D6D958 /* YXURLHelper.m in Sources */,
 				04646CC21C59AB6100D6DE13 /* ZXAI01weightDecoder.m in Sources */,
 				04646D031C59AB6100D6DE13 /* ZXPDF417ErrorCorrection.m in Sources */,
 				04D6BA2C1C605B8C00006CE5 /* YXTaskApplyDetail.m in Sources */,
@@ -3032,7 +3106,7 @@
 				04646CB81C59AB6100D6DE13 /* ZXGenericMultipleBarcodeReader.m in Sources */,
 				04646CA31C59AB6100D6DE13 /* ZXDataMatrixVersion.m in Sources */,
 				041070D51C59A8F300D6D958 /* SDImageCache.m in Sources */,
-				041071091C59A8F300D6D958 /* YXFragment.m in Sources */,
+				041071091C59A8F300D6D958 /* YXTaskFragment.m in Sources */,
 				041070C71C59A8F300D6D958 /* GTMBase64.m in Sources */,
 				04646C911C59AB6100D6DE13 /* ZXStringUtils.m in Sources */,
 				041070B31C59A8F300D6D958 /* YXZoomImageController.m in Sources */,
@@ -3049,6 +3123,7 @@
 				04646CCB1C59AB6100D6DE13 /* ZXRSSExpandedGeneralAppIdDecoder.m in Sources */,
 				041070A51C59A8F300D6D958 /* YXMessageViewController.m in Sources */,
 				04646CA91C59AB6100D6DE13 /* ZXDataMatrixEdifactEncoder.m in Sources */,
+				04E9D8B01C75ACC500570673 /* YXBusinessDirectorFragment.m in Sources */,
 				041070C21C59A8F300D6D958 /* AFSecurityPolicy.m in Sources */,
 				04646CE91C59AB6100D6DE13 /* ZXUPCAWriter.m in Sources */,
 				04646CE61C59AB6100D6DE13 /* ZXOneDimensionalCodeWriter.m in Sources */,
@@ -3100,6 +3175,7 @@
 				041070B11C59A8F300D6D958 /* YXOrderListDetailController.m in Sources */,
 				04646D1E1C59AB6100D6DE13 /* ZXMultiDetector.m in Sources */,
 				04646C691C59AB6100D6DE13 /* ZXSMSMMSResultParser.m in Sources */,
+				04E9D8A21C75A0F100570673 /* YXAssessController.m in Sources */,
 				04646CED1C59AB6100D6DE13 /* ZXUPCEANReader.m in Sources */,
 				04D6BA281C605B8C00006CE5 /* YXTermResponse.m in Sources */,
 				04646C731C59AB6100D6DE13 /* ZXVCardResultParser.m in Sources */,
@@ -3164,7 +3240,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = mrtn/Config/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "70d5134e-6f71-42a1-95ec-f11fd7f90b94";
@@ -3209,7 +3285,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = mrtn/Config/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "70d5134e-6f71-42a1-95ec-f11fd7f90b94";
 				SDKROOT = iphoneos7.1;
@@ -3222,11 +3298,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_LINK_OBJC_RUNTIME = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/mrtn/Classes/Framework";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/mrtn/Config/PrefixHeader.pch";
@@ -3234,7 +3312,7 @@
 				INFOPLIST_FILE = mrtn/Config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/mrtn/Classes/Lib/GPUImage";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -3256,11 +3334,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_LINK_OBJC_RUNTIME = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/mrtn/Classes/Framework";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/mrtn/Config/PrefixHeader.pch";
@@ -3268,7 +3348,7 @@
 				INFOPLIST_FILE = mrtn/Config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/mrtn/Classes/Lib/GPUImage";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-lxml2",

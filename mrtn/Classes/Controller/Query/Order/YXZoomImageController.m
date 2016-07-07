@@ -6,7 +6,7 @@
 //
 
 #import "YXZoomImageController.h"
-#import "YXURLHelper.h"
+#import "YXAPI.h"
 #import "UIImageView+WebCache.h"
 
 @interface YXZoomImageController ()

@@ -24,5 +24,11 @@
  *  @param subview 子控件
  */
 - (void)addBottomSubview:(UIView *)subview;
+/**
+ *  屏幕快照
+ *
+ *  @return 图片
+ */
+-(UIImage *)convertViewToImage;
 
 @end

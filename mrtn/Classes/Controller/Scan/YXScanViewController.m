@@ -183,7 +183,7 @@
  *  @param manager   位置管理器
  *  @param locations 位置信息
  */
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     
     CLLocation *newLocation = [locations lastObject];
     //将经度和纬度显示到label上

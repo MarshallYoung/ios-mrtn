@@ -47,6 +47,7 @@
     [YXNetworkingManager loginWithRequest:request success:^(YXLoginResponse *response) {// 请求成功
         [progress hide:YES];// 隐藏读取框
         if (response.success) {// 登录成功
+            YXLog(@"登录成功");
             YXLoginInfo *loginInfo = response.data;// 得到登录信息
             [self enterWithInfo:loginInfo];
         } else {// 登录失败

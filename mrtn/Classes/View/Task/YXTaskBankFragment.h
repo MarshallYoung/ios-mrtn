@@ -6,9 +6,9 @@
 //
 
 #import "JSONModel.h"
-#import "YXFragment.h"
+#import "YXTaskFragment.h"
 
-@interface YXTaskBankFragment : YXFragment
+@interface YXTaskBankFragment : YXTaskFragment
 
 + (instancetype)initWithTaskOrderInfo:(YXTaskOrderInfo *)taskOrderInfo;
 
