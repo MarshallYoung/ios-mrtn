@@ -12,6 +12,9 @@
 #import "YXOrderListDetailResponse.h"
 #import "YXTaskOrderCell.h"
 #import "YXOrderDetailController.h"
+#import "YXUpdatePredictRequest.h"
+#import "YXUpdatePredictResponse.h"
+#import "YXDatePicker.h"
 
 @interface YXOrderListDetailController ()<MBProgressHUDDelegate,UITableViewDataSource,UITableViewDelegate>
 
@@ -103,10 +106,48 @@
 // 点击cell执行方法
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    YXTaskOrderInfo *orderInfo = array[indexPath.row];
+    if (orderInfo.predictTime == nil || [orderInfo.predictTime isEqualToString:@""]) {// 未设置时间
+        NSString *taskId = ((YXTaskOrderInfo *)array[indexPath.row]).taskId;
+        [self updatePredictWithId:taskId];
+    }else{
     YXOrderDetailController *controller = [YXOrderDetailController initWithTaskOrderInfo:array[indexPath.row]];
-    [self.navigationController pushViewController:controller animated:YES];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
     
 }
 
+/**
+ *  更新预计上门时间
+ *
+ *  @param taskId 任务单编号
+ */
+- (void)updatePredictWithId:(NSString *)taskId {
+    
+    YXDatePicker *picker = [YXDatePicker initWithSuperView:self.view confirm:^(NSString *dateString) {
+        MBProgressHUD *progress = [MBProgressHUD showHUDAddedTo:self text:@"更新预计上门时间..."];// 进度框
+        YXUpdatePredictRequest *request = [YXUpdatePredictRequest requestWithId:taskId date:dateString];
+        [YXNetworkingManager updateWithRequest:request success:^(id responseObject) {
+            [progress hide:YES];// 隐藏读取框
+            YXUpdatePredictResponse *response = [[YXUpdatePredictResponse alloc] initWithDictionary:responseObject error:nil];
+            if (response.success) {
+                [MBProgressHUD showSuccess:@"设置成功"];
+            } else {
+                if (response.msg) {
+                    [MBProgressHUD showFail:response.msg];// 显示错误消息
+                } else {
+                    [MBProgressHUD showFail:@"上传失败"];// 显示错误消息
+                }
+            }
+            [self refreshData];// 刷新列表
+        } failure:^(void) {
+            [progress hide:YES];// 隐藏读取框
+            [MBProgressHUD show408];
+        }];
+        
+    }];
+    picker.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+    
+}
 
 @end

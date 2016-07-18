@@ -5,6 +5,7 @@
 //  Copyright © 2015年 YusysTechnologies. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "YXNetworkingManager.h"
 #import "YXEncryptHelper.h"
 #import "YXAPI.h"
@@ -36,6 +37,20 @@
     AFHTTPRequestOperation *operation = [manager POST:URL_LOGIN parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {// 登录成功
         YXLog(@"登录获得服务器数据");
         YXLog(@"%@",responseObject);
+        NSString *cookieString = [[operation.response allHeaderFields] valueForKey:@"Set-Cookie"];
+        YXLog(@"%@",cookieString);
+        NSArray *arr =[cookieString componentsSeparatedByString:NSLocalizedString(@";", nil)];//拆分成数组
+        YXLog(@"%@",arr);
+        NSString *sidStr = @"";
+        for (int i = 0; i < arr.count; i++) {
+            NSString *tempStr = [arr objectAtIndex: i];
+            if ([tempStr hasPrefix:@"sid="]) {
+                sidStr = [tempStr substringFromIndex:4];
+            }
+        }
+        YXLog(@"sid是:  %@",sidStr);
+        AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        delegate.sid = sidStr;
         YXLoginResponse *response = [[YXLoginResponse alloc] initWithDictionary:responseObject error:nil];// 得到响应
         success(response);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {// 登录失败
@@ -88,6 +103,12 @@
         parameters = @{@"hostSerialNo":query.hostSerialNo};
     }
     AFHTTPRequestOperationManager *manager = [self manager];
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (delegate.sid) {
+        NSString *cookieStr = [NSString stringWithFormat:@"sid=%@", delegate.sid];
+        YXLog(@"Cookie是:  %@",cookieStr);
+        [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
+    }
     AFHTTPRequestOperation *operation = [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {// 查询成功
         success(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {// 查询失败
@@ -185,7 +206,6 @@
     // 设置请求头,<<调试DEBUG>>用
     [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"android_request"];
     return manager;
-    
 }
 
 /**

@@ -144,7 +144,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     [picker dismissViewControllerAnimated:YES completion:^{}];
-    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     /* 此处info 有六个值
      * UIImagePickerControllerMediaType; // an NSString UTTypeImage)
      * UIImagePickerControllerOriginalImage;  // a UIImage 原始图片
@@ -164,36 +164,36 @@
     
 }
 
-// 压缩图片
-- (NSData *)resetSizeOfImageData:(UIImage *)originalImage maxSize:(NSInteger)maxSize {
-    
-    //先调整分辨率
-    CGSize newSize = originalImage.size;
-    CGFloat tempHeight = newSize.height / 1024;
-    CGFloat tempWidth = newSize.width / 1024;
-    if (tempWidth > 1.0 && tempWidth > tempHeight) {
-        newSize = CGSizeMake(originalImage.size.width / tempWidth, originalImage.size.height / tempWidth);
-    }
-    else if (tempHeight > 1.0 && tempWidth < tempHeight){
-        newSize = CGSizeMake(originalImage.size.width / tempHeight, originalImage.size.height / tempHeight);
-    }
-    
-    UIGraphicsBeginImageContext(newSize);
-    [originalImage drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    //调整大小
-    NSData *imageData = UIImageJPEGRepresentation(newImage,1.0);
-    NSUInteger sizeOrigin = [imageData length];
-    NSUInteger sizeOriginKB = sizeOrigin / 1024;
-    if (sizeOriginKB > maxSize) {
-        NSData *finallImageData = UIImageJPEGRepresentation(newImage,0.50);
-        return finallImageData;
-    }
-    
-    return imageData;
-}
+//// 压缩图片
+//- (NSData *)resetSizeOfImageData:(UIImage *)originalImage maxSize:(NSInteger)maxSize {
+//    
+//    //先调整分辨率
+//    CGSize newSize = originalImage.size;
+//    CGFloat tempHeight = newSize.height / 1024;
+//    CGFloat tempWidth = newSize.width / 1024;
+//    if (tempWidth > 1.0 && tempWidth > tempHeight) {
+//        newSize = CGSizeMake(originalImage.size.width / tempWidth, originalImage.size.height / tempWidth);
+//    }
+//    else if (tempHeight > 1.0 && tempWidth < tempHeight){
+//        newSize = CGSizeMake(originalImage.size.width / tempHeight, originalImage.size.height / tempHeight);
+//    }
+//    
+//    UIGraphicsBeginImageContext(newSize);
+//    [originalImage drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+//    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    
+//    //调整大小
+//    NSData *imageData = UIImageJPEGRepresentation(newImage,1.0);
+//    NSUInteger sizeOrigin = [imageData length];
+//    NSUInteger sizeOriginKB = sizeOrigin / 1024;
+//    if (sizeOriginKB > maxSize) {
+//        NSData *finallImageData = UIImageJPEGRepresentation(newImage,0.50);
+//        return finallImageData;
+//    }
+//    
+//    return imageData;
+//}
 
 
 @end

@@ -88,12 +88,6 @@
     singleTap  = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sign)];// 初始化点击事件
     signSetted = NO;
     attSetted  = NO;
-    
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
     [self initInfo];
     
 }
@@ -118,6 +112,7 @@
         if (rsp.success) {
             if (rsp.data) {
                 _taskOrderInfo = rsp.data;
+                YXLog(@"YXOrderDetailController  更新后的数据是:%@", _taskOrderInfo);
                 [self refreshData];
             }
         }else{

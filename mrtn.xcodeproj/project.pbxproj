@@ -3314,11 +3314,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/mrtn/Classes/Lib/GPUImage";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"-lxml2",
-					"-all_load",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.yusys.yuchengapp;
 				PRODUCT_NAME = mrtn;
 				PROVISIONING_PROFILE = "";
@@ -3350,11 +3346,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/mrtn/Classes/Lib/GPUImage";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"-lxml2",
-					"-all_load",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.yusys.yuchengapp;
 				PRODUCT_NAME = mrtn;
 				PROVISIONING_PROFILE = "";

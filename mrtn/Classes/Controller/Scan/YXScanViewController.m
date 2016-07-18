@@ -36,12 +36,11 @@
 @end
 
 
-@implementation YXScanViewController {
-    
-    NSString *_id;// 编号,用于UpdateRequest
-    MBProgressHUD *hud;// 读取框
-    
-}
+@implementation YXScanViewController
+
+NSString *TAG = @"YXScanViewController";
+NSString *_id;// 编号,用于UpdateRequest
+MBProgressHUD *hud;// 读取框
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -78,7 +77,7 @@
     MBProgressHUD *progress = [MBProgressHUD showHUDAddedTo:self text:@"正在查询..."];// 进度框
     YXTermRequest *request = [YXTermRequest requestWithSN:hostSerialNo];
     [YXNetworkingManager queryWithRequest:request success:^(id responseObject) {
-        YXLog(@"机具信息 : %@",responseObject);
+        YXLog(@"%@:  机具信息是  %@",TAG,responseObject);
         [progress hide:YES];// 隐藏读取框
         YXTermResponse *response = [[YXTermResponse alloc] initWithDictionary:responseObject error:nil];
         if (response.success) {// 查询成功
